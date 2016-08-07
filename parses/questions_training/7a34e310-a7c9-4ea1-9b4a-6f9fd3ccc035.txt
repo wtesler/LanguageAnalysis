@@ -1,0 +1,84 @@
+{
+  "sentences": [
+    {
+      "text": {
+        "content": "Fries have salt on them",
+        "beginOffset": 0
+      }
+    }
+  ],
+  "tokens": [
+    {
+      "text": {
+        "content": "Fries",
+        "beginOffset": 0
+      },
+      "partOfSpeech": {
+        "tag": "NOUN"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 1,
+        "label": "NSUBJ"
+      },
+      "lemma": "fry"
+    },
+    {
+      "text": {
+        "content": "have",
+        "beginOffset": 6
+      },
+      "partOfSpeech": {
+        "tag": "VERB"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 1,
+        "label": "ROOT"
+      },
+      "lemma": "have"
+    },
+    {
+      "text": {
+        "content": "salt",
+        "beginOffset": 11
+      },
+      "partOfSpeech": {
+        "tag": "NOUN"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 1,
+        "label": "DOBJ"
+      },
+      "lemma": "salt"
+    },
+    {
+      "text": {
+        "content": "on",
+        "beginOffset": 16
+      },
+      "partOfSpeech": {
+        "tag": "ADP"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 1,
+        "label": "PREP"
+      },
+      "lemma": "on"
+    },
+    {
+      "text": {
+        "content": "them",
+        "beginOffset": 19
+      },
+      "partOfSpeech": {
+        "tag": "PRON"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 3,
+        "label": "POBJ"
+      },
+      "lemma": "them"
+    }
+  ],
+  "entities": [],
+  "language": "en"
+}

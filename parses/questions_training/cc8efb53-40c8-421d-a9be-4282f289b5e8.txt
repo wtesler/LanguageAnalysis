@@ -1,0 +1,84 @@
+{
+  "sentences": [
+    {
+      "text": {
+        "content": "will it come with fries",
+        "beginOffset": 0
+      }
+    }
+  ],
+  "tokens": [
+    {
+      "text": {
+        "content": "will",
+        "beginOffset": 0
+      },
+      "partOfSpeech": {
+        "tag": "VERB"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 2,
+        "label": "AUX"
+      },
+      "lemma": "will"
+    },
+    {
+      "text": {
+        "content": "it",
+        "beginOffset": 5
+      },
+      "partOfSpeech": {
+        "tag": "PRON"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 2,
+        "label": "NSUBJ"
+      },
+      "lemma": "it"
+    },
+    {
+      "text": {
+        "content": "come",
+        "beginOffset": 8
+      },
+      "partOfSpeech": {
+        "tag": "VERB"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 2,
+        "label": "ROOT"
+      },
+      "lemma": "come"
+    },
+    {
+      "text": {
+        "content": "with",
+        "beginOffset": 13
+      },
+      "partOfSpeech": {
+        "tag": "ADP"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 2,
+        "label": "PREP"
+      },
+      "lemma": "with"
+    },
+    {
+      "text": {
+        "content": "fries",
+        "beginOffset": 18
+      },
+      "partOfSpeech": {
+        "tag": "NOUN"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 3,
+        "label": "POBJ"
+      },
+      "lemma": "fry"
+    }
+  ],
+  "entities": [],
+  "language": "en"
+}

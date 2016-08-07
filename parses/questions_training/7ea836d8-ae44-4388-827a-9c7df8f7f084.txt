@@ -1,0 +1,98 @@
+{
+  "sentences": [
+    {
+      "text": {
+        "content": "what did the last guy order",
+        "beginOffset": 0
+      }
+    }
+  ],
+  "tokens": [
+    {
+      "text": {
+        "content": "what",
+        "beginOffset": 0
+      },
+      "partOfSpeech": {
+        "tag": "PRON"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 1,
+        "label": "NSUBJ"
+      },
+      "lemma": "what"
+    },
+    {
+      "text": {
+        "content": "did",
+        "beginOffset": 5
+      },
+      "partOfSpeech": {
+        "tag": "VERB"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 1,
+        "label": "ROOT"
+      },
+      "lemma": "do"
+    },
+    {
+      "text": {
+        "content": "the",
+        "beginOffset": 9
+      },
+      "partOfSpeech": {
+        "tag": "DET"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 5,
+        "label": "DET"
+      },
+      "lemma": "the"
+    },
+    {
+      "text": {
+        "content": "last",
+        "beginOffset": 13
+      },
+      "partOfSpeech": {
+        "tag": "ADJ"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 5,
+        "label": "AMOD"
+      },
+      "lemma": "last"
+    },
+    {
+      "text": {
+        "content": "guy",
+        "beginOffset": 18
+      },
+      "partOfSpeech": {
+        "tag": "NOUN"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 5,
+        "label": "NN"
+      },
+      "lemma": "guy"
+    },
+    {
+      "text": {
+        "content": "order",
+        "beginOffset": 22
+      },
+      "partOfSpeech": {
+        "tag": "NOUN"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 1,
+        "label": "DOBJ"
+      },
+      "lemma": "order"
+    }
+  ],
+  "entities": [],
+  "language": "en"
+}

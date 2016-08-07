@@ -1,0 +1,84 @@
+{
+  "sentences": [
+    {
+      "text": {
+        "content": "Put relish on the hamburger",
+        "beginOffset": 0
+      }
+    }
+  ],
+  "tokens": [
+    {
+      "text": {
+        "content": "Put",
+        "beginOffset": 0
+      },
+      "partOfSpeech": {
+        "tag": "VERB"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 0,
+        "label": "ROOT"
+      },
+      "lemma": "Put"
+    },
+    {
+      "text": {
+        "content": "relish",
+        "beginOffset": 4
+      },
+      "partOfSpeech": {
+        "tag": "NOUN"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 0,
+        "label": "DOBJ"
+      },
+      "lemma": "relish"
+    },
+    {
+      "text": {
+        "content": "on",
+        "beginOffset": 11
+      },
+      "partOfSpeech": {
+        "tag": "ADP"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 0,
+        "label": "PREP"
+      },
+      "lemma": "on"
+    },
+    {
+      "text": {
+        "content": "the",
+        "beginOffset": 14
+      },
+      "partOfSpeech": {
+        "tag": "DET"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 4,
+        "label": "DET"
+      },
+      "lemma": "the"
+    },
+    {
+      "text": {
+        "content": "hamburger",
+        "beginOffset": 18
+      },
+      "partOfSpeech": {
+        "tag": "NOUN"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 2,
+        "label": "POBJ"
+      },
+      "lemma": "hamburger"
+    }
+  ],
+  "entities": [],
+  "language": "en"
+}

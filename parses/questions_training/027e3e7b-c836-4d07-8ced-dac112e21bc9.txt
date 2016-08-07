@@ -1,0 +1,42 @@
+{
+  "sentences": [
+    {
+      "text": {
+        "content": "How much",
+        "beginOffset": 0
+      }
+    }
+  ],
+  "tokens": [
+    {
+      "text": {
+        "content": "How",
+        "beginOffset": 0
+      },
+      "partOfSpeech": {
+        "tag": "ADV"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 1,
+        "label": "ADVMOD"
+      },
+      "lemma": "How"
+    },
+    {
+      "text": {
+        "content": "much",
+        "beginOffset": 4
+      },
+      "partOfSpeech": {
+        "tag": "ADJ"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 1,
+        "label": "ROOT"
+      },
+      "lemma": "much"
+    }
+  ],
+  "entities": [],
+  "language": "en"
+}

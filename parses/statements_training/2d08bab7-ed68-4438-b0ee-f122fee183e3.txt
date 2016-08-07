@@ -1,0 +1,98 @@
+{
+  "sentences": [
+    {
+      "text": {
+        "content": "I can't pay with visa",
+        "beginOffset": 0
+      }
+    }
+  ],
+  "tokens": [
+    {
+      "text": {
+        "content": "I",
+        "beginOffset": 0
+      },
+      "partOfSpeech": {
+        "tag": "PRON"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 3,
+        "label": "NSUBJ"
+      },
+      "lemma": "I"
+    },
+    {
+      "text": {
+        "content": "ca",
+        "beginOffset": 2
+      },
+      "partOfSpeech": {
+        "tag": "VERB"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 3,
+        "label": "AUX"
+      },
+      "lemma": "ca"
+    },
+    {
+      "text": {
+        "content": "n't",
+        "beginOffset": 4
+      },
+      "partOfSpeech": {
+        "tag": "ADV"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 3,
+        "label": "NEG"
+      },
+      "lemma": "n't"
+    },
+    {
+      "text": {
+        "content": "pay",
+        "beginOffset": 8
+      },
+      "partOfSpeech": {
+        "tag": "VERB"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 3,
+        "label": "ROOT"
+      },
+      "lemma": "pay"
+    },
+    {
+      "text": {
+        "content": "with",
+        "beginOffset": 12
+      },
+      "partOfSpeech": {
+        "tag": "ADP"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 3,
+        "label": "PREP"
+      },
+      "lemma": "with"
+    },
+    {
+      "text": {
+        "content": "visa",
+        "beginOffset": 17
+      },
+      "partOfSpeech": {
+        "tag": "NOUN"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 4,
+        "label": "POBJ"
+      },
+      "lemma": "visa"
+    }
+  ],
+  "entities": [],
+  "language": "en"
+}

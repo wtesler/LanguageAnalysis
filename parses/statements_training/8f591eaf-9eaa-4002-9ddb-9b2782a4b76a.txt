@@ -1,0 +1,112 @@
+{
+  "sentences": [
+    {
+      "text": {
+        "content": "I know you are closed after 5",
+        "beginOffset": 0
+      }
+    }
+  ],
+  "tokens": [
+    {
+      "text": {
+        "content": "I",
+        "beginOffset": 0
+      },
+      "partOfSpeech": {
+        "tag": "PRON"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 1,
+        "label": "NSUBJ"
+      },
+      "lemma": "I"
+    },
+    {
+      "text": {
+        "content": "know",
+        "beginOffset": 2
+      },
+      "partOfSpeech": {
+        "tag": "VERB"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 1,
+        "label": "ROOT"
+      },
+      "lemma": "know"
+    },
+    {
+      "text": {
+        "content": "you",
+        "beginOffset": 7
+      },
+      "partOfSpeech": {
+        "tag": "PRON"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 4,
+        "label": "NSUBJPASS"
+      },
+      "lemma": "you"
+    },
+    {
+      "text": {
+        "content": "are",
+        "beginOffset": 11
+      },
+      "partOfSpeech": {
+        "tag": "VERB"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 4,
+        "label": "AUXPASS"
+      },
+      "lemma": "be"
+    },
+    {
+      "text": {
+        "content": "closed",
+        "beginOffset": 15
+      },
+      "partOfSpeech": {
+        "tag": "VERB"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 1,
+        "label": "CCOMP"
+      },
+      "lemma": "close"
+    },
+    {
+      "text": {
+        "content": "after",
+        "beginOffset": 22
+      },
+      "partOfSpeech": {
+        "tag": "ADP"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 4,
+        "label": "PREP"
+      },
+      "lemma": "after"
+    },
+    {
+      "text": {
+        "content": "5",
+        "beginOffset": 28
+      },
+      "partOfSpeech": {
+        "tag": "NUM"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 5,
+        "label": "POBJ"
+      },
+      "lemma": "5"
+    }
+  ],
+  "entities": [],
+  "language": "en"
+}

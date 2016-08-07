@@ -1,0 +1,98 @@
+{
+  "sentences": [
+    {
+      "text": {
+        "content": "I would park over there.",
+        "beginOffset": 0
+      }
+    }
+  ],
+  "tokens": [
+    {
+      "text": {
+        "content": "I",
+        "beginOffset": 0
+      },
+      "partOfSpeech": {
+        "tag": "PRON"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 2,
+        "label": "NSUBJ"
+      },
+      "lemma": "I"
+    },
+    {
+      "text": {
+        "content": "would",
+        "beginOffset": 2
+      },
+      "partOfSpeech": {
+        "tag": "VERB"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 2,
+        "label": "AUX"
+      },
+      "lemma": "would"
+    },
+    {
+      "text": {
+        "content": "park",
+        "beginOffset": 8
+      },
+      "partOfSpeech": {
+        "tag": "VERB"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 2,
+        "label": "ROOT"
+      },
+      "lemma": "park"
+    },
+    {
+      "text": {
+        "content": "over",
+        "beginOffset": 13
+      },
+      "partOfSpeech": {
+        "tag": "ADV"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 4,
+        "label": "ADVMOD"
+      },
+      "lemma": "over"
+    },
+    {
+      "text": {
+        "content": "there",
+        "beginOffset": 18
+      },
+      "partOfSpeech": {
+        "tag": "ADV"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 2,
+        "label": "ADVMOD"
+      },
+      "lemma": "there"
+    },
+    {
+      "text": {
+        "content": ".",
+        "beginOffset": 23
+      },
+      "partOfSpeech": {
+        "tag": "PUNCT"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 2,
+        "label": "P"
+      },
+      "lemma": "."
+    }
+  ],
+  "entities": [],
+  "language": "en"
+}

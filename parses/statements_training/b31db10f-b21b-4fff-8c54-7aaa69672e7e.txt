@@ -1,0 +1,112 @@
+{
+  "sentences": [
+    {
+      "text": {
+        "content": "We will come back when you open",
+        "beginOffset": 0
+      }
+    }
+  ],
+  "tokens": [
+    {
+      "text": {
+        "content": "We",
+        "beginOffset": 0
+      },
+      "partOfSpeech": {
+        "tag": "PRON"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 2,
+        "label": "NSUBJ"
+      },
+      "lemma": "We"
+    },
+    {
+      "text": {
+        "content": "will",
+        "beginOffset": 3
+      },
+      "partOfSpeech": {
+        "tag": "VERB"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 2,
+        "label": "AUX"
+      },
+      "lemma": "will"
+    },
+    {
+      "text": {
+        "content": "come",
+        "beginOffset": 8
+      },
+      "partOfSpeech": {
+        "tag": "VERB"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 2,
+        "label": "ROOT"
+      },
+      "lemma": "come"
+    },
+    {
+      "text": {
+        "content": "back",
+        "beginOffset": 13
+      },
+      "partOfSpeech": {
+        "tag": "ADV"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 2,
+        "label": "ADVMOD"
+      },
+      "lemma": "back"
+    },
+    {
+      "text": {
+        "content": "when",
+        "beginOffset": 18
+      },
+      "partOfSpeech": {
+        "tag": "ADV"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 6,
+        "label": "ADVMOD"
+      },
+      "lemma": "when"
+    },
+    {
+      "text": {
+        "content": "you",
+        "beginOffset": 23
+      },
+      "partOfSpeech": {
+        "tag": "PRON"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 6,
+        "label": "NSUBJ"
+      },
+      "lemma": "you"
+    },
+    {
+      "text": {
+        "content": "open",
+        "beginOffset": 27
+      },
+      "partOfSpeech": {
+        "tag": "VERB"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 2,
+        "label": "ADVCL"
+      },
+      "lemma": "open"
+    }
+  ],
+  "entities": [],
+  "language": "en"
+}

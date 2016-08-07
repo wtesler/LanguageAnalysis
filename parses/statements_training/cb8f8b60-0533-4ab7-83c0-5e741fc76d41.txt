@@ -1,0 +1,56 @@
+{
+  "sentences": [
+    {
+      "text": {
+        "content": "Fries with that",
+        "beginOffset": 0
+      }
+    }
+  ],
+  "tokens": [
+    {
+      "text": {
+        "content": "Fries",
+        "beginOffset": 0
+      },
+      "partOfSpeech": {
+        "tag": "NOUN"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 0,
+        "label": "ROOT"
+      },
+      "lemma": "fry"
+    },
+    {
+      "text": {
+        "content": "with",
+        "beginOffset": 6
+      },
+      "partOfSpeech": {
+        "tag": "ADP"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 0,
+        "label": "PREP"
+      },
+      "lemma": "with"
+    },
+    {
+      "text": {
+        "content": "that",
+        "beginOffset": 11
+      },
+      "partOfSpeech": {
+        "tag": "DET"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 1,
+        "label": "POBJ"
+      },
+      "lemma": "that"
+    }
+  ],
+  "entities": [],
+  "language": "en"
+}

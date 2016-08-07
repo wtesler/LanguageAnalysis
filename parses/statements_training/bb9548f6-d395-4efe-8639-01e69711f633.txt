@@ -1,0 +1,56 @@
+{
+  "sentences": [
+    {
+      "text": {
+        "content": "everything on it",
+        "beginOffset": 0
+      }
+    }
+  ],
+  "tokens": [
+    {
+      "text": {
+        "content": "everything",
+        "beginOffset": 0
+      },
+      "partOfSpeech": {
+        "tag": "NOUN"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 0,
+        "label": "ROOT"
+      },
+      "lemma": "everything"
+    },
+    {
+      "text": {
+        "content": "on",
+        "beginOffset": 11
+      },
+      "partOfSpeech": {
+        "tag": "ADP"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 0,
+        "label": "PREP"
+      },
+      "lemma": "on"
+    },
+    {
+      "text": {
+        "content": "it",
+        "beginOffset": 14
+      },
+      "partOfSpeech": {
+        "tag": "PRON"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 1,
+        "label": "POBJ"
+      },
+      "lemma": "it"
+    }
+  ],
+  "entities": [],
+  "language": "en"
+}

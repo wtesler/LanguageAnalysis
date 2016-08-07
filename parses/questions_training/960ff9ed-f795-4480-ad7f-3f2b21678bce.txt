@@ -1,0 +1,98 @@
+{
+  "sentences": [
+    {
+      "text": {
+        "content": "Why are you closed after 5",
+        "beginOffset": 0
+      }
+    }
+  ],
+  "tokens": [
+    {
+      "text": {
+        "content": "Why",
+        "beginOffset": 0
+      },
+      "partOfSpeech": {
+        "tag": "ADV"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 3,
+        "label": "ADVMOD"
+      },
+      "lemma": "Why"
+    },
+    {
+      "text": {
+        "content": "are",
+        "beginOffset": 4
+      },
+      "partOfSpeech": {
+        "tag": "VERB"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 3,
+        "label": "AUXPASS"
+      },
+      "lemma": "be"
+    },
+    {
+      "text": {
+        "content": "you",
+        "beginOffset": 8
+      },
+      "partOfSpeech": {
+        "tag": "PRON"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 3,
+        "label": "NSUBJ"
+      },
+      "lemma": "you"
+    },
+    {
+      "text": {
+        "content": "closed",
+        "beginOffset": 12
+      },
+      "partOfSpeech": {
+        "tag": "VERB"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 3,
+        "label": "ROOT"
+      },
+      "lemma": "close"
+    },
+    {
+      "text": {
+        "content": "after",
+        "beginOffset": 19
+      },
+      "partOfSpeech": {
+        "tag": "ADP"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 3,
+        "label": "PREP"
+      },
+      "lemma": "after"
+    },
+    {
+      "text": {
+        "content": "5",
+        "beginOffset": 25
+      },
+      "partOfSpeech": {
+        "tag": "NUM"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 4,
+        "label": "POBJ"
+      },
+      "lemma": "5"
+    }
+  ],
+  "entities": [],
+  "language": "en"
+}

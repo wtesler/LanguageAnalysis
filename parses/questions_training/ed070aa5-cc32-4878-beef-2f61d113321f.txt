@@ -1,0 +1,112 @@
+{
+  "sentences": [
+    {
+      "text": {
+        "content": "We want to know where to park",
+        "beginOffset": 0
+      }
+    }
+  ],
+  "tokens": [
+    {
+      "text": {
+        "content": "We",
+        "beginOffset": 0
+      },
+      "partOfSpeech": {
+        "tag": "PRON"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 1,
+        "label": "NSUBJ"
+      },
+      "lemma": "We"
+    },
+    {
+      "text": {
+        "content": "want",
+        "beginOffset": 3
+      },
+      "partOfSpeech": {
+        "tag": "VERB"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 1,
+        "label": "ROOT"
+      },
+      "lemma": "want"
+    },
+    {
+      "text": {
+        "content": "to",
+        "beginOffset": 8
+      },
+      "partOfSpeech": {
+        "tag": "PRT"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 3,
+        "label": "AUX"
+      },
+      "lemma": "to"
+    },
+    {
+      "text": {
+        "content": "know",
+        "beginOffset": 11
+      },
+      "partOfSpeech": {
+        "tag": "VERB"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 1,
+        "label": "XCOMP"
+      },
+      "lemma": "know"
+    },
+    {
+      "text": {
+        "content": "where",
+        "beginOffset": 16
+      },
+      "partOfSpeech": {
+        "tag": "ADV"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 6,
+        "label": "ADVMOD"
+      },
+      "lemma": "where"
+    },
+    {
+      "text": {
+        "content": "to",
+        "beginOffset": 22
+      },
+      "partOfSpeech": {
+        "tag": "PRT"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 6,
+        "label": "AUX"
+      },
+      "lemma": "to"
+    },
+    {
+      "text": {
+        "content": "park",
+        "beginOffset": 25
+      },
+      "partOfSpeech": {
+        "tag": "VERB"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 3,
+        "label": "ADVCL"
+      },
+      "lemma": "park"
+    }
+  ],
+  "entities": [],
+  "language": "en"
+}

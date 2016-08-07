@@ -1,0 +1,98 @@
+{
+  "sentences": [
+    {
+      "text": {
+        "content": "why don't you offer hamburgers",
+        "beginOffset": 0
+      }
+    }
+  ],
+  "tokens": [
+    {
+      "text": {
+        "content": "why",
+        "beginOffset": 0
+      },
+      "partOfSpeech": {
+        "tag": "ADV"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 4,
+        "label": "ADVMOD"
+      },
+      "lemma": "why"
+    },
+    {
+      "text": {
+        "content": "do",
+        "beginOffset": 4
+      },
+      "partOfSpeech": {
+        "tag": "VERB"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 4,
+        "label": "AUX"
+      },
+      "lemma": "do"
+    },
+    {
+      "text": {
+        "content": "n't",
+        "beginOffset": 6
+      },
+      "partOfSpeech": {
+        "tag": "ADV"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 4,
+        "label": "NEG"
+      },
+      "lemma": "n't"
+    },
+    {
+      "text": {
+        "content": "you",
+        "beginOffset": 10
+      },
+      "partOfSpeech": {
+        "tag": "PRON"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 4,
+        "label": "NSUBJ"
+      },
+      "lemma": "you"
+    },
+    {
+      "text": {
+        "content": "offer",
+        "beginOffset": 14
+      },
+      "partOfSpeech": {
+        "tag": "VERB"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 4,
+        "label": "ROOT"
+      },
+      "lemma": "offer"
+    },
+    {
+      "text": {
+        "content": "hamburgers",
+        "beginOffset": 20
+      },
+      "partOfSpeech": {
+        "tag": "NOUN"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 4,
+        "label": "DOBJ"
+      },
+      "lemma": "hamburger"
+    }
+  ],
+  "entities": [],
+  "language": "en"
+}

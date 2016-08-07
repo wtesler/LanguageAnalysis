@@ -1,0 +1,112 @@
+{
+  "sentences": [
+    {
+      "text": {
+        "content": "I want to talk to a human",
+        "beginOffset": 0
+      }
+    }
+  ],
+  "tokens": [
+    {
+      "text": {
+        "content": "I",
+        "beginOffset": 0
+      },
+      "partOfSpeech": {
+        "tag": "PRON"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 1,
+        "label": "NSUBJ"
+      },
+      "lemma": "I"
+    },
+    {
+      "text": {
+        "content": "want",
+        "beginOffset": 2
+      },
+      "partOfSpeech": {
+        "tag": "VERB"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 1,
+        "label": "ROOT"
+      },
+      "lemma": "want"
+    },
+    {
+      "text": {
+        "content": "to",
+        "beginOffset": 7
+      },
+      "partOfSpeech": {
+        "tag": "PRT"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 3,
+        "label": "AUX"
+      },
+      "lemma": "to"
+    },
+    {
+      "text": {
+        "content": "talk",
+        "beginOffset": 10
+      },
+      "partOfSpeech": {
+        "tag": "VERB"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 1,
+        "label": "XCOMP"
+      },
+      "lemma": "talk"
+    },
+    {
+      "text": {
+        "content": "to",
+        "beginOffset": 15
+      },
+      "partOfSpeech": {
+        "tag": "ADP"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 3,
+        "label": "PREP"
+      },
+      "lemma": "to"
+    },
+    {
+      "text": {
+        "content": "a",
+        "beginOffset": 18
+      },
+      "partOfSpeech": {
+        "tag": "DET"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 6,
+        "label": "DET"
+      },
+      "lemma": "a"
+    },
+    {
+      "text": {
+        "content": "human",
+        "beginOffset": 20
+      },
+      "partOfSpeech": {
+        "tag": "NOUN"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 4,
+        "label": "POBJ"
+      },
+      "lemma": "human"
+    }
+  ],
+  "entities": [],
+  "language": "en"
+}

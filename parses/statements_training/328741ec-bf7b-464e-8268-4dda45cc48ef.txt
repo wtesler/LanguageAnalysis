@@ -1,0 +1,56 @@
+{
+  "sentences": [
+    {
+      "text": {
+        "content": "It is good",
+        "beginOffset": 0
+      }
+    }
+  ],
+  "tokens": [
+    {
+      "text": {
+        "content": "It",
+        "beginOffset": 0
+      },
+      "partOfSpeech": {
+        "tag": "PRON"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 1,
+        "label": "NSUBJ"
+      },
+      "lemma": "It"
+    },
+    {
+      "text": {
+        "content": "is",
+        "beginOffset": 3
+      },
+      "partOfSpeech": {
+        "tag": "VERB"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 1,
+        "label": "ROOT"
+      },
+      "lemma": "be"
+    },
+    {
+      "text": {
+        "content": "good",
+        "beginOffset": 6
+      },
+      "partOfSpeech": {
+        "tag": "ADJ"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 1,
+        "label": "ACOMP"
+      },
+      "lemma": "good"
+    }
+  ],
+  "entities": [],
+  "language": "en"
+}

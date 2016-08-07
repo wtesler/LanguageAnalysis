@@ -1,0 +1,70 @@
+{
+  "sentences": [
+    {
+      "text": {
+        "content": "Where should I go",
+        "beginOffset": 0
+      }
+    }
+  ],
+  "tokens": [
+    {
+      "text": {
+        "content": "Where",
+        "beginOffset": 0
+      },
+      "partOfSpeech": {
+        "tag": "ADV"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 3,
+        "label": "ADVMOD"
+      },
+      "lemma": "Where"
+    },
+    {
+      "text": {
+        "content": "should",
+        "beginOffset": 6
+      },
+      "partOfSpeech": {
+        "tag": "VERB"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 3,
+        "label": "AUX"
+      },
+      "lemma": "should"
+    },
+    {
+      "text": {
+        "content": "I",
+        "beginOffset": 13
+      },
+      "partOfSpeech": {
+        "tag": "PRON"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 3,
+        "label": "NSUBJ"
+      },
+      "lemma": "I"
+    },
+    {
+      "text": {
+        "content": "go",
+        "beginOffset": 15
+      },
+      "partOfSpeech": {
+        "tag": "VERB"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 3,
+        "label": "ROOT"
+      },
+      "lemma": "go"
+    }
+  ],
+  "entities": [],
+  "language": "en"
+}

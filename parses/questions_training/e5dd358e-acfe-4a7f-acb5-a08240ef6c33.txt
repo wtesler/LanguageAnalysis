@@ -1,0 +1,70 @@
+{
+  "sentences": [
+    {
+      "text": {
+        "content": "are you a robot",
+        "beginOffset": 0
+      }
+    }
+  ],
+  "tokens": [
+    {
+      "text": {
+        "content": "are",
+        "beginOffset": 0
+      },
+      "partOfSpeech": {
+        "tag": "VERB"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 0,
+        "label": "ROOT"
+      },
+      "lemma": "be"
+    },
+    {
+      "text": {
+        "content": "you",
+        "beginOffset": 4
+      },
+      "partOfSpeech": {
+        "tag": "PRON"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 0,
+        "label": "NSUBJ"
+      },
+      "lemma": "you"
+    },
+    {
+      "text": {
+        "content": "a",
+        "beginOffset": 8
+      },
+      "partOfSpeech": {
+        "tag": "DET"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 3,
+        "label": "DET"
+      },
+      "lemma": "a"
+    },
+    {
+      "text": {
+        "content": "robot",
+        "beginOffset": 10
+      },
+      "partOfSpeech": {
+        "tag": "NOUN"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 0,
+        "label": "ATTR"
+      },
+      "lemma": "robot"
+    }
+  ],
+  "entities": [],
+  "language": "en"
+}

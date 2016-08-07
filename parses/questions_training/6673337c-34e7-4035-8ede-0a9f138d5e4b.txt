@@ -1,0 +1,70 @@
+{
+  "sentences": [
+    {
+      "text": {
+        "content": "What's your favorite",
+        "beginOffset": 0
+      }
+    }
+  ],
+  "tokens": [
+    {
+      "text": {
+        "content": "What",
+        "beginOffset": 0
+      },
+      "partOfSpeech": {
+        "tag": "PRON"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 1,
+        "label": "ATTR"
+      },
+      "lemma": "What"
+    },
+    {
+      "text": {
+        "content": "'s",
+        "beginOffset": 4
+      },
+      "partOfSpeech": {
+        "tag": "VERB"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 1,
+        "label": "ROOT"
+      },
+      "lemma": "'s"
+    },
+    {
+      "text": {
+        "content": "your",
+        "beginOffset": 7
+      },
+      "partOfSpeech": {
+        "tag": "PRON"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 3,
+        "label": "POSS"
+      },
+      "lemma": "your"
+    },
+    {
+      "text": {
+        "content": "favorite",
+        "beginOffset": 12
+      },
+      "partOfSpeech": {
+        "tag": "ADJ"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 1,
+        "label": "NSUBJ"
+      },
+      "lemma": "favorite"
+    }
+  ],
+  "entities": [],
+  "language": "en"
+}

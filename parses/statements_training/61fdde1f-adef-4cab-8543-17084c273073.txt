@@ -1,0 +1,70 @@
+{
+  "sentences": [
+    {
+      "text": {
+        "content": "The hamburger with salt",
+        "beginOffset": 0
+      }
+    }
+  ],
+  "tokens": [
+    {
+      "text": {
+        "content": "The",
+        "beginOffset": 0
+      },
+      "partOfSpeech": {
+        "tag": "DET"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 1,
+        "label": "DET"
+      },
+      "lemma": "The"
+    },
+    {
+      "text": {
+        "content": "hamburger",
+        "beginOffset": 4
+      },
+      "partOfSpeech": {
+        "tag": "NOUN"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 1,
+        "label": "ROOT"
+      },
+      "lemma": "hamburger"
+    },
+    {
+      "text": {
+        "content": "with",
+        "beginOffset": 14
+      },
+      "partOfSpeech": {
+        "tag": "ADP"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 1,
+        "label": "PREP"
+      },
+      "lemma": "with"
+    },
+    {
+      "text": {
+        "content": "salt",
+        "beginOffset": 19
+      },
+      "partOfSpeech": {
+        "tag": "NOUN"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 2,
+        "label": "POBJ"
+      },
+      "lemma": "salt"
+    }
+  ],
+  "entities": [],
+  "language": "en"
+}

@@ -1,0 +1,126 @@
+{
+  "sentences": [
+    {
+      "text": {
+        "content": "I'll speak to the manager about it",
+        "beginOffset": 0
+      }
+    }
+  ],
+  "tokens": [
+    {
+      "text": {
+        "content": "I",
+        "beginOffset": 0
+      },
+      "partOfSpeech": {
+        "tag": "PRON"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 2,
+        "label": "NSUBJ"
+      },
+      "lemma": "I"
+    },
+    {
+      "text": {
+        "content": "'ll",
+        "beginOffset": 1
+      },
+      "partOfSpeech": {
+        "tag": "VERB"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 2,
+        "label": "AUX"
+      },
+      "lemma": "will"
+    },
+    {
+      "text": {
+        "content": "speak",
+        "beginOffset": 5
+      },
+      "partOfSpeech": {
+        "tag": "VERB"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 2,
+        "label": "ROOT"
+      },
+      "lemma": "speak"
+    },
+    {
+      "text": {
+        "content": "to",
+        "beginOffset": 11
+      },
+      "partOfSpeech": {
+        "tag": "ADP"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 2,
+        "label": "PREP"
+      },
+      "lemma": "to"
+    },
+    {
+      "text": {
+        "content": "the",
+        "beginOffset": 14
+      },
+      "partOfSpeech": {
+        "tag": "DET"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 5,
+        "label": "DET"
+      },
+      "lemma": "the"
+    },
+    {
+      "text": {
+        "content": "manager",
+        "beginOffset": 18
+      },
+      "partOfSpeech": {
+        "tag": "NOUN"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 3,
+        "label": "POBJ"
+      },
+      "lemma": "manager"
+    },
+    {
+      "text": {
+        "content": "about",
+        "beginOffset": 26
+      },
+      "partOfSpeech": {
+        "tag": "ADP"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 2,
+        "label": "PREP"
+      },
+      "lemma": "about"
+    },
+    {
+      "text": {
+        "content": "it",
+        "beginOffset": 32
+      },
+      "partOfSpeech": {
+        "tag": "PRON"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 6,
+        "label": "POBJ"
+      },
+      "lemma": "it"
+    }
+  ],
+  "entities": [],
+  "language": "en"
+}

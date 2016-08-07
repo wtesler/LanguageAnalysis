@@ -1,0 +1,84 @@
+{
+  "sentences": [
+    {
+      "text": {
+        "content": "A number 1 with fries",
+        "beginOffset": 0
+      }
+    }
+  ],
+  "tokens": [
+    {
+      "text": {
+        "content": "A",
+        "beginOffset": 0
+      },
+      "partOfSpeech": {
+        "tag": "DET"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 1,
+        "label": "DET"
+      },
+      "lemma": "A"
+    },
+    {
+      "text": {
+        "content": "number",
+        "beginOffset": 2
+      },
+      "partOfSpeech": {
+        "tag": "NOUN"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 1,
+        "label": "ROOT"
+      },
+      "lemma": "number"
+    },
+    {
+      "text": {
+        "content": "1",
+        "beginOffset": 9
+      },
+      "partOfSpeech": {
+        "tag": "NUM"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 1,
+        "label": "NUM"
+      },
+      "lemma": "1"
+    },
+    {
+      "text": {
+        "content": "with",
+        "beginOffset": 11
+      },
+      "partOfSpeech": {
+        "tag": "ADP"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 1,
+        "label": "PREP"
+      },
+      "lemma": "with"
+    },
+    {
+      "text": {
+        "content": "fries",
+        "beginOffset": 16
+      },
+      "partOfSpeech": {
+        "tag": "NOUN"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 3,
+        "label": "POBJ"
+      },
+      "lemma": "fry"
+    }
+  ],
+  "entities": [],
+  "language": "en"
+}

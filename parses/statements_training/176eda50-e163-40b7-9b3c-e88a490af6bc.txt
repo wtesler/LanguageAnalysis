@@ -1,0 +1,70 @@
+{
+  "sentences": [
+    {
+      "text": {
+        "content": "The wait seems long",
+        "beginOffset": 0
+      }
+    }
+  ],
+  "tokens": [
+    {
+      "text": {
+        "content": "The",
+        "beginOffset": 0
+      },
+      "partOfSpeech": {
+        "tag": "DET"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 1,
+        "label": "DET"
+      },
+      "lemma": "The"
+    },
+    {
+      "text": {
+        "content": "wait",
+        "beginOffset": 4
+      },
+      "partOfSpeech": {
+        "tag": "NOUN"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 2,
+        "label": "NSUBJ"
+      },
+      "lemma": "wait"
+    },
+    {
+      "text": {
+        "content": "seems",
+        "beginOffset": 9
+      },
+      "partOfSpeech": {
+        "tag": "VERB"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 2,
+        "label": "ROOT"
+      },
+      "lemma": "seem"
+    },
+    {
+      "text": {
+        "content": "long",
+        "beginOffset": 15
+      },
+      "partOfSpeech": {
+        "tag": "ADJ"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 2,
+        "label": "ACOMP"
+      },
+      "lemma": "long"
+    }
+  ],
+  "entities": [],
+  "language": "en"
+}

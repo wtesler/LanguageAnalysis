@@ -1,0 +1,70 @@
+{
+  "sentences": [
+    {
+      "text": {
+        "content": "Fries from the menu",
+        "beginOffset": 0
+      }
+    }
+  ],
+  "tokens": [
+    {
+      "text": {
+        "content": "Fries",
+        "beginOffset": 0
+      },
+      "partOfSpeech": {
+        "tag": "NOUN"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 0,
+        "label": "ROOT"
+      },
+      "lemma": "fry"
+    },
+    {
+      "text": {
+        "content": "from",
+        "beginOffset": 6
+      },
+      "partOfSpeech": {
+        "tag": "ADP"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 0,
+        "label": "PREP"
+      },
+      "lemma": "from"
+    },
+    {
+      "text": {
+        "content": "the",
+        "beginOffset": 11
+      },
+      "partOfSpeech": {
+        "tag": "DET"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 3,
+        "label": "DET"
+      },
+      "lemma": "the"
+    },
+    {
+      "text": {
+        "content": "menu",
+        "beginOffset": 15
+      },
+      "partOfSpeech": {
+        "tag": "NOUN"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 1,
+        "label": "POBJ"
+      },
+      "lemma": "menu"
+    }
+  ],
+  "entities": [],
+  "language": "en"
+}

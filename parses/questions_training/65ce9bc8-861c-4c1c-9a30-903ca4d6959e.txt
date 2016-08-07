@@ -1,0 +1,126 @@
+{
+  "sentences": [
+    {
+      "text": {
+        "content": "Would you put some napkins in the bag",
+        "beginOffset": 0
+      }
+    }
+  ],
+  "tokens": [
+    {
+      "text": {
+        "content": "Would",
+        "beginOffset": 0
+      },
+      "partOfSpeech": {
+        "tag": "VERB"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 2,
+        "label": "AUX"
+      },
+      "lemma": "Would"
+    },
+    {
+      "text": {
+        "content": "you",
+        "beginOffset": 6
+      },
+      "partOfSpeech": {
+        "tag": "PRON"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 2,
+        "label": "NSUBJ"
+      },
+      "lemma": "you"
+    },
+    {
+      "text": {
+        "content": "put",
+        "beginOffset": 10
+      },
+      "partOfSpeech": {
+        "tag": "VERB"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 2,
+        "label": "ROOT"
+      },
+      "lemma": "put"
+    },
+    {
+      "text": {
+        "content": "some",
+        "beginOffset": 14
+      },
+      "partOfSpeech": {
+        "tag": "DET"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 4,
+        "label": "DET"
+      },
+      "lemma": "some"
+    },
+    {
+      "text": {
+        "content": "napkins",
+        "beginOffset": 19
+      },
+      "partOfSpeech": {
+        "tag": "NOUN"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 2,
+        "label": "DOBJ"
+      },
+      "lemma": "napkin"
+    },
+    {
+      "text": {
+        "content": "in",
+        "beginOffset": 27
+      },
+      "partOfSpeech": {
+        "tag": "ADP"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 2,
+        "label": "PREP"
+      },
+      "lemma": "in"
+    },
+    {
+      "text": {
+        "content": "the",
+        "beginOffset": 30
+      },
+      "partOfSpeech": {
+        "tag": "DET"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 7,
+        "label": "DET"
+      },
+      "lemma": "the"
+    },
+    {
+      "text": {
+        "content": "bag",
+        "beginOffset": 34
+      },
+      "partOfSpeech": {
+        "tag": "NOUN"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 5,
+        "label": "POBJ"
+      },
+      "lemma": "bag"
+    }
+  ],
+  "entities": [],
+  "language": "en"
+}

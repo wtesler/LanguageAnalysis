@@ -1,0 +1,28 @@
+{
+  "sentences": [
+    {
+      "text": {
+        "content": "everything",
+        "beginOffset": 0
+      }
+    }
+  ],
+  "tokens": [
+    {
+      "text": {
+        "content": "everything",
+        "beginOffset": 0
+      },
+      "partOfSpeech": {
+        "tag": "NOUN"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 0,
+        "label": "ROOT"
+      },
+      "lemma": "everything"
+    }
+  ],
+  "entities": [],
+  "language": "en"
+}

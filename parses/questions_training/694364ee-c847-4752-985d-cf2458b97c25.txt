@@ -1,0 +1,84 @@
+{
+  "sentences": [
+    {
+      "text": {
+        "content": "Is this coupon still valid",
+        "beginOffset": 0
+      }
+    }
+  ],
+  "tokens": [
+    {
+      "text": {
+        "content": "Is",
+        "beginOffset": 0
+      },
+      "partOfSpeech": {
+        "tag": "VERB"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 0,
+        "label": "ROOT"
+      },
+      "lemma": "be"
+    },
+    {
+      "text": {
+        "content": "this",
+        "beginOffset": 3
+      },
+      "partOfSpeech": {
+        "tag": "DET"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 2,
+        "label": "DET"
+      },
+      "lemma": "this"
+    },
+    {
+      "text": {
+        "content": "coupon",
+        "beginOffset": 8
+      },
+      "partOfSpeech": {
+        "tag": "NOUN"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 0,
+        "label": "NSUBJ"
+      },
+      "lemma": "coupon"
+    },
+    {
+      "text": {
+        "content": "still",
+        "beginOffset": 15
+      },
+      "partOfSpeech": {
+        "tag": "ADV"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 0,
+        "label": "ADVMOD"
+      },
+      "lemma": "still"
+    },
+    {
+      "text": {
+        "content": "valid",
+        "beginOffset": 21
+      },
+      "partOfSpeech": {
+        "tag": "ADJ"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 0,
+        "label": "ACOMP"
+      },
+      "lemma": "valid"
+    }
+  ],
+  "entities": [],
+  "language": "en"
+}

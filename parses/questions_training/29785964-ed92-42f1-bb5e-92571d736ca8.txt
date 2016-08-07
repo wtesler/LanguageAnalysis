@@ -1,0 +1,154 @@
+{
+  "sentences": [
+    {
+      "text": {
+        "content": "If I came back later would you still be open",
+        "beginOffset": 0
+      }
+    }
+  ],
+  "tokens": [
+    {
+      "text": {
+        "content": "If",
+        "beginOffset": 0
+      },
+      "partOfSpeech": {
+        "tag": "ADP"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 2,
+        "label": "MARK"
+      },
+      "lemma": "If"
+    },
+    {
+      "text": {
+        "content": "I",
+        "beginOffset": 3
+      },
+      "partOfSpeech": {
+        "tag": "PRON"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 2,
+        "label": "NSUBJ"
+      },
+      "lemma": "I"
+    },
+    {
+      "text": {
+        "content": "came",
+        "beginOffset": 5
+      },
+      "partOfSpeech": {
+        "tag": "VERB"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 8,
+        "label": "ADVCL"
+      },
+      "lemma": "come"
+    },
+    {
+      "text": {
+        "content": "back",
+        "beginOffset": 10
+      },
+      "partOfSpeech": {
+        "tag": "ADV"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 2,
+        "label": "ADVMOD"
+      },
+      "lemma": "back"
+    },
+    {
+      "text": {
+        "content": "later",
+        "beginOffset": 15
+      },
+      "partOfSpeech": {
+        "tag": "ADV"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 2,
+        "label": "ADVMOD"
+      },
+      "lemma": "later"
+    },
+    {
+      "text": {
+        "content": "would",
+        "beginOffset": 21
+      },
+      "partOfSpeech": {
+        "tag": "VERB"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 8,
+        "label": "AUX"
+      },
+      "lemma": "would"
+    },
+    {
+      "text": {
+        "content": "you",
+        "beginOffset": 27
+      },
+      "partOfSpeech": {
+        "tag": "PRON"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 8,
+        "label": "NSUBJ"
+      },
+      "lemma": "you"
+    },
+    {
+      "text": {
+        "content": "still",
+        "beginOffset": 31
+      },
+      "partOfSpeech": {
+        "tag": "ADV"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 8,
+        "label": "ADVMOD"
+      },
+      "lemma": "still"
+    },
+    {
+      "text": {
+        "content": "be",
+        "beginOffset": 37
+      },
+      "partOfSpeech": {
+        "tag": "VERB"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 8,
+        "label": "ROOT"
+      },
+      "lemma": "be"
+    },
+    {
+      "text": {
+        "content": "open",
+        "beginOffset": 40
+      },
+      "partOfSpeech": {
+        "tag": "ADJ"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 8,
+        "label": "ACOMP"
+      },
+      "lemma": "open"
+    }
+  ],
+  "entities": [],
+  "language": "en"
+}

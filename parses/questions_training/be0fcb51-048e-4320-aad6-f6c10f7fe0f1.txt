@@ -1,0 +1,154 @@
+{
+  "sentences": [
+    {
+      "text": {
+        "content": "We're wondering whether you can make that to go",
+        "beginOffset": 0
+      }
+    }
+  ],
+  "tokens": [
+    {
+      "text": {
+        "content": "We",
+        "beginOffset": 0
+      },
+      "partOfSpeech": {
+        "tag": "PRON"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 2,
+        "label": "NSUBJ"
+      },
+      "lemma": "We"
+    },
+    {
+      "text": {
+        "content": "'re",
+        "beginOffset": 2
+      },
+      "partOfSpeech": {
+        "tag": "VERB"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 2,
+        "label": "AUX"
+      },
+      "lemma": "be"
+    },
+    {
+      "text": {
+        "content": "wondering",
+        "beginOffset": 6
+      },
+      "partOfSpeech": {
+        "tag": "VERB"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 2,
+        "label": "ROOT"
+      },
+      "lemma": "wonder"
+    },
+    {
+      "text": {
+        "content": "whether",
+        "beginOffset": 16
+      },
+      "partOfSpeech": {
+        "tag": "ADP"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 6,
+        "label": "MARK"
+      },
+      "lemma": "whether"
+    },
+    {
+      "text": {
+        "content": "you",
+        "beginOffset": 24
+      },
+      "partOfSpeech": {
+        "tag": "PRON"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 6,
+        "label": "NSUBJ"
+      },
+      "lemma": "you"
+    },
+    {
+      "text": {
+        "content": "can",
+        "beginOffset": 28
+      },
+      "partOfSpeech": {
+        "tag": "VERB"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 6,
+        "label": "AUX"
+      },
+      "lemma": "can"
+    },
+    {
+      "text": {
+        "content": "make",
+        "beginOffset": 32
+      },
+      "partOfSpeech": {
+        "tag": "VERB"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 2,
+        "label": "CCOMP"
+      },
+      "lemma": "make"
+    },
+    {
+      "text": {
+        "content": "that",
+        "beginOffset": 37
+      },
+      "partOfSpeech": {
+        "tag": "DET"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 6,
+        "label": "DOBJ"
+      },
+      "lemma": "that"
+    },
+    {
+      "text": {
+        "content": "to",
+        "beginOffset": 42
+      },
+      "partOfSpeech": {
+        "tag": "PRT"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 9,
+        "label": "AUX"
+      },
+      "lemma": "to"
+    },
+    {
+      "text": {
+        "content": "go",
+        "beginOffset": 45
+      },
+      "partOfSpeech": {
+        "tag": "VERB"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 6,
+        "label": "XCOMP"
+      },
+      "lemma": "go"
+    }
+  ],
+  "entities": [],
+  "language": "en"
+}

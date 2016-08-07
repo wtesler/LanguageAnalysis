@@ -1,0 +1,98 @@
+{
+  "sentences": [
+    {
+      "text": {
+        "content": "I know hamburgers are usually ordered",
+        "beginOffset": 0
+      }
+    }
+  ],
+  "tokens": [
+    {
+      "text": {
+        "content": "I",
+        "beginOffset": 0
+      },
+      "partOfSpeech": {
+        "tag": "PRON"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 1,
+        "label": "NSUBJ"
+      },
+      "lemma": "I"
+    },
+    {
+      "text": {
+        "content": "know",
+        "beginOffset": 2
+      },
+      "partOfSpeech": {
+        "tag": "VERB"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 1,
+        "label": "ROOT"
+      },
+      "lemma": "know"
+    },
+    {
+      "text": {
+        "content": "hamburgers",
+        "beginOffset": 7
+      },
+      "partOfSpeech": {
+        "tag": "NOUN"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 5,
+        "label": "NSUBJPASS"
+      },
+      "lemma": "hamburger"
+    },
+    {
+      "text": {
+        "content": "are",
+        "beginOffset": 18
+      },
+      "partOfSpeech": {
+        "tag": "VERB"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 5,
+        "label": "AUXPASS"
+      },
+      "lemma": "be"
+    },
+    {
+      "text": {
+        "content": "usually",
+        "beginOffset": 22
+      },
+      "partOfSpeech": {
+        "tag": "ADV"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 5,
+        "label": "ADVMOD"
+      },
+      "lemma": "usually"
+    },
+    {
+      "text": {
+        "content": "ordered",
+        "beginOffset": 30
+      },
+      "partOfSpeech": {
+        "tag": "VERB"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 1,
+        "label": "CCOMP"
+      },
+      "lemma": "order"
+    }
+  ],
+  "entities": [],
+  "language": "en"
+}

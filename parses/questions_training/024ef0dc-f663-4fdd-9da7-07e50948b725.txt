@@ -1,0 +1,154 @@
+{
+  "sentences": [
+    {
+      "text": {
+        "content": "Where does it say that coke comes with the meal",
+        "beginOffset": 0
+      }
+    }
+  ],
+  "tokens": [
+    {
+      "text": {
+        "content": "Where",
+        "beginOffset": 0
+      },
+      "partOfSpeech": {
+        "tag": "ADV"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 3,
+        "label": "ADVMOD"
+      },
+      "lemma": "Where"
+    },
+    {
+      "text": {
+        "content": "does",
+        "beginOffset": 6
+      },
+      "partOfSpeech": {
+        "tag": "VERB"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 3,
+        "label": "AUX"
+      },
+      "lemma": "do"
+    },
+    {
+      "text": {
+        "content": "it",
+        "beginOffset": 11
+      },
+      "partOfSpeech": {
+        "tag": "PRON"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 3,
+        "label": "NSUBJ"
+      },
+      "lemma": "it"
+    },
+    {
+      "text": {
+        "content": "say",
+        "beginOffset": 14
+      },
+      "partOfSpeech": {
+        "tag": "VERB"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 3,
+        "label": "ROOT"
+      },
+      "lemma": "say"
+    },
+    {
+      "text": {
+        "content": "that",
+        "beginOffset": 18
+      },
+      "partOfSpeech": {
+        "tag": "ADP"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 6,
+        "label": "MARK"
+      },
+      "lemma": "that"
+    },
+    {
+      "text": {
+        "content": "coke",
+        "beginOffset": 23
+      },
+      "partOfSpeech": {
+        "tag": "NOUN"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 6,
+        "label": "NSUBJ"
+      },
+      "lemma": "coke"
+    },
+    {
+      "text": {
+        "content": "comes",
+        "beginOffset": 28
+      },
+      "partOfSpeech": {
+        "tag": "VERB"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 3,
+        "label": "CCOMP"
+      },
+      "lemma": "come"
+    },
+    {
+      "text": {
+        "content": "with",
+        "beginOffset": 34
+      },
+      "partOfSpeech": {
+        "tag": "ADP"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 6,
+        "label": "PREP"
+      },
+      "lemma": "with"
+    },
+    {
+      "text": {
+        "content": "the",
+        "beginOffset": 39
+      },
+      "partOfSpeech": {
+        "tag": "DET"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 9,
+        "label": "DET"
+      },
+      "lemma": "the"
+    },
+    {
+      "text": {
+        "content": "meal",
+        "beginOffset": 43
+      },
+      "partOfSpeech": {
+        "tag": "NOUN"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 7,
+        "label": "POBJ"
+      },
+      "lemma": "meal"
+    }
+  ],
+  "entities": [],
+  "language": "en"
+}

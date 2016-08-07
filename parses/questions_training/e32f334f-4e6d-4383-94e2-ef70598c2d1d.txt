@@ -1,0 +1,126 @@
+{
+  "sentences": [
+    {
+      "text": {
+        "content": "How long does it take to make fries",
+        "beginOffset": 0
+      }
+    }
+  ],
+  "tokens": [
+    {
+      "text": {
+        "content": "How",
+        "beginOffset": 0
+      },
+      "partOfSpeech": {
+        "tag": "ADV"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 1,
+        "label": "ADVMOD"
+      },
+      "lemma": "How"
+    },
+    {
+      "text": {
+        "content": "long",
+        "beginOffset": 4
+      },
+      "partOfSpeech": {
+        "tag": "ADV"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 4,
+        "label": "ADVMOD"
+      },
+      "lemma": "long"
+    },
+    {
+      "text": {
+        "content": "does",
+        "beginOffset": 9
+      },
+      "partOfSpeech": {
+        "tag": "VERB"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 4,
+        "label": "AUX"
+      },
+      "lemma": "do"
+    },
+    {
+      "text": {
+        "content": "it",
+        "beginOffset": 14
+      },
+      "partOfSpeech": {
+        "tag": "PRON"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 4,
+        "label": "NSUBJ"
+      },
+      "lemma": "it"
+    },
+    {
+      "text": {
+        "content": "take",
+        "beginOffset": 17
+      },
+      "partOfSpeech": {
+        "tag": "VERB"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 4,
+        "label": "ROOT"
+      },
+      "lemma": "take"
+    },
+    {
+      "text": {
+        "content": "to",
+        "beginOffset": 22
+      },
+      "partOfSpeech": {
+        "tag": "PRT"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 6,
+        "label": "AUX"
+      },
+      "lemma": "to"
+    },
+    {
+      "text": {
+        "content": "make",
+        "beginOffset": 25
+      },
+      "partOfSpeech": {
+        "tag": "VERB"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 4,
+        "label": "XCOMP"
+      },
+      "lemma": "make"
+    },
+    {
+      "text": {
+        "content": "fries",
+        "beginOffset": 30
+      },
+      "partOfSpeech": {
+        "tag": "NOUN"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 6,
+        "label": "DOBJ"
+      },
+      "lemma": "fry"
+    }
+  ],
+  "entities": [],
+  "language": "en"
+}

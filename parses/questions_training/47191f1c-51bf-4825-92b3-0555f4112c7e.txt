@@ -1,0 +1,126 @@
+{
+  "sentences": [
+    {
+      "text": {
+        "content": "How long can we expect to wait.",
+        "beginOffset": 0
+      }
+    }
+  ],
+  "tokens": [
+    {
+      "text": {
+        "content": "How",
+        "beginOffset": 0
+      },
+      "partOfSpeech": {
+        "tag": "ADV"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 1,
+        "label": "ADVMOD"
+      },
+      "lemma": "How"
+    },
+    {
+      "text": {
+        "content": "long",
+        "beginOffset": 4
+      },
+      "partOfSpeech": {
+        "tag": "ADV"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 4,
+        "label": "ADVMOD"
+      },
+      "lemma": "long"
+    },
+    {
+      "text": {
+        "content": "can",
+        "beginOffset": 9
+      },
+      "partOfSpeech": {
+        "tag": "VERB"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 4,
+        "label": "AUX"
+      },
+      "lemma": "can"
+    },
+    {
+      "text": {
+        "content": "we",
+        "beginOffset": 13
+      },
+      "partOfSpeech": {
+        "tag": "PRON"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 4,
+        "label": "NSUBJ"
+      },
+      "lemma": "we"
+    },
+    {
+      "text": {
+        "content": "expect",
+        "beginOffset": 16
+      },
+      "partOfSpeech": {
+        "tag": "VERB"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 4,
+        "label": "ROOT"
+      },
+      "lemma": "expect"
+    },
+    {
+      "text": {
+        "content": "to",
+        "beginOffset": 23
+      },
+      "partOfSpeech": {
+        "tag": "PRT"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 6,
+        "label": "AUX"
+      },
+      "lemma": "to"
+    },
+    {
+      "text": {
+        "content": "wait",
+        "beginOffset": 26
+      },
+      "partOfSpeech": {
+        "tag": "VERB"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 4,
+        "label": "XCOMP"
+      },
+      "lemma": "wait"
+    },
+    {
+      "text": {
+        "content": ".",
+        "beginOffset": 30
+      },
+      "partOfSpeech": {
+        "tag": "PUNCT"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 4,
+        "label": "P"
+      },
+      "lemma": "."
+    }
+  ],
+  "entities": [],
+  "language": "en"
+}

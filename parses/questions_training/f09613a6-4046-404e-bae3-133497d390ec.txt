@@ -1,0 +1,98 @@
+{
+  "sentences": [
+    {
+      "text": {
+        "content": "In what way is that better",
+        "beginOffset": 0
+      }
+    }
+  ],
+  "tokens": [
+    {
+      "text": {
+        "content": "In",
+        "beginOffset": 0
+      },
+      "partOfSpeech": {
+        "tag": "ADP"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 3,
+        "label": "PREP"
+      },
+      "lemma": "In"
+    },
+    {
+      "text": {
+        "content": "what",
+        "beginOffset": 3
+      },
+      "partOfSpeech": {
+        "tag": "DET"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 2,
+        "label": "DET"
+      },
+      "lemma": "what"
+    },
+    {
+      "text": {
+        "content": "way",
+        "beginOffset": 8
+      },
+      "partOfSpeech": {
+        "tag": "NOUN"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 0,
+        "label": "POBJ"
+      },
+      "lemma": "way"
+    },
+    {
+      "text": {
+        "content": "is",
+        "beginOffset": 12
+      },
+      "partOfSpeech": {
+        "tag": "VERB"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 3,
+        "label": "ROOT"
+      },
+      "lemma": "be"
+    },
+    {
+      "text": {
+        "content": "that",
+        "beginOffset": 15
+      },
+      "partOfSpeech": {
+        "tag": "ADP"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 5,
+        "label": "ADVMOD"
+      },
+      "lemma": "that"
+    },
+    {
+      "text": {
+        "content": "better",
+        "beginOffset": 20
+      },
+      "partOfSpeech": {
+        "tag": "ADJ"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 3,
+        "label": "ACOMP"
+      },
+      "lemma": "good"
+    }
+  ],
+  "entities": [],
+  "language": "en"
+}

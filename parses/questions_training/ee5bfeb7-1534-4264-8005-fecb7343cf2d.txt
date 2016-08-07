@@ -1,0 +1,140 @@
+{
+  "sentences": [
+    {
+      "text": {
+        "content": "Please could you tell me how do I order",
+        "beginOffset": 0
+      }
+    }
+  ],
+  "tokens": [
+    {
+      "text": {
+        "content": "Please",
+        "beginOffset": 0
+      },
+      "partOfSpeech": {
+        "tag": "X"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 3,
+        "label": "DISCOURSE"
+      },
+      "lemma": "Please"
+    },
+    {
+      "text": {
+        "content": "could",
+        "beginOffset": 7
+      },
+      "partOfSpeech": {
+        "tag": "VERB"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 3,
+        "label": "AUX"
+      },
+      "lemma": "could"
+    },
+    {
+      "text": {
+        "content": "you",
+        "beginOffset": 13
+      },
+      "partOfSpeech": {
+        "tag": "PRON"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 3,
+        "label": "NSUBJ"
+      },
+      "lemma": "you"
+    },
+    {
+      "text": {
+        "content": "tell",
+        "beginOffset": 17
+      },
+      "partOfSpeech": {
+        "tag": "VERB"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 3,
+        "label": "ROOT"
+      },
+      "lemma": "tell"
+    },
+    {
+      "text": {
+        "content": "me",
+        "beginOffset": 22
+      },
+      "partOfSpeech": {
+        "tag": "PRON"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 3,
+        "label": "DOBJ"
+      },
+      "lemma": "me"
+    },
+    {
+      "text": {
+        "content": "how",
+        "beginOffset": 25
+      },
+      "partOfSpeech": {
+        "tag": "ADV"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 8,
+        "label": "ADVMOD"
+      },
+      "lemma": "how"
+    },
+    {
+      "text": {
+        "content": "do",
+        "beginOffset": 29
+      },
+      "partOfSpeech": {
+        "tag": "VERB"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 8,
+        "label": "AUX"
+      },
+      "lemma": "do"
+    },
+    {
+      "text": {
+        "content": "I",
+        "beginOffset": 32
+      },
+      "partOfSpeech": {
+        "tag": "PRON"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 8,
+        "label": "NSUBJ"
+      },
+      "lemma": "I"
+    },
+    {
+      "text": {
+        "content": "order",
+        "beginOffset": 34
+      },
+      "partOfSpeech": {
+        "tag": "VERB"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 3,
+        "label": "DEP"
+      },
+      "lemma": "order"
+    }
+  ],
+  "entities": [],
+  "language": "en"
+}

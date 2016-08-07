@@ -1,0 +1,70 @@
+{
+  "sentences": [
+    {
+      "text": {
+        "content": "A small sized coke",
+        "beginOffset": 0
+      }
+    }
+  ],
+  "tokens": [
+    {
+      "text": {
+        "content": "A",
+        "beginOffset": 0
+      },
+      "partOfSpeech": {
+        "tag": "DET"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 3,
+        "label": "DET"
+      },
+      "lemma": "A"
+    },
+    {
+      "text": {
+        "content": "small",
+        "beginOffset": 2
+      },
+      "partOfSpeech": {
+        "tag": "ADJ"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 3,
+        "label": "AMOD"
+      },
+      "lemma": "small"
+    },
+    {
+      "text": {
+        "content": "sized",
+        "beginOffset": 8
+      },
+      "partOfSpeech": {
+        "tag": "ADJ"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 3,
+        "label": "AMOD"
+      },
+      "lemma": "sized"
+    },
+    {
+      "text": {
+        "content": "coke",
+        "beginOffset": 14
+      },
+      "partOfSpeech": {
+        "tag": "NOUN"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 3,
+        "label": "ROOT"
+      },
+      "lemma": "coke"
+    }
+  ],
+  "entities": [],
+  "language": "en"
+}
