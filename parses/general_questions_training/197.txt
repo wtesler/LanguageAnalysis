@@ -1,0 +1,364 @@
+{
+  "sentences": [
+    {
+      "text": {
+        "content": "Consequently, what is not considered a \"serious painter\" by some contemporary artists, who often regard his work as bourgeois and kitsch",
+        "beginOffset": 0
+      }
+    }
+  ],
+  "tokens": [
+    {
+      "text": {
+        "content": "Consequently",
+        "beginOffset": 0
+      },
+      "partOfSpeech": {
+        "tag": "ADV"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 5,
+        "label": "ADVMOD"
+      },
+      "lemma": "Consequently"
+    },
+    {
+      "text": {
+        "content": ",",
+        "beginOffset": 12
+      },
+      "partOfSpeech": {
+        "tag": "PUNCT"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 5,
+        "label": "P"
+      },
+      "lemma": ","
+    },
+    {
+      "text": {
+        "content": "what",
+        "beginOffset": 14
+      },
+      "partOfSpeech": {
+        "tag": "PRON"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 5,
+        "label": "NSUBJPASS"
+      },
+      "lemma": "what"
+    },
+    {
+      "text": {
+        "content": "is",
+        "beginOffset": 19
+      },
+      "partOfSpeech": {
+        "tag": "VERB"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 5,
+        "label": "AUXPASS"
+      },
+      "lemma": "be"
+    },
+    {
+      "text": {
+        "content": "not",
+        "beginOffset": 22
+      },
+      "partOfSpeech": {
+        "tag": "ADV"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 5,
+        "label": "NEG"
+      },
+      "lemma": "not"
+    },
+    {
+      "text": {
+        "content": "considered",
+        "beginOffset": 26
+      },
+      "partOfSpeech": {
+        "tag": "VERB"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 5,
+        "label": "ROOT"
+      },
+      "lemma": "consider"
+    },
+    {
+      "text": {
+        "content": "a",
+        "beginOffset": 37
+      },
+      "partOfSpeech": {
+        "tag": "DET"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 9,
+        "label": "DET"
+      },
+      "lemma": "a"
+    },
+    {
+      "text": {
+        "content": "\"",
+        "beginOffset": 39
+      },
+      "partOfSpeech": {
+        "tag": "PUNCT"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 9,
+        "label": "P"
+      },
+      "lemma": "\""
+    },
+    {
+      "text": {
+        "content": "serious",
+        "beginOffset": 40
+      },
+      "partOfSpeech": {
+        "tag": "ADJ"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 9,
+        "label": "AMOD"
+      },
+      "lemma": "serious"
+    },
+    {
+      "text": {
+        "content": "painter",
+        "beginOffset": 48
+      },
+      "partOfSpeech": {
+        "tag": "NOUN"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 5,
+        "label": "ATTR"
+      },
+      "lemma": "painter"
+    },
+    {
+      "text": {
+        "content": "\"",
+        "beginOffset": 55
+      },
+      "partOfSpeech": {
+        "tag": "PUNCT"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 9,
+        "label": "P"
+      },
+      "lemma": "\""
+    },
+    {
+      "text": {
+        "content": "by",
+        "beginOffset": 57
+      },
+      "partOfSpeech": {
+        "tag": "ADP"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 9,
+        "label": "PREP"
+      },
+      "lemma": "by"
+    },
+    {
+      "text": {
+        "content": "some",
+        "beginOffset": 60
+      },
+      "partOfSpeech": {
+        "tag": "DET"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 14,
+        "label": "DET"
+      },
+      "lemma": "some"
+    },
+    {
+      "text": {
+        "content": "contemporary",
+        "beginOffset": 65
+      },
+      "partOfSpeech": {
+        "tag": "ADJ"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 14,
+        "label": "AMOD"
+      },
+      "lemma": "contemporary"
+    },
+    {
+      "text": {
+        "content": "artists",
+        "beginOffset": 78
+      },
+      "partOfSpeech": {
+        "tag": "NOUN"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 11,
+        "label": "POBJ"
+      },
+      "lemma": "artist"
+    },
+    {
+      "text": {
+        "content": ",",
+        "beginOffset": 85
+      },
+      "partOfSpeech": {
+        "tag": "PUNCT"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 14,
+        "label": "P"
+      },
+      "lemma": ","
+    },
+    {
+      "text": {
+        "content": "who",
+        "beginOffset": 87
+      },
+      "partOfSpeech": {
+        "tag": "PRON"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 18,
+        "label": "NSUBJ"
+      },
+      "lemma": "who"
+    },
+    {
+      "text": {
+        "content": "often",
+        "beginOffset": 91
+      },
+      "partOfSpeech": {
+        "tag": "ADV"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 18,
+        "label": "ADVMOD"
+      },
+      "lemma": "often"
+    },
+    {
+      "text": {
+        "content": "regard",
+        "beginOffset": 97
+      },
+      "partOfSpeech": {
+        "tag": "VERB"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 14,
+        "label": "RCMOD"
+      },
+      "lemma": "regard"
+    },
+    {
+      "text": {
+        "content": "his",
+        "beginOffset": 104
+      },
+      "partOfSpeech": {
+        "tag": "PRON"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 20,
+        "label": "POSS"
+      },
+      "lemma": "his"
+    },
+    {
+      "text": {
+        "content": "work",
+        "beginOffset": 108
+      },
+      "partOfSpeech": {
+        "tag": "NOUN"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 18,
+        "label": "DOBJ"
+      },
+      "lemma": "work"
+    },
+    {
+      "text": {
+        "content": "as",
+        "beginOffset": 113
+      },
+      "partOfSpeech": {
+        "tag": "ADP"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 18,
+        "label": "PREP"
+      },
+      "lemma": "as"
+    },
+    {
+      "text": {
+        "content": "bourgeois",
+        "beginOffset": 116
+      },
+      "partOfSpeech": {
+        "tag": "NOUN"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 21,
+        "label": "POBJ"
+      },
+      "lemma": "bourgeois"
+    },
+    {
+      "text": {
+        "content": "and",
+        "beginOffset": 126
+      },
+      "partOfSpeech": {
+        "tag": "CONJ"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 22,
+        "label": "CC"
+      },
+      "lemma": "and"
+    },
+    {
+      "text": {
+        "content": "kitsch",
+        "beginOffset": 130
+      },
+      "partOfSpeech": {
+        "tag": "ADJ"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 22,
+        "label": "CONJ"
+      },
+      "lemma": "kitsch"
+    }
+  ],
+  "entities": [],
+  "language": "en"
+}

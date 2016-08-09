@@ -1,0 +1,42 @@
+{
+  "sentences": [
+    {
+      "text": {
+        "content": "Bahasa Melayu",
+        "beginOffset": 0
+      }
+    }
+  ],
+  "tokens": [
+    {
+      "text": {
+        "content": "Bahasa",
+        "beginOffset": 0
+      },
+      "partOfSpeech": {
+        "tag": "NOUN"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 1,
+        "label": "NN"
+      },
+      "lemma": "Bahasa"
+    },
+    {
+      "text": {
+        "content": "Melayu",
+        "beginOffset": 7
+      },
+      "partOfSpeech": {
+        "tag": "NOUN"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 1,
+        "label": "ROOT"
+      },
+      "lemma": "Melayu"
+    }
+  ],
+  "entities": [],
+  "language": "en"
+}

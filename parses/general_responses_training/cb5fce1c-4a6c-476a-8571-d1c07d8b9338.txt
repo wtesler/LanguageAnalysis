@@ -1,0 +1,42 @@
+{
+  "sentences": [
+    {
+      "text": {
+        "content": "1500 BC",
+        "beginOffset": 0
+      }
+    }
+  ],
+  "tokens": [
+    {
+      "text": {
+        "content": "1500",
+        "beginOffset": 0
+      },
+      "partOfSpeech": {
+        "tag": "NUM"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 1,
+        "label": "NUM"
+      },
+      "lemma": "1500"
+    },
+    {
+      "text": {
+        "content": "BC",
+        "beginOffset": 5
+      },
+      "partOfSpeech": {
+        "tag": "NOUN"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 1,
+        "label": "ROOT"
+      },
+      "lemma": "BC"
+    }
+  ],
+  "entities": [],
+  "language": "en"
+}

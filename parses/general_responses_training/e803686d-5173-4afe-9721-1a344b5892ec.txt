@@ -1,0 +1,28 @@
+{
+  "sentences": [
+    {
+      "text": {
+        "content": "Korean",
+        "beginOffset": 0
+      }
+    }
+  ],
+  "tokens": [
+    {
+      "text": {
+        "content": "Korean",
+        "beginOffset": 0
+      },
+      "partOfSpeech": {
+        "tag": "NOUN"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 0,
+        "label": "ROOT"
+      },
+      "lemma": "Korean"
+    }
+  ],
+  "entities": [],
+  "language": "en"
+}

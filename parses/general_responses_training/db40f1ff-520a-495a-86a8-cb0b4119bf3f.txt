@@ -1,0 +1,336 @@
+{
+  "sentences": [
+    {
+      "text": {
+        "content": "Among the most significant foreign contributors to Turkish vocabulary are Arabic, French, Persian, Italian, English, and Greek.",
+        "beginOffset": 0
+      }
+    }
+  ],
+  "tokens": [
+    {
+      "text": {
+        "content": "Among",
+        "beginOffset": 0
+      },
+      "partOfSpeech": {
+        "tag": "ADP"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 9,
+        "label": "PREP"
+      },
+      "lemma": "Among"
+    },
+    {
+      "text": {
+        "content": "the",
+        "beginOffset": 6
+      },
+      "partOfSpeech": {
+        "tag": "DET"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 5,
+        "label": "DET"
+      },
+      "lemma": "the"
+    },
+    {
+      "text": {
+        "content": "most",
+        "beginOffset": 10
+      },
+      "partOfSpeech": {
+        "tag": "ADV"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 3,
+        "label": "ADVMOD"
+      },
+      "lemma": "most"
+    },
+    {
+      "text": {
+        "content": "significant",
+        "beginOffset": 15
+      },
+      "partOfSpeech": {
+        "tag": "ADJ"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 5,
+        "label": "AMOD"
+      },
+      "lemma": "significant"
+    },
+    {
+      "text": {
+        "content": "foreign",
+        "beginOffset": 27
+      },
+      "partOfSpeech": {
+        "tag": "ADJ"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 5,
+        "label": "AMOD"
+      },
+      "lemma": "foreign"
+    },
+    {
+      "text": {
+        "content": "contributors",
+        "beginOffset": 35
+      },
+      "partOfSpeech": {
+        "tag": "NOUN"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 0,
+        "label": "POBJ"
+      },
+      "lemma": "contributor"
+    },
+    {
+      "text": {
+        "content": "to",
+        "beginOffset": 48
+      },
+      "partOfSpeech": {
+        "tag": "ADP"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 5,
+        "label": "PREP"
+      },
+      "lemma": "to"
+    },
+    {
+      "text": {
+        "content": "Turkish",
+        "beginOffset": 51
+      },
+      "partOfSpeech": {
+        "tag": "ADJ"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 8,
+        "label": "AMOD"
+      },
+      "lemma": "Turkish"
+    },
+    {
+      "text": {
+        "content": "vocabulary",
+        "beginOffset": 59
+      },
+      "partOfSpeech": {
+        "tag": "NOUN"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 6,
+        "label": "POBJ"
+      },
+      "lemma": "vocabulary"
+    },
+    {
+      "text": {
+        "content": "are",
+        "beginOffset": 70
+      },
+      "partOfSpeech": {
+        "tag": "VERB"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 9,
+        "label": "ROOT"
+      },
+      "lemma": "be"
+    },
+    {
+      "text": {
+        "content": "Arabic",
+        "beginOffset": 74
+      },
+      "partOfSpeech": {
+        "tag": "ADJ"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 9,
+        "label": "ACOMP"
+      },
+      "lemma": "Arabic"
+    },
+    {
+      "text": {
+        "content": ",",
+        "beginOffset": 80
+      },
+      "partOfSpeech": {
+        "tag": "PUNCT"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 10,
+        "label": "P"
+      },
+      "lemma": ","
+    },
+    {
+      "text": {
+        "content": "French",
+        "beginOffset": 82
+      },
+      "partOfSpeech": {
+        "tag": "ADJ"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 10,
+        "label": "CONJ"
+      },
+      "lemma": "French"
+    },
+    {
+      "text": {
+        "content": ",",
+        "beginOffset": 88
+      },
+      "partOfSpeech": {
+        "tag": "PUNCT"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 10,
+        "label": "P"
+      },
+      "lemma": ","
+    },
+    {
+      "text": {
+        "content": "Persian",
+        "beginOffset": 90
+      },
+      "partOfSpeech": {
+        "tag": "NOUN"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 10,
+        "label": "CONJ"
+      },
+      "lemma": "Persian"
+    },
+    {
+      "text": {
+        "content": ",",
+        "beginOffset": 97
+      },
+      "partOfSpeech": {
+        "tag": "PUNCT"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 10,
+        "label": "P"
+      },
+      "lemma": ","
+    },
+    {
+      "text": {
+        "content": "Italian",
+        "beginOffset": 99
+      },
+      "partOfSpeech": {
+        "tag": "ADJ"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 10,
+        "label": "CONJ"
+      },
+      "lemma": "Italian"
+    },
+    {
+      "text": {
+        "content": ",",
+        "beginOffset": 106
+      },
+      "partOfSpeech": {
+        "tag": "PUNCT"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 10,
+        "label": "P"
+      },
+      "lemma": ","
+    },
+    {
+      "text": {
+        "content": "English",
+        "beginOffset": 108
+      },
+      "partOfSpeech": {
+        "tag": "NOUN"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 10,
+        "label": "CONJ"
+      },
+      "lemma": "English"
+    },
+    {
+      "text": {
+        "content": ",",
+        "beginOffset": 115
+      },
+      "partOfSpeech": {
+        "tag": "PUNCT"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 10,
+        "label": "P"
+      },
+      "lemma": ","
+    },
+    {
+      "text": {
+        "content": "and",
+        "beginOffset": 117
+      },
+      "partOfSpeech": {
+        "tag": "CONJ"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 10,
+        "label": "CC"
+      },
+      "lemma": "and"
+    },
+    {
+      "text": {
+        "content": "Greek",
+        "beginOffset": 121
+      },
+      "partOfSpeech": {
+        "tag": "NOUN"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 10,
+        "label": "CONJ"
+      },
+      "lemma": "Greek"
+    },
+    {
+      "text": {
+        "content": ".",
+        "beginOffset": 126
+      },
+      "partOfSpeech": {
+        "tag": "PUNCT"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 9,
+        "label": "P"
+      },
+      "lemma": "."
+    }
+  ],
+  "entities": [],
+  "language": "en"
+}

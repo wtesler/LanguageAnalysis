@@ -1,0 +1,364 @@
+{
+  "sentences": [
+    {
+      "text": {
+        "content": "Yes, the koala did not specialise in a diet of eucalyptus until the climate cooled and eucalypt forests grew in the place of rainforests",
+        "beginOffset": 0
+      }
+    }
+  ],
+  "tokens": [
+    {
+      "text": {
+        "content": "Yes",
+        "beginOffset": 0
+      },
+      "partOfSpeech": {
+        "tag": "X"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 6,
+        "label": "DISCOURSE"
+      },
+      "lemma": "Yes"
+    },
+    {
+      "text": {
+        "content": ",",
+        "beginOffset": 3
+      },
+      "partOfSpeech": {
+        "tag": "PUNCT"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 6,
+        "label": "P"
+      },
+      "lemma": ","
+    },
+    {
+      "text": {
+        "content": "the",
+        "beginOffset": 5
+      },
+      "partOfSpeech": {
+        "tag": "DET"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 3,
+        "label": "DET"
+      },
+      "lemma": "the"
+    },
+    {
+      "text": {
+        "content": "koala",
+        "beginOffset": 9
+      },
+      "partOfSpeech": {
+        "tag": "NOUN"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 6,
+        "label": "NSUBJ"
+      },
+      "lemma": "koala"
+    },
+    {
+      "text": {
+        "content": "did",
+        "beginOffset": 15
+      },
+      "partOfSpeech": {
+        "tag": "VERB"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 6,
+        "label": "AUX"
+      },
+      "lemma": "do"
+    },
+    {
+      "text": {
+        "content": "not",
+        "beginOffset": 19
+      },
+      "partOfSpeech": {
+        "tag": "ADV"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 6,
+        "label": "NEG"
+      },
+      "lemma": "not"
+    },
+    {
+      "text": {
+        "content": "specialise",
+        "beginOffset": 23
+      },
+      "partOfSpeech": {
+        "tag": "VERB"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 6,
+        "label": "ROOT"
+      },
+      "lemma": "specialise"
+    },
+    {
+      "text": {
+        "content": "in",
+        "beginOffset": 34
+      },
+      "partOfSpeech": {
+        "tag": "ADP"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 6,
+        "label": "PREP"
+      },
+      "lemma": "in"
+    },
+    {
+      "text": {
+        "content": "a",
+        "beginOffset": 37
+      },
+      "partOfSpeech": {
+        "tag": "DET"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 9,
+        "label": "DET"
+      },
+      "lemma": "a"
+    },
+    {
+      "text": {
+        "content": "diet",
+        "beginOffset": 39
+      },
+      "partOfSpeech": {
+        "tag": "NOUN"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 7,
+        "label": "POBJ"
+      },
+      "lemma": "diet"
+    },
+    {
+      "text": {
+        "content": "of",
+        "beginOffset": 44
+      },
+      "partOfSpeech": {
+        "tag": "ADP"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 9,
+        "label": "PREP"
+      },
+      "lemma": "of"
+    },
+    {
+      "text": {
+        "content": "eucalyptus",
+        "beginOffset": 47
+      },
+      "partOfSpeech": {
+        "tag": "NOUN"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 10,
+        "label": "POBJ"
+      },
+      "lemma": "eucalyptus"
+    },
+    {
+      "text": {
+        "content": "until",
+        "beginOffset": 58
+      },
+      "partOfSpeech": {
+        "tag": "ADP"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 15,
+        "label": "MARK"
+      },
+      "lemma": "until"
+    },
+    {
+      "text": {
+        "content": "the",
+        "beginOffset": 64
+      },
+      "partOfSpeech": {
+        "tag": "DET"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 14,
+        "label": "DET"
+      },
+      "lemma": "the"
+    },
+    {
+      "text": {
+        "content": "climate",
+        "beginOffset": 68
+      },
+      "partOfSpeech": {
+        "tag": "NOUN"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 15,
+        "label": "NSUBJ"
+      },
+      "lemma": "climate"
+    },
+    {
+      "text": {
+        "content": "cooled",
+        "beginOffset": 76
+      },
+      "partOfSpeech": {
+        "tag": "VERB"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 6,
+        "label": "ADVCL"
+      },
+      "lemma": "cool"
+    },
+    {
+      "text": {
+        "content": "and",
+        "beginOffset": 83
+      },
+      "partOfSpeech": {
+        "tag": "CONJ"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 15,
+        "label": "CC"
+      },
+      "lemma": "and"
+    },
+    {
+      "text": {
+        "content": "eucalypt",
+        "beginOffset": 87
+      },
+      "partOfSpeech": {
+        "tag": "NOUN"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 18,
+        "label": "NN"
+      },
+      "lemma": "eucalypt"
+    },
+    {
+      "text": {
+        "content": "forests",
+        "beginOffset": 96
+      },
+      "partOfSpeech": {
+        "tag": "NOUN"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 19,
+        "label": "NSUBJ"
+      },
+      "lemma": "forest"
+    },
+    {
+      "text": {
+        "content": "grew",
+        "beginOffset": 104
+      },
+      "partOfSpeech": {
+        "tag": "VERB"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 15,
+        "label": "CONJ"
+      },
+      "lemma": "grow"
+    },
+    {
+      "text": {
+        "content": "in",
+        "beginOffset": 109
+      },
+      "partOfSpeech": {
+        "tag": "ADP"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 19,
+        "label": "PREP"
+      },
+      "lemma": "in"
+    },
+    {
+      "text": {
+        "content": "the",
+        "beginOffset": 112
+      },
+      "partOfSpeech": {
+        "tag": "DET"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 22,
+        "label": "DET"
+      },
+      "lemma": "the"
+    },
+    {
+      "text": {
+        "content": "place",
+        "beginOffset": 116
+      },
+      "partOfSpeech": {
+        "tag": "NOUN"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 20,
+        "label": "POBJ"
+      },
+      "lemma": "place"
+    },
+    {
+      "text": {
+        "content": "of",
+        "beginOffset": 122
+      },
+      "partOfSpeech": {
+        "tag": "ADP"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 22,
+        "label": "PREP"
+      },
+      "lemma": "of"
+    },
+    {
+      "text": {
+        "content": "rainforests",
+        "beginOffset": 125
+      },
+      "partOfSpeech": {
+        "tag": "NOUN"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 23,
+        "label": "POBJ"
+      },
+      "lemma": "rainforest"
+    }
+  ],
+  "entities": [],
+  "language": "en"
+}

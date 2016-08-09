@@ -1,0 +1,70 @@
+{
+  "sentences": [
+    {
+      "text": {
+        "content": "Yes (capitalization)",
+        "beginOffset": 0
+      }
+    }
+  ],
+  "tokens": [
+    {
+      "text": {
+        "content": "Yes",
+        "beginOffset": 0
+      },
+      "partOfSpeech": {
+        "tag": "X"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 2,
+        "label": "DISCOURSE"
+      },
+      "lemma": "Yes"
+    },
+    {
+      "text": {
+        "content": "(",
+        "beginOffset": 4
+      },
+      "partOfSpeech": {
+        "tag": "PUNCT"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 2,
+        "label": "P"
+      },
+      "lemma": "("
+    },
+    {
+      "text": {
+        "content": "capitalization",
+        "beginOffset": 5
+      },
+      "partOfSpeech": {
+        "tag": "NOUN"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 2,
+        "label": "ROOT"
+      },
+      "lemma": "capitalization"
+    },
+    {
+      "text": {
+        "content": ")",
+        "beginOffset": 19
+      },
+      "partOfSpeech": {
+        "tag": "PUNCT"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 2,
+        "label": "P"
+      },
+      "lemma": ")"
+    }
+  ],
+  "entities": [],
+  "language": "en"
+}

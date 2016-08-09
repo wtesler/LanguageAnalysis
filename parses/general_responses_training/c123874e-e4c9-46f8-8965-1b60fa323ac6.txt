@@ -1,0 +1,56 @@
+{
+  "sentences": [
+    {
+      "text": {
+        "content": "5 or 6",
+        "beginOffset": 0
+      }
+    }
+  ],
+  "tokens": [
+    {
+      "text": {
+        "content": "5",
+        "beginOffset": 0
+      },
+      "partOfSpeech": {
+        "tag": "NUM"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 0,
+        "label": "ROOT"
+      },
+      "lemma": "5"
+    },
+    {
+      "text": {
+        "content": "or",
+        "beginOffset": 2
+      },
+      "partOfSpeech": {
+        "tag": "CONJ"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 0,
+        "label": "CC"
+      },
+      "lemma": "or"
+    },
+    {
+      "text": {
+        "content": "6",
+        "beginOffset": 5
+      },
+      "partOfSpeech": {
+        "tag": "NUM"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 0,
+        "label": "CONJ"
+      },
+      "lemma": "6"
+    }
+  ],
+  "entities": [],
+  "language": "en"
+}

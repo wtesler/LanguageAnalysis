@@ -1,0 +1,140 @@
+{
+  "sentences": [
+    {
+      "text": {
+        "content": "Studio pianos are around 42 to 45 inches tall",
+        "beginOffset": 0
+      }
+    }
+  ],
+  "tokens": [
+    {
+      "text": {
+        "content": "Studio",
+        "beginOffset": 0
+      },
+      "partOfSpeech": {
+        "tag": "NOUN"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 1,
+        "label": "NN"
+      },
+      "lemma": "Studio"
+    },
+    {
+      "text": {
+        "content": "pianos",
+        "beginOffset": 7
+      },
+      "partOfSpeech": {
+        "tag": "NOUN"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 2,
+        "label": "NSUBJ"
+      },
+      "lemma": "piano"
+    },
+    {
+      "text": {
+        "content": "are",
+        "beginOffset": 14
+      },
+      "partOfSpeech": {
+        "tag": "VERB"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 2,
+        "label": "ROOT"
+      },
+      "lemma": "be"
+    },
+    {
+      "text": {
+        "content": "around",
+        "beginOffset": 18
+      },
+      "partOfSpeech": {
+        "tag": "ADV"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 6,
+        "label": "QUANTMOD"
+      },
+      "lemma": "around"
+    },
+    {
+      "text": {
+        "content": "42",
+        "beginOffset": 25
+      },
+      "partOfSpeech": {
+        "tag": "NUM"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 6,
+        "label": "NUMBER"
+      },
+      "lemma": "42"
+    },
+    {
+      "text": {
+        "content": "to",
+        "beginOffset": 28
+      },
+      "partOfSpeech": {
+        "tag": "ADP"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 6,
+        "label": "QUANTMOD"
+      },
+      "lemma": "to"
+    },
+    {
+      "text": {
+        "content": "45",
+        "beginOffset": 31
+      },
+      "partOfSpeech": {
+        "tag": "NUM"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 7,
+        "label": "NUM"
+      },
+      "lemma": "45"
+    },
+    {
+      "text": {
+        "content": "inches",
+        "beginOffset": 34
+      },
+      "partOfSpeech": {
+        "tag": "NOUN"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 8,
+        "label": "NPADVMOD"
+      },
+      "lemma": "inch"
+    },
+    {
+      "text": {
+        "content": "tall",
+        "beginOffset": 41
+      },
+      "partOfSpeech": {
+        "tag": "ADJ"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 2,
+        "label": "ACOMP"
+      },
+      "lemma": "tall"
+    }
+  ],
+  "entities": [],
+  "language": "en"
+}

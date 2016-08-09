@@ -1,0 +1,28 @@
+{
+  "sentences": [
+    {
+      "text": {
+        "content": "maltese",
+        "beginOffset": 0
+      }
+    }
+  ],
+  "tokens": [
+    {
+      "text": {
+        "content": "maltese",
+        "beginOffset": 0
+      },
+      "partOfSpeech": {
+        "tag": "NOUN"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 0,
+        "label": "ROOT"
+      },
+      "lemma": "maltese"
+    }
+  ],
+  "entities": [],
+  "language": "en"
+}

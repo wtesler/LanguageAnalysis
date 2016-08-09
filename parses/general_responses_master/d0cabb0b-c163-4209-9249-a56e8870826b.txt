@@ -1,0 +1,42 @@
+{
+  "sentences": [
+    {
+      "text": {
+        "content": "Michael Faraday",
+        "beginOffset": 0
+      }
+    }
+  ],
+  "tokens": [
+    {
+      "text": {
+        "content": "Michael",
+        "beginOffset": 0
+      },
+      "partOfSpeech": {
+        "tag": "NOUN"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 1,
+        "label": "NN"
+      },
+      "lemma": "Michael"
+    },
+    {
+      "text": {
+        "content": "Faraday",
+        "beginOffset": 8
+      },
+      "partOfSpeech": {
+        "tag": "NOUN"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 1,
+        "label": "ROOT"
+      },
+      "lemma": "Faraday"
+    }
+  ],
+  "entities": [],
+  "language": "en"
+}

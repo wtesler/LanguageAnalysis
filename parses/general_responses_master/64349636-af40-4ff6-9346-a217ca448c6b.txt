@@ -1,0 +1,42 @@
+{
+  "sentences": [
+    {
+      "text": {
+        "content": "In Montpellier",
+        "beginOffset": 0
+      }
+    }
+  ],
+  "tokens": [
+    {
+      "text": {
+        "content": "In",
+        "beginOffset": 0
+      },
+      "partOfSpeech": {
+        "tag": "ADP"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 0,
+        "label": "ROOT"
+      },
+      "lemma": "In"
+    },
+    {
+      "text": {
+        "content": "Montpellier",
+        "beginOffset": 3
+      },
+      "partOfSpeech": {
+        "tag": "NOUN"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 0,
+        "label": "POBJ"
+      },
+      "lemma": "Montpellier"
+    }
+  ],
+  "entities": [],
+  "language": "en"
+}

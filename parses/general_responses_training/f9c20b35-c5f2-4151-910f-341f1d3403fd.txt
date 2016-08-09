@@ -1,0 +1,28 @@
+{
+  "sentences": [
+    {
+      "text": {
+        "content": "Christian",
+        "beginOffset": 0
+      }
+    }
+  ],
+  "tokens": [
+    {
+      "text": {
+        "content": "Christian",
+        "beginOffset": 0
+      },
+      "partOfSpeech": {
+        "tag": "NOUN"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 0,
+        "label": "ROOT"
+      },
+      "lemma": "Christian"
+    }
+  ],
+  "entities": [],
+  "language": "en"
+}

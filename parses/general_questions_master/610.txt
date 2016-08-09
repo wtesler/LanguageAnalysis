@@ -1,0 +1,224 @@
+{
+  "sentences": [
+    {
+      "text": {
+        "content": "Give an example of the most comprehensive records extant of any major artists beginnings.",
+        "beginOffset": 0
+      }
+    }
+  ],
+  "tokens": [
+    {
+      "text": {
+        "content": "Give",
+        "beginOffset": 0
+      },
+      "partOfSpeech": {
+        "tag": "VERB"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 0,
+        "label": "ROOT"
+      },
+      "lemma": "Give"
+    },
+    {
+      "text": {
+        "content": "an",
+        "beginOffset": 5
+      },
+      "partOfSpeech": {
+        "tag": "DET"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 2,
+        "label": "DET"
+      },
+      "lemma": "an"
+    },
+    {
+      "text": {
+        "content": "example",
+        "beginOffset": 8
+      },
+      "partOfSpeech": {
+        "tag": "NOUN"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 0,
+        "label": "DOBJ"
+      },
+      "lemma": "example"
+    },
+    {
+      "text": {
+        "content": "of",
+        "beginOffset": 16
+      },
+      "partOfSpeech": {
+        "tag": "ADP"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 2,
+        "label": "PREP"
+      },
+      "lemma": "of"
+    },
+    {
+      "text": {
+        "content": "the",
+        "beginOffset": 19
+      },
+      "partOfSpeech": {
+        "tag": "DET"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 7,
+        "label": "DET"
+      },
+      "lemma": "the"
+    },
+    {
+      "text": {
+        "content": "most",
+        "beginOffset": 23
+      },
+      "partOfSpeech": {
+        "tag": "ADV"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 6,
+        "label": "ADVMOD"
+      },
+      "lemma": "most"
+    },
+    {
+      "text": {
+        "content": "comprehensive",
+        "beginOffset": 28
+      },
+      "partOfSpeech": {
+        "tag": "ADJ"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 7,
+        "label": "AMOD"
+      },
+      "lemma": "comprehensive"
+    },
+    {
+      "text": {
+        "content": "records",
+        "beginOffset": 42
+      },
+      "partOfSpeech": {
+        "tag": "NOUN"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 3,
+        "label": "POBJ"
+      },
+      "lemma": "record"
+    },
+    {
+      "text": {
+        "content": "extant",
+        "beginOffset": 50
+      },
+      "partOfSpeech": {
+        "tag": "ADJ"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 7,
+        "label": "AMOD"
+      },
+      "lemma": "extant"
+    },
+    {
+      "text": {
+        "content": "of",
+        "beginOffset": 57
+      },
+      "partOfSpeech": {
+        "tag": "ADP"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 8,
+        "label": "PREP"
+      },
+      "lemma": "of"
+    },
+    {
+      "text": {
+        "content": "any",
+        "beginOffset": 60
+      },
+      "partOfSpeech": {
+        "tag": "DET"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 13,
+        "label": "DET"
+      },
+      "lemma": "any"
+    },
+    {
+      "text": {
+        "content": "major",
+        "beginOffset": 64
+      },
+      "partOfSpeech": {
+        "tag": "ADJ"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 13,
+        "label": "AMOD"
+      },
+      "lemma": "major"
+    },
+    {
+      "text": {
+        "content": "artists",
+        "beginOffset": 70
+      },
+      "partOfSpeech": {
+        "tag": "NOUN"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 13,
+        "label": "NN"
+      },
+      "lemma": "artist"
+    },
+    {
+      "text": {
+        "content": "beginnings",
+        "beginOffset": 78
+      },
+      "partOfSpeech": {
+        "tag": "NOUN"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 9,
+        "label": "POBJ"
+      },
+      "lemma": "beginning"
+    },
+    {
+      "text": {
+        "content": ".",
+        "beginOffset": 88
+      },
+      "partOfSpeech": {
+        "tag": "PUNCT"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 0,
+        "label": "P"
+      },
+      "lemma": "."
+    }
+  ],
+  "entities": [],
+  "language": "en"
+}

@@ -1,0 +1,630 @@
+{
+  "sentences": [
+    {
+      "text": {
+        "content": "In 1887, a year when Queen Victoria celebrated her Golden Jubilee, and upon the request of the queen's associate, Phillip Richbourg, he donated several paintings to the \"French Impressionist Paintings\" catalog as a token of his loyalty",
+        "beginOffset": 0
+      }
+    }
+  ],
+  "tokens": [
+    {
+      "text": {
+        "content": "In",
+        "beginOffset": 0
+      },
+      "partOfSpeech": {
+        "tag": "ADP"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 27,
+        "label": "PREP"
+      },
+      "lemma": "In"
+    },
+    {
+      "text": {
+        "content": "1887",
+        "beginOffset": 3
+      },
+      "partOfSpeech": {
+        "tag": "NUM"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 0,
+        "label": "POBJ"
+      },
+      "lemma": "1887"
+    },
+    {
+      "text": {
+        "content": ",",
+        "beginOffset": 7
+      },
+      "partOfSpeech": {
+        "tag": "PUNCT"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 27,
+        "label": "P"
+      },
+      "lemma": ","
+    },
+    {
+      "text": {
+        "content": "a",
+        "beginOffset": 9
+      },
+      "partOfSpeech": {
+        "tag": "DET"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 4,
+        "label": "DET"
+      },
+      "lemma": "a"
+    },
+    {
+      "text": {
+        "content": "year",
+        "beginOffset": 11
+      },
+      "partOfSpeech": {
+        "tag": "NOUN"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 27,
+        "label": "TMOD"
+      },
+      "lemma": "year"
+    },
+    {
+      "text": {
+        "content": "when",
+        "beginOffset": 16
+      },
+      "partOfSpeech": {
+        "tag": "ADV"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 8,
+        "label": "ADVMOD"
+      },
+      "lemma": "when"
+    },
+    {
+      "text": {
+        "content": "Queen",
+        "beginOffset": 21
+      },
+      "partOfSpeech": {
+        "tag": "NOUN"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 7,
+        "label": "NN"
+      },
+      "lemma": "Queen"
+    },
+    {
+      "text": {
+        "content": "Victoria",
+        "beginOffset": 27
+      },
+      "partOfSpeech": {
+        "tag": "NOUN"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 8,
+        "label": "NSUBJ"
+      },
+      "lemma": "Victoria"
+    },
+    {
+      "text": {
+        "content": "celebrated",
+        "beginOffset": 36
+      },
+      "partOfSpeech": {
+        "tag": "VERB"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 4,
+        "label": "RCMOD"
+      },
+      "lemma": "celebrate"
+    },
+    {
+      "text": {
+        "content": "her",
+        "beginOffset": 47
+      },
+      "partOfSpeech": {
+        "tag": "PRON"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 11,
+        "label": "POSS"
+      },
+      "lemma": "her"
+    },
+    {
+      "text": {
+        "content": "Golden",
+        "beginOffset": 51
+      },
+      "partOfSpeech": {
+        "tag": "NOUN"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 11,
+        "label": "NN"
+      },
+      "lemma": "Golden"
+    },
+    {
+      "text": {
+        "content": "Jubilee",
+        "beginOffset": 58
+      },
+      "partOfSpeech": {
+        "tag": "NOUN"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 8,
+        "label": "DOBJ"
+      },
+      "lemma": "Jubilee"
+    },
+    {
+      "text": {
+        "content": ",",
+        "beginOffset": 65
+      },
+      "partOfSpeech": {
+        "tag": "PUNCT"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 8,
+        "label": "P"
+      },
+      "lemma": ","
+    },
+    {
+      "text": {
+        "content": "and",
+        "beginOffset": 67
+      },
+      "partOfSpeech": {
+        "tag": "CONJ"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 8,
+        "label": "CC"
+      },
+      "lemma": "and"
+    },
+    {
+      "text": {
+        "content": "upon",
+        "beginOffset": 71
+      },
+      "partOfSpeech": {
+        "tag": "ADP"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 8,
+        "label": "CONJ"
+      },
+      "lemma": "upon"
+    },
+    {
+      "text": {
+        "content": "the",
+        "beginOffset": 76
+      },
+      "partOfSpeech": {
+        "tag": "DET"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 16,
+        "label": "DET"
+      },
+      "lemma": "the"
+    },
+    {
+      "text": {
+        "content": "request",
+        "beginOffset": 80
+      },
+      "partOfSpeech": {
+        "tag": "NOUN"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 14,
+        "label": "POBJ"
+      },
+      "lemma": "request"
+    },
+    {
+      "text": {
+        "content": "of",
+        "beginOffset": 88
+      },
+      "partOfSpeech": {
+        "tag": "ADP"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 16,
+        "label": "PREP"
+      },
+      "lemma": "of"
+    },
+    {
+      "text": {
+        "content": "the",
+        "beginOffset": 91
+      },
+      "partOfSpeech": {
+        "tag": "DET"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 19,
+        "label": "DET"
+      },
+      "lemma": "the"
+    },
+    {
+      "text": {
+        "content": "queen",
+        "beginOffset": 95
+      },
+      "partOfSpeech": {
+        "tag": "NOUN"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 21,
+        "label": "POSS"
+      },
+      "lemma": "queen"
+    },
+    {
+      "text": {
+        "content": "'s",
+        "beginOffset": 100
+      },
+      "partOfSpeech": {
+        "tag": "PRT"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 19,
+        "label": "PS"
+      },
+      "lemma": "'s"
+    },
+    {
+      "text": {
+        "content": "associate",
+        "beginOffset": 103
+      },
+      "partOfSpeech": {
+        "tag": "NOUN"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 17,
+        "label": "POBJ"
+      },
+      "lemma": "associate"
+    },
+    {
+      "text": {
+        "content": ",",
+        "beginOffset": 112
+      },
+      "partOfSpeech": {
+        "tag": "PUNCT"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 21,
+        "label": "P"
+      },
+      "lemma": ","
+    },
+    {
+      "text": {
+        "content": "Phillip",
+        "beginOffset": 114
+      },
+      "partOfSpeech": {
+        "tag": "NOUN"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 24,
+        "label": "NN"
+      },
+      "lemma": "Phillip"
+    },
+    {
+      "text": {
+        "content": "Richbourg",
+        "beginOffset": 122
+      },
+      "partOfSpeech": {
+        "tag": "NOUN"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 21,
+        "label": "APPOS"
+      },
+      "lemma": "Richbourg"
+    },
+    {
+      "text": {
+        "content": ",",
+        "beginOffset": 131
+      },
+      "partOfSpeech": {
+        "tag": "PUNCT"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 27,
+        "label": "P"
+      },
+      "lemma": ","
+    },
+    {
+      "text": {
+        "content": "he",
+        "beginOffset": 133
+      },
+      "partOfSpeech": {
+        "tag": "PRON"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 27,
+        "label": "NSUBJ"
+      },
+      "lemma": "he"
+    },
+    {
+      "text": {
+        "content": "donated",
+        "beginOffset": 136
+      },
+      "partOfSpeech": {
+        "tag": "VERB"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 27,
+        "label": "ROOT"
+      },
+      "lemma": "donate"
+    },
+    {
+      "text": {
+        "content": "several",
+        "beginOffset": 144
+      },
+      "partOfSpeech": {
+        "tag": "ADJ"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 29,
+        "label": "AMOD"
+      },
+      "lemma": "several"
+    },
+    {
+      "text": {
+        "content": "paintings",
+        "beginOffset": 152
+      },
+      "partOfSpeech": {
+        "tag": "NOUN"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 27,
+        "label": "DOBJ"
+      },
+      "lemma": "painting"
+    },
+    {
+      "text": {
+        "content": "to",
+        "beginOffset": 162
+      },
+      "partOfSpeech": {
+        "tag": "ADP"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 27,
+        "label": "PREP"
+      },
+      "lemma": "to"
+    },
+    {
+      "text": {
+        "content": "the",
+        "beginOffset": 165
+      },
+      "partOfSpeech": {
+        "tag": "DET"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 37,
+        "label": "DET"
+      },
+      "lemma": "the"
+    },
+    {
+      "text": {
+        "content": "\"",
+        "beginOffset": 169
+      },
+      "partOfSpeech": {
+        "tag": "PUNCT"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 37,
+        "label": "P"
+      },
+      "lemma": "\""
+    },
+    {
+      "text": {
+        "content": "French",
+        "beginOffset": 170
+      },
+      "partOfSpeech": {
+        "tag": "ADJ"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 35,
+        "label": "AMOD"
+      },
+      "lemma": "French"
+    },
+    {
+      "text": {
+        "content": "Impressionist",
+        "beginOffset": 177
+      },
+      "partOfSpeech": {
+        "tag": "ADJ"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 35,
+        "label": "AMOD"
+      },
+      "lemma": "Impressionist"
+    },
+    {
+      "text": {
+        "content": "Paintings",
+        "beginOffset": 191
+      },
+      "partOfSpeech": {
+        "tag": "NOUN"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 37,
+        "label": "NN"
+      },
+      "lemma": "painting"
+    },
+    {
+      "text": {
+        "content": "\"",
+        "beginOffset": 200
+      },
+      "partOfSpeech": {
+        "tag": "PUNCT"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 37,
+        "label": "P"
+      },
+      "lemma": "\""
+    },
+    {
+      "text": {
+        "content": "catalog",
+        "beginOffset": 202
+      },
+      "partOfSpeech": {
+        "tag": "NOUN"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 30,
+        "label": "POBJ"
+      },
+      "lemma": "catalog"
+    },
+    {
+      "text": {
+        "content": "as",
+        "beginOffset": 210
+      },
+      "partOfSpeech": {
+        "tag": "ADP"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 27,
+        "label": "PREP"
+      },
+      "lemma": "as"
+    },
+    {
+      "text": {
+        "content": "a",
+        "beginOffset": 213
+      },
+      "partOfSpeech": {
+        "tag": "DET"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 40,
+        "label": "DET"
+      },
+      "lemma": "a"
+    },
+    {
+      "text": {
+        "content": "token",
+        "beginOffset": 215
+      },
+      "partOfSpeech": {
+        "tag": "NOUN"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 38,
+        "label": "POBJ"
+      },
+      "lemma": "token"
+    },
+    {
+      "text": {
+        "content": "of",
+        "beginOffset": 221
+      },
+      "partOfSpeech": {
+        "tag": "ADP"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 40,
+        "label": "PREP"
+      },
+      "lemma": "of"
+    },
+    {
+      "text": {
+        "content": "his",
+        "beginOffset": 224
+      },
+      "partOfSpeech": {
+        "tag": "PRON"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 43,
+        "label": "POSS"
+      },
+      "lemma": "his"
+    },
+    {
+      "text": {
+        "content": "loyalty",
+        "beginOffset": 228
+      },
+      "partOfSpeech": {
+        "tag": "NOUN"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 41,
+        "label": "POBJ"
+      },
+      "lemma": "loyalty"
+    }
+  ],
+  "entities": [],
+  "language": "en"
+}

@@ -1,0 +1,28 @@
+{
+  "sentences": [
+    {
+      "text": {
+        "content": "two",
+        "beginOffset": 0
+      }
+    }
+  ],
+  "tokens": [
+    {
+      "text": {
+        "content": "two",
+        "beginOffset": 0
+      },
+      "partOfSpeech": {
+        "tag": "NUM"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 0,
+        "label": "ROOT"
+      },
+      "lemma": "two"
+    }
+  ],
+  "entities": [],
+  "language": "en"
+}

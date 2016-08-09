@@ -1,0 +1,154 @@
+{
+  "sentences": [
+    {
+      "text": {
+        "content": "Metal, polymers, or animal or plant product materials",
+        "beginOffset": 0
+      }
+    }
+  ],
+  "tokens": [
+    {
+      "text": {
+        "content": "Metal",
+        "beginOffset": 0
+      },
+      "partOfSpeech": {
+        "tag": "NOUN"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 9,
+        "label": "NN"
+      },
+      "lemma": "Metal"
+    },
+    {
+      "text": {
+        "content": ",",
+        "beginOffset": 5
+      },
+      "partOfSpeech": {
+        "tag": "PUNCT"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 0,
+        "label": "P"
+      },
+      "lemma": ","
+    },
+    {
+      "text": {
+        "content": "polymers",
+        "beginOffset": 7
+      },
+      "partOfSpeech": {
+        "tag": "NOUN"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 0,
+        "label": "CONJ"
+      },
+      "lemma": "polymer"
+    },
+    {
+      "text": {
+        "content": ",",
+        "beginOffset": 15
+      },
+      "partOfSpeech": {
+        "tag": "PUNCT"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 0,
+        "label": "P"
+      },
+      "lemma": ","
+    },
+    {
+      "text": {
+        "content": "or",
+        "beginOffset": 17
+      },
+      "partOfSpeech": {
+        "tag": "CONJ"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 0,
+        "label": "CC"
+      },
+      "lemma": "or"
+    },
+    {
+      "text": {
+        "content": "animal",
+        "beginOffset": 20
+      },
+      "partOfSpeech": {
+        "tag": "NOUN"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 8,
+        "label": "NN"
+      },
+      "lemma": "animal"
+    },
+    {
+      "text": {
+        "content": "or",
+        "beginOffset": 27
+      },
+      "partOfSpeech": {
+        "tag": "CONJ"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 5,
+        "label": "CC"
+      },
+      "lemma": "or"
+    },
+    {
+      "text": {
+        "content": "plant",
+        "beginOffset": 30
+      },
+      "partOfSpeech": {
+        "tag": "NOUN"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 5,
+        "label": "CONJ"
+      },
+      "lemma": "plant"
+    },
+    {
+      "text": {
+        "content": "product",
+        "beginOffset": 36
+      },
+      "partOfSpeech": {
+        "tag": "NOUN"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 0,
+        "label": "CONJ"
+      },
+      "lemma": "product"
+    },
+    {
+      "text": {
+        "content": "materials",
+        "beginOffset": 44
+      },
+      "partOfSpeech": {
+        "tag": "NOUN"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 9,
+        "label": "ROOT"
+      },
+      "lemma": "material"
+    }
+  ],
+  "entities": [],
+  "language": "en"
+}

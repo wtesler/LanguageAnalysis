@@ -1,0 +1,532 @@
+{
+  "sentences": [
+    {
+      "text": {
+        "content": "According to art historian Helen Gardner, were the scope and depth of his interests without precedent and ``his mind and personality seem to us superhuman, the man himself mysterious and remote''",
+        "beginOffset": 0
+      }
+    }
+  ],
+  "tokens": [
+    {
+      "text": {
+        "content": "According",
+        "beginOffset": 0
+      },
+      "partOfSpeech": {
+        "tag": "VERB"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 7,
+        "label": "PREP"
+      },
+      "lemma": "accord"
+    },
+    {
+      "text": {
+        "content": "to",
+        "beginOffset": 10
+      },
+      "partOfSpeech": {
+        "tag": "ADP"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 0,
+        "label": "PCOMP"
+      },
+      "lemma": "to"
+    },
+    {
+      "text": {
+        "content": "art",
+        "beginOffset": 13
+      },
+      "partOfSpeech": {
+        "tag": "NOUN"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 3,
+        "label": "NN"
+      },
+      "lemma": "art"
+    },
+    {
+      "text": {
+        "content": "historian",
+        "beginOffset": 17
+      },
+      "partOfSpeech": {
+        "tag": "NOUN"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 5,
+        "label": "NN"
+      },
+      "lemma": "historian"
+    },
+    {
+      "text": {
+        "content": "Helen",
+        "beginOffset": 27
+      },
+      "partOfSpeech": {
+        "tag": "NOUN"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 5,
+        "label": "NN"
+      },
+      "lemma": "Helen"
+    },
+    {
+      "text": {
+        "content": "Gardner",
+        "beginOffset": 33
+      },
+      "partOfSpeech": {
+        "tag": "NOUN"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 1,
+        "label": "POBJ"
+      },
+      "lemma": "Gardner"
+    },
+    {
+      "text": {
+        "content": ",",
+        "beginOffset": 40
+      },
+      "partOfSpeech": {
+        "tag": "PUNCT"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 7,
+        "label": "P"
+      },
+      "lemma": ","
+    },
+    {
+      "text": {
+        "content": "were",
+        "beginOffset": 42
+      },
+      "partOfSpeech": {
+        "tag": "VERB"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 7,
+        "label": "ROOT"
+      },
+      "lemma": "be"
+    },
+    {
+      "text": {
+        "content": "the",
+        "beginOffset": 47
+      },
+      "partOfSpeech": {
+        "tag": "DET"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 9,
+        "label": "DET"
+      },
+      "lemma": "the"
+    },
+    {
+      "text": {
+        "content": "scope",
+        "beginOffset": 51
+      },
+      "partOfSpeech": {
+        "tag": "NOUN"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 7,
+        "label": "ATTR"
+      },
+      "lemma": "scope"
+    },
+    {
+      "text": {
+        "content": "and",
+        "beginOffset": 57
+      },
+      "partOfSpeech": {
+        "tag": "CONJ"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 9,
+        "label": "CC"
+      },
+      "lemma": "and"
+    },
+    {
+      "text": {
+        "content": "depth",
+        "beginOffset": 61
+      },
+      "partOfSpeech": {
+        "tag": "NOUN"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 9,
+        "label": "CONJ"
+      },
+      "lemma": "depth"
+    },
+    {
+      "text": {
+        "content": "of",
+        "beginOffset": 67
+      },
+      "partOfSpeech": {
+        "tag": "ADP"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 9,
+        "label": "PREP"
+      },
+      "lemma": "of"
+    },
+    {
+      "text": {
+        "content": "his",
+        "beginOffset": 70
+      },
+      "partOfSpeech": {
+        "tag": "PRON"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 14,
+        "label": "POSS"
+      },
+      "lemma": "his"
+    },
+    {
+      "text": {
+        "content": "interests",
+        "beginOffset": 74
+      },
+      "partOfSpeech": {
+        "tag": "NOUN"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 12,
+        "label": "POBJ"
+      },
+      "lemma": "interest"
+    },
+    {
+      "text": {
+        "content": "without",
+        "beginOffset": 84
+      },
+      "partOfSpeech": {
+        "tag": "ADP"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 9,
+        "label": "PREP"
+      },
+      "lemma": "without"
+    },
+    {
+      "text": {
+        "content": "precedent",
+        "beginOffset": 92
+      },
+      "partOfSpeech": {
+        "tag": "NOUN"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 15,
+        "label": "POBJ"
+      },
+      "lemma": "precedent"
+    },
+    {
+      "text": {
+        "content": "and",
+        "beginOffset": 102
+      },
+      "partOfSpeech": {
+        "tag": "CONJ"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 9,
+        "label": "CC"
+      },
+      "lemma": "and"
+    },
+    {
+      "text": {
+        "content": "`",
+        "beginOffset": 106
+      },
+      "partOfSpeech": {
+        "tag": "PUNCT"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 9,
+        "label": "P"
+      },
+      "lemma": "`"
+    },
+    {
+      "text": {
+        "content": "`",
+        "beginOffset": 107
+      },
+      "partOfSpeech": {
+        "tag": "PUNCT"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 24,
+        "label": "P"
+      },
+      "lemma": "`"
+    },
+    {
+      "text": {
+        "content": "his",
+        "beginOffset": 108
+      },
+      "partOfSpeech": {
+        "tag": "PRON"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 21,
+        "label": "POSS"
+      },
+      "lemma": "his"
+    },
+    {
+      "text": {
+        "content": "mind",
+        "beginOffset": 112
+      },
+      "partOfSpeech": {
+        "tag": "NOUN"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 24,
+        "label": "NSUBJ"
+      },
+      "lemma": "mind"
+    },
+    {
+      "text": {
+        "content": "and",
+        "beginOffset": 117
+      },
+      "partOfSpeech": {
+        "tag": "CONJ"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 21,
+        "label": "CC"
+      },
+      "lemma": "and"
+    },
+    {
+      "text": {
+        "content": "personality",
+        "beginOffset": 121
+      },
+      "partOfSpeech": {
+        "tag": "NOUN"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 21,
+        "label": "CONJ"
+      },
+      "lemma": "personality"
+    },
+    {
+      "text": {
+        "content": "seem",
+        "beginOffset": 133
+      },
+      "partOfSpeech": {
+        "tag": "VERB"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 9,
+        "label": "DEP"
+      },
+      "lemma": "seem"
+    },
+    {
+      "text": {
+        "content": "to",
+        "beginOffset": 138
+      },
+      "partOfSpeech": {
+        "tag": "ADP"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 24,
+        "label": "PREP"
+      },
+      "lemma": "to"
+    },
+    {
+      "text": {
+        "content": "us",
+        "beginOffset": 141
+      },
+      "partOfSpeech": {
+        "tag": "PRON"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 25,
+        "label": "POBJ"
+      },
+      "lemma": "us"
+    },
+    {
+      "text": {
+        "content": "superhuman",
+        "beginOffset": 144
+      },
+      "partOfSpeech": {
+        "tag": "ADJ"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 24,
+        "label": "ACOMP"
+      },
+      "lemma": "superhuman"
+    },
+    {
+      "text": {
+        "content": ",",
+        "beginOffset": 154
+      },
+      "partOfSpeech": {
+        "tag": "PUNCT"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 9,
+        "label": "P"
+      },
+      "lemma": ","
+    },
+    {
+      "text": {
+        "content": "the",
+        "beginOffset": 156
+      },
+      "partOfSpeech": {
+        "tag": "DET"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 30,
+        "label": "DET"
+      },
+      "lemma": "the"
+    },
+    {
+      "text": {
+        "content": "man",
+        "beginOffset": 160
+      },
+      "partOfSpeech": {
+        "tag": "NOUN"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 9,
+        "label": "APPOS"
+      },
+      "lemma": "man"
+    },
+    {
+      "text": {
+        "content": "himself",
+        "beginOffset": 164
+      },
+      "partOfSpeech": {
+        "tag": "PRON"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 32,
+        "label": "NSUBJ"
+      },
+      "lemma": "himself"
+    },
+    {
+      "text": {
+        "content": "mysterious",
+        "beginOffset": 172
+      },
+      "partOfSpeech": {
+        "tag": "ADJ"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 30,
+        "label": "RCMOD"
+      },
+      "lemma": "mysterious"
+    },
+    {
+      "text": {
+        "content": "and",
+        "beginOffset": 183
+      },
+      "partOfSpeech": {
+        "tag": "CONJ"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 32,
+        "label": "CC"
+      },
+      "lemma": "and"
+    },
+    {
+      "text": {
+        "content": "remote",
+        "beginOffset": 187
+      },
+      "partOfSpeech": {
+        "tag": "ADJ"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 32,
+        "label": "CONJ"
+      },
+      "lemma": "remote"
+    },
+    {
+      "text": {
+        "content": "'",
+        "beginOffset": 193
+      },
+      "partOfSpeech": {
+        "tag": "PUNCT"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 30,
+        "label": "P"
+      },
+      "lemma": "'"
+    },
+    {
+      "text": {
+        "content": "'",
+        "beginOffset": 194
+      },
+      "partOfSpeech": {
+        "tag": "PUNCT"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 7,
+        "label": "P"
+      },
+      "lemma": "'"
+    }
+  ],
+  "entities": [],
+  "language": "en"
+}

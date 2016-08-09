@@ -1,0 +1,266 @@
+{
+  "sentences": [
+    {
+      "text": {
+        "content": "Is one of the best known Impressionist works Renoir\u0001s 1876 Dance at Le Moulin de la Galette",
+        "beginOffset": 0
+      }
+    }
+  ],
+  "tokens": [
+    {
+      "text": {
+        "content": "Is",
+        "beginOffset": 0
+      },
+      "partOfSpeech": {
+        "tag": "VERB"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 0,
+        "label": "ROOT"
+      },
+      "lemma": "be"
+    },
+    {
+      "text": {
+        "content": "one",
+        "beginOffset": 3
+      },
+      "partOfSpeech": {
+        "tag": "NUM"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 0,
+        "label": "NSUBJ"
+      },
+      "lemma": "one"
+    },
+    {
+      "text": {
+        "content": "of",
+        "beginOffset": 7
+      },
+      "partOfSpeech": {
+        "tag": "ADP"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 1,
+        "label": "PREP"
+      },
+      "lemma": "of"
+    },
+    {
+      "text": {
+        "content": "the",
+        "beginOffset": 10
+      },
+      "partOfSpeech": {
+        "tag": "DET"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 7,
+        "label": "DET"
+      },
+      "lemma": "the"
+    },
+    {
+      "text": {
+        "content": "best",
+        "beginOffset": 14
+      },
+      "partOfSpeech": {
+        "tag": "ADV"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 5,
+        "label": "ADVMOD"
+      },
+      "lemma": "well"
+    },
+    {
+      "text": {
+        "content": "known",
+        "beginOffset": 19
+      },
+      "partOfSpeech": {
+        "tag": "VERB"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 7,
+        "label": "AMOD"
+      },
+      "lemma": "know"
+    },
+    {
+      "text": {
+        "content": "Impressionist",
+        "beginOffset": 25
+      },
+      "partOfSpeech": {
+        "tag": "ADJ"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 7,
+        "label": "AMOD"
+      },
+      "lemma": "Impressionist"
+    },
+    {
+      "text": {
+        "content": "works",
+        "beginOffset": 39
+      },
+      "partOfSpeech": {
+        "tag": "NOUN"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 2,
+        "label": "POBJ"
+      },
+      "lemma": "work"
+    },
+    {
+      "text": {
+        "content": "Renoir",
+        "beginOffset": 45
+      },
+      "partOfSpeech": {
+        "tag": "NOUN"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 11,
+        "label": "POSS"
+      },
+      "lemma": "Renoir"
+    },
+    {
+      "text": {
+        "content": "s",
+        "beginOffset": 52
+      },
+      "partOfSpeech": {
+        "tag": "PRT"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 8,
+        "label": "PS"
+      },
+      "lemma": "s"
+    },
+    {
+      "text": {
+        "content": "1876",
+        "beginOffset": 54
+      },
+      "partOfSpeech": {
+        "tag": "NUM"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 11,
+        "label": "NUM"
+      },
+      "lemma": "1876"
+    },
+    {
+      "text": {
+        "content": "Dance",
+        "beginOffset": 59
+      },
+      "partOfSpeech": {
+        "tag": "NOUN"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 7,
+        "label": "DEP"
+      },
+      "lemma": "Dance"
+    },
+    {
+      "text": {
+        "content": "at",
+        "beginOffset": 65
+      },
+      "partOfSpeech": {
+        "tag": "ADP"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 11,
+        "label": "PREP"
+      },
+      "lemma": "at"
+    },
+    {
+      "text": {
+        "content": "Le",
+        "beginOffset": 68
+      },
+      "partOfSpeech": {
+        "tag": "NOUN"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 17,
+        "label": "NN"
+      },
+      "lemma": "Le"
+    },
+    {
+      "text": {
+        "content": "Moulin",
+        "beginOffset": 71
+      },
+      "partOfSpeech": {
+        "tag": "NOUN"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 17,
+        "label": "NN"
+      },
+      "lemma": "Moulin"
+    },
+    {
+      "text": {
+        "content": "de",
+        "beginOffset": 78
+      },
+      "partOfSpeech": {
+        "tag": "NOUN"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 17,
+        "label": "NN"
+      },
+      "lemma": "de"
+    },
+    {
+      "text": {
+        "content": "la",
+        "beginOffset": 81
+      },
+      "partOfSpeech": {
+        "tag": "X"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 17,
+        "label": "NN"
+      },
+      "lemma": "la"
+    },
+    {
+      "text": {
+        "content": "Galette",
+        "beginOffset": 84
+      },
+      "partOfSpeech": {
+        "tag": "NOUN"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 12,
+        "label": "POBJ"
+      },
+      "lemma": "Galette"
+    }
+  ],
+  "entities": [],
+  "language": "en"
+}

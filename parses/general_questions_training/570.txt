@@ -1,0 +1,392 @@
+{
+  "sentences": [
+    {
+      "text": {
+        "content": "Were the koalas of South Australia largely exterminated during the early part of the 20th century, but the state has since been repopulated with Victorian stock",
+        "beginOffset": 0
+      }
+    }
+  ],
+  "tokens": [
+    {
+      "text": {
+        "content": "Were",
+        "beginOffset": 0
+      },
+      "partOfSpeech": {
+        "tag": "VERB"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 0,
+        "label": "ROOT"
+      },
+      "lemma": "be"
+    },
+    {
+      "text": {
+        "content": "the",
+        "beginOffset": 5
+      },
+      "partOfSpeech": {
+        "tag": "DET"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 2,
+        "label": "DET"
+      },
+      "lemma": "the"
+    },
+    {
+      "text": {
+        "content": "koalas",
+        "beginOffset": 9
+      },
+      "partOfSpeech": {
+        "tag": "NOUN"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 0,
+        "label": "DOBJ"
+      },
+      "lemma": "koala"
+    },
+    {
+      "text": {
+        "content": "of",
+        "beginOffset": 16
+      },
+      "partOfSpeech": {
+        "tag": "ADP"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 2,
+        "label": "PREP"
+      },
+      "lemma": "of"
+    },
+    {
+      "text": {
+        "content": "South",
+        "beginOffset": 19
+      },
+      "partOfSpeech": {
+        "tag": "NOUN"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 5,
+        "label": "NN"
+      },
+      "lemma": "South"
+    },
+    {
+      "text": {
+        "content": "Australia",
+        "beginOffset": 25
+      },
+      "partOfSpeech": {
+        "tag": "NOUN"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 3,
+        "label": "POBJ"
+      },
+      "lemma": "Australia"
+    },
+    {
+      "text": {
+        "content": "largely",
+        "beginOffset": 35
+      },
+      "partOfSpeech": {
+        "tag": "ADV"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 7,
+        "label": "ADVMOD"
+      },
+      "lemma": "largely"
+    },
+    {
+      "text": {
+        "content": "exterminated",
+        "beginOffset": 43
+      },
+      "partOfSpeech": {
+        "tag": "VERB"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 2,
+        "label": "VMOD"
+      },
+      "lemma": "exterminate"
+    },
+    {
+      "text": {
+        "content": "during",
+        "beginOffset": 56
+      },
+      "partOfSpeech": {
+        "tag": "ADP"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 7,
+        "label": "PREP"
+      },
+      "lemma": "during"
+    },
+    {
+      "text": {
+        "content": "the",
+        "beginOffset": 63
+      },
+      "partOfSpeech": {
+        "tag": "DET"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 11,
+        "label": "DET"
+      },
+      "lemma": "the"
+    },
+    {
+      "text": {
+        "content": "early",
+        "beginOffset": 67
+      },
+      "partOfSpeech": {
+        "tag": "ADJ"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 11,
+        "label": "AMOD"
+      },
+      "lemma": "early"
+    },
+    {
+      "text": {
+        "content": "part",
+        "beginOffset": 73
+      },
+      "partOfSpeech": {
+        "tag": "NOUN"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 8,
+        "label": "POBJ"
+      },
+      "lemma": "part"
+    },
+    {
+      "text": {
+        "content": "of",
+        "beginOffset": 78
+      },
+      "partOfSpeech": {
+        "tag": "ADP"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 11,
+        "label": "PREP"
+      },
+      "lemma": "of"
+    },
+    {
+      "text": {
+        "content": "the",
+        "beginOffset": 81
+      },
+      "partOfSpeech": {
+        "tag": "DET"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 15,
+        "label": "DET"
+      },
+      "lemma": "the"
+    },
+    {
+      "text": {
+        "content": "20th",
+        "beginOffset": 85
+      },
+      "partOfSpeech": {
+        "tag": "ADJ"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 15,
+        "label": "AMOD"
+      },
+      "lemma": "20th"
+    },
+    {
+      "text": {
+        "content": "century",
+        "beginOffset": 90
+      },
+      "partOfSpeech": {
+        "tag": "NOUN"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 12,
+        "label": "POBJ"
+      },
+      "lemma": "century"
+    },
+    {
+      "text": {
+        "content": ",",
+        "beginOffset": 97
+      },
+      "partOfSpeech": {
+        "tag": "PUNCT"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 0,
+        "label": "P"
+      },
+      "lemma": ","
+    },
+    {
+      "text": {
+        "content": "but",
+        "beginOffset": 99
+      },
+      "partOfSpeech": {
+        "tag": "CONJ"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 0,
+        "label": "CC"
+      },
+      "lemma": "but"
+    },
+    {
+      "text": {
+        "content": "the",
+        "beginOffset": 103
+      },
+      "partOfSpeech": {
+        "tag": "DET"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 19,
+        "label": "DET"
+      },
+      "lemma": "the"
+    },
+    {
+      "text": {
+        "content": "state",
+        "beginOffset": 107
+      },
+      "partOfSpeech": {
+        "tag": "NOUN"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 23,
+        "label": "NSUBJPASS"
+      },
+      "lemma": "state"
+    },
+    {
+      "text": {
+        "content": "has",
+        "beginOffset": 113
+      },
+      "partOfSpeech": {
+        "tag": "VERB"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 23,
+        "label": "AUX"
+      },
+      "lemma": "have"
+    },
+    {
+      "text": {
+        "content": "since",
+        "beginOffset": 117
+      },
+      "partOfSpeech": {
+        "tag": "ADP"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 23,
+        "label": "ADVMOD"
+      },
+      "lemma": "since"
+    },
+    {
+      "text": {
+        "content": "been",
+        "beginOffset": 123
+      },
+      "partOfSpeech": {
+        "tag": "VERB"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 23,
+        "label": "AUXPASS"
+      },
+      "lemma": "be"
+    },
+    {
+      "text": {
+        "content": "repopulated",
+        "beginOffset": 128
+      },
+      "partOfSpeech": {
+        "tag": "VERB"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 0,
+        "label": "CONJ"
+      },
+      "lemma": "repopulate"
+    },
+    {
+      "text": {
+        "content": "with",
+        "beginOffset": 140
+      },
+      "partOfSpeech": {
+        "tag": "ADP"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 23,
+        "label": "PREP"
+      },
+      "lemma": "with"
+    },
+    {
+      "text": {
+        "content": "Victorian",
+        "beginOffset": 145
+      },
+      "partOfSpeech": {
+        "tag": "ADJ"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 26,
+        "label": "AMOD"
+      },
+      "lemma": "Victorian"
+    },
+    {
+      "text": {
+        "content": "stock",
+        "beginOffset": 155
+      },
+      "partOfSpeech": {
+        "tag": "NOUN"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 24,
+        "label": "POBJ"
+      },
+      "lemma": "stock"
+    }
+  ],
+  "entities": [],
+  "language": "en"
+}

@@ -1,0 +1,336 @@
+{
+  "sentences": [
+    {
+      "text": {
+        "content": "Does the word ``violin'' come from the Middle Latin word vitula, meaning ``stringed instrument''",
+        "beginOffset": 0
+      }
+    }
+  ],
+  "tokens": [
+    {
+      "text": {
+        "content": "Does",
+        "beginOffset": 0
+      },
+      "partOfSpeech": {
+        "tag": "VERB"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 8,
+        "label": "AUX"
+      },
+      "lemma": "do"
+    },
+    {
+      "text": {
+        "content": "the",
+        "beginOffset": 5
+      },
+      "partOfSpeech": {
+        "tag": "DET"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 2,
+        "label": "DET"
+      },
+      "lemma": "the"
+    },
+    {
+      "text": {
+        "content": "word",
+        "beginOffset": 9
+      },
+      "partOfSpeech": {
+        "tag": "NOUN"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 8,
+        "label": "NSUBJ"
+      },
+      "lemma": "word"
+    },
+    {
+      "text": {
+        "content": "`",
+        "beginOffset": 14
+      },
+      "partOfSpeech": {
+        "tag": "PUNCT"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 5,
+        "label": "P"
+      },
+      "lemma": "`"
+    },
+    {
+      "text": {
+        "content": "`",
+        "beginOffset": 15
+      },
+      "partOfSpeech": {
+        "tag": "PUNCT"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 5,
+        "label": "P"
+      },
+      "lemma": "`"
+    },
+    {
+      "text": {
+        "content": "violin",
+        "beginOffset": 16
+      },
+      "partOfSpeech": {
+        "tag": "NOUN"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 2,
+        "label": "DEP"
+      },
+      "lemma": "violin"
+    },
+    {
+      "text": {
+        "content": "'",
+        "beginOffset": 22
+      },
+      "partOfSpeech": {
+        "tag": "PUNCT"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 5,
+        "label": "P"
+      },
+      "lemma": "'"
+    },
+    {
+      "text": {
+        "content": "'",
+        "beginOffset": 23
+      },
+      "partOfSpeech": {
+        "tag": "PUNCT"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 5,
+        "label": "P"
+      },
+      "lemma": "'"
+    },
+    {
+      "text": {
+        "content": "come",
+        "beginOffset": 25
+      },
+      "partOfSpeech": {
+        "tag": "VERB"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 8,
+        "label": "ROOT"
+      },
+      "lemma": "come"
+    },
+    {
+      "text": {
+        "content": "from",
+        "beginOffset": 30
+      },
+      "partOfSpeech": {
+        "tag": "ADP"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 8,
+        "label": "PREP"
+      },
+      "lemma": "from"
+    },
+    {
+      "text": {
+        "content": "the",
+        "beginOffset": 35
+      },
+      "partOfSpeech": {
+        "tag": "DET"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 14,
+        "label": "DET"
+      },
+      "lemma": "the"
+    },
+    {
+      "text": {
+        "content": "Middle",
+        "beginOffset": 39
+      },
+      "partOfSpeech": {
+        "tag": "NOUN"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 12,
+        "label": "NN"
+      },
+      "lemma": "Middle"
+    },
+    {
+      "text": {
+        "content": "Latin",
+        "beginOffset": 46
+      },
+      "partOfSpeech": {
+        "tag": "NOUN"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 13,
+        "label": "NN"
+      },
+      "lemma": "Latin"
+    },
+    {
+      "text": {
+        "content": "word",
+        "beginOffset": 52
+      },
+      "partOfSpeech": {
+        "tag": "NOUN"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 14,
+        "label": "NN"
+      },
+      "lemma": "word"
+    },
+    {
+      "text": {
+        "content": "vitula",
+        "beginOffset": 57
+      },
+      "partOfSpeech": {
+        "tag": "NOUN"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 9,
+        "label": "POBJ"
+      },
+      "lemma": "vitula"
+    },
+    {
+      "text": {
+        "content": ",",
+        "beginOffset": 63
+      },
+      "partOfSpeech": {
+        "tag": "PUNCT"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 8,
+        "label": "P"
+      },
+      "lemma": ","
+    },
+    {
+      "text": {
+        "content": "meaning",
+        "beginOffset": 65
+      },
+      "partOfSpeech": {
+        "tag": "VERB"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 8,
+        "label": "XCOMP"
+      },
+      "lemma": "mean"
+    },
+    {
+      "text": {
+        "content": "`",
+        "beginOffset": 73
+      },
+      "partOfSpeech": {
+        "tag": "PUNCT"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 16,
+        "label": "P"
+      },
+      "lemma": "`"
+    },
+    {
+      "text": {
+        "content": "`",
+        "beginOffset": 74
+      },
+      "partOfSpeech": {
+        "tag": "PUNCT"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 20,
+        "label": "P"
+      },
+      "lemma": "`"
+    },
+    {
+      "text": {
+        "content": "stringed",
+        "beginOffset": 75
+      },
+      "partOfSpeech": {
+        "tag": "ADJ"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 20,
+        "label": "AMOD"
+      },
+      "lemma": "stringed"
+    },
+    {
+      "text": {
+        "content": "instrument",
+        "beginOffset": 84
+      },
+      "partOfSpeech": {
+        "tag": "NOUN"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 16,
+        "label": "DOBJ"
+      },
+      "lemma": "instrument"
+    },
+    {
+      "text": {
+        "content": "'",
+        "beginOffset": 94
+      },
+      "partOfSpeech": {
+        "tag": "PUNCT"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 20,
+        "label": "P"
+      },
+      "lemma": "'"
+    },
+    {
+      "text": {
+        "content": "'",
+        "beginOffset": 95
+      },
+      "partOfSpeech": {
+        "tag": "PUNCT"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 8,
+        "label": "P"
+      },
+      "lemma": "'"
+    }
+  ],
+  "entities": [],
+  "language": "en"
+}

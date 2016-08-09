@@ -1,0 +1,98 @@
+{
+  "sentences": [
+    {
+      "text": {
+        "content": "John 'Mad Jack' Fuller",
+        "beginOffset": 0
+      }
+    }
+  ],
+  "tokens": [
+    {
+      "text": {
+        "content": "John",
+        "beginOffset": 0
+      },
+      "partOfSpeech": {
+        "tag": "NOUN"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 3,
+        "label": "POSS"
+      },
+      "lemma": "John"
+    },
+    {
+      "text": {
+        "content": "'",
+        "beginOffset": 5
+      },
+      "partOfSpeech": {
+        "tag": "PRT"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 0,
+        "label": "PS"
+      },
+      "lemma": "'"
+    },
+    {
+      "text": {
+        "content": "Mad",
+        "beginOffset": 6
+      },
+      "partOfSpeech": {
+        "tag": "NOUN"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 3,
+        "label": "NN"
+      },
+      "lemma": "Mad"
+    },
+    {
+      "text": {
+        "content": "Jack",
+        "beginOffset": 10
+      },
+      "partOfSpeech": {
+        "tag": "NOUN"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 3,
+        "label": "ROOT"
+      },
+      "lemma": "Jack"
+    },
+    {
+      "text": {
+        "content": "'",
+        "beginOffset": 14
+      },
+      "partOfSpeech": {
+        "tag": "PUNCT"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 3,
+        "label": "P"
+      },
+      "lemma": "'"
+    },
+    {
+      "text": {
+        "content": "Fuller",
+        "beginOffset": 16
+      },
+      "partOfSpeech": {
+        "tag": "NOUN"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 3,
+        "label": "APPOS"
+      },
+      "lemma": "Fuller"
+    }
+  ],
+  "entities": [],
+  "language": "en"
+}

@@ -1,0 +1,56 @@
+{
+  "sentences": [
+    {
+      "text": {
+        "content": "About 3 million",
+        "beginOffset": 0
+      }
+    }
+  ],
+  "tokens": [
+    {
+      "text": {
+        "content": "About",
+        "beginOffset": 0
+      },
+      "partOfSpeech": {
+        "tag": "ADV"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 2,
+        "label": "QUANTMOD"
+      },
+      "lemma": "About"
+    },
+    {
+      "text": {
+        "content": "3",
+        "beginOffset": 6
+      },
+      "partOfSpeech": {
+        "tag": "NUM"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 2,
+        "label": "NUMBER"
+      },
+      "lemma": "3"
+    },
+    {
+      "text": {
+        "content": "million",
+        "beginOffset": 8
+      },
+      "partOfSpeech": {
+        "tag": "NUM"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 2,
+        "label": "ROOT"
+      },
+      "lemma": "million"
+    }
+  ],
+  "entities": [],
+  "language": "en"
+}

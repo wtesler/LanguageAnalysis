@@ -1,0 +1,56 @@
+{
+  "sentences": [
+    {
+      "text": {
+        "content": "10 million trades",
+        "beginOffset": 0
+      }
+    }
+  ],
+  "tokens": [
+    {
+      "text": {
+        "content": "10",
+        "beginOffset": 0
+      },
+      "partOfSpeech": {
+        "tag": "NUM"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 1,
+        "label": "NUMBER"
+      },
+      "lemma": "10"
+    },
+    {
+      "text": {
+        "content": "million",
+        "beginOffset": 3
+      },
+      "partOfSpeech": {
+        "tag": "NUM"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 2,
+        "label": "NUM"
+      },
+      "lemma": "million"
+    },
+    {
+      "text": {
+        "content": "trades",
+        "beginOffset": 11
+      },
+      "partOfSpeech": {
+        "tag": "NOUN"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 2,
+        "label": "ROOT"
+      },
+      "lemma": "trade"
+    }
+  ],
+  "entities": [],
+  "language": "en"
+}

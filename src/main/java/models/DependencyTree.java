@@ -1,7 +1,5 @@
 package models;
 
-import java.util.ArrayList;
-
 public class DependencyTree {
 
     private final Node[] mNodes;
@@ -25,17 +23,24 @@ public class DependencyTree {
         }
     }
 
+    @Override
+    public String toString() {
+        StringBuilder builder = new StringBuilder();
+        printRecursively(getRoot(), builder, "");
+        return builder.toString();
+    }
+
     public Node getRoot() {
         return mRoot;
     }
 
-    public class Node {
-
-        public Token token;
-        public ArrayList<Node> children = new ArrayList<>();
-
-        public Node(Token token) {
-            this.token = token;
-        }
+    private static void printRecursively(
+            Node node, final StringBuilder builder, final String prefixedSpace) {
+        builder.append(prefixedSpace)
+                .append(node.token.dependencyEdge.label)
+                .append(" (")
+                .append(node.token.text.content)
+                .append(")\n");
+        node.children.stream().forEach(child -> printRecursively(child, builder, prefixedSpace + "\t"));
     }
 }

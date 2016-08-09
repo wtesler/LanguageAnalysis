@@ -1,0 +1,630 @@
+{
+  "sentences": [
+    {
+      "text": {
+        "content": "Are they constructed of brass tubing bent twice into an oblong shape, and are played by blowing air through closed lips, producing a ``buzzing'' sound which starts a standing wave vibration in the air column inside the trumpet",
+        "beginOffset": 0
+      }
+    }
+  ],
+  "tokens": [
+    {
+      "text": {
+        "content": "Are",
+        "beginOffset": 0
+      },
+      "partOfSpeech": {
+        "tag": "VERB"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 2,
+        "label": "AUXPASS"
+      },
+      "lemma": "be"
+    },
+    {
+      "text": {
+        "content": "they",
+        "beginOffset": 4
+      },
+      "partOfSpeech": {
+        "tag": "PRON"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 2,
+        "label": "NSUBJ"
+      },
+      "lemma": "they"
+    },
+    {
+      "text": {
+        "content": "constructed",
+        "beginOffset": 9
+      },
+      "partOfSpeech": {
+        "tag": "VERB"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 2,
+        "label": "ROOT"
+      },
+      "lemma": "construct"
+    },
+    {
+      "text": {
+        "content": "of",
+        "beginOffset": 21
+      },
+      "partOfSpeech": {
+        "tag": "ADP"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 2,
+        "label": "PREP"
+      },
+      "lemma": "of"
+    },
+    {
+      "text": {
+        "content": "brass",
+        "beginOffset": 24
+      },
+      "partOfSpeech": {
+        "tag": "NOUN"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 5,
+        "label": "NN"
+      },
+      "lemma": "brass"
+    },
+    {
+      "text": {
+        "content": "tubing",
+        "beginOffset": 30
+      },
+      "partOfSpeech": {
+        "tag": "NOUN"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 3,
+        "label": "POBJ"
+      },
+      "lemma": "tubing"
+    },
+    {
+      "text": {
+        "content": "bent",
+        "beginOffset": 37
+      },
+      "partOfSpeech": {
+        "tag": "VERB"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 5,
+        "label": "VMOD"
+      },
+      "lemma": "bend"
+    },
+    {
+      "text": {
+        "content": "twice",
+        "beginOffset": 42
+      },
+      "partOfSpeech": {
+        "tag": "ADV"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 6,
+        "label": "ADVMOD"
+      },
+      "lemma": "twice"
+    },
+    {
+      "text": {
+        "content": "into",
+        "beginOffset": 48
+      },
+      "partOfSpeech": {
+        "tag": "ADP"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 6,
+        "label": "PREP"
+      },
+      "lemma": "into"
+    },
+    {
+      "text": {
+        "content": "an",
+        "beginOffset": 53
+      },
+      "partOfSpeech": {
+        "tag": "DET"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 11,
+        "label": "DET"
+      },
+      "lemma": "an"
+    },
+    {
+      "text": {
+        "content": "oblong",
+        "beginOffset": 56
+      },
+      "partOfSpeech": {
+        "tag": "ADJ"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 11,
+        "label": "AMOD"
+      },
+      "lemma": "oblong"
+    },
+    {
+      "text": {
+        "content": "shape",
+        "beginOffset": 63
+      },
+      "partOfSpeech": {
+        "tag": "NOUN"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 8,
+        "label": "POBJ"
+      },
+      "lemma": "shape"
+    },
+    {
+      "text": {
+        "content": ",",
+        "beginOffset": 68
+      },
+      "partOfSpeech": {
+        "tag": "PUNCT"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 2,
+        "label": "P"
+      },
+      "lemma": ","
+    },
+    {
+      "text": {
+        "content": "and",
+        "beginOffset": 70
+      },
+      "partOfSpeech": {
+        "tag": "CONJ"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 2,
+        "label": "CC"
+      },
+      "lemma": "and"
+    },
+    {
+      "text": {
+        "content": "are",
+        "beginOffset": 74
+      },
+      "partOfSpeech": {
+        "tag": "VERB"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 15,
+        "label": "AUXPASS"
+      },
+      "lemma": "be"
+    },
+    {
+      "text": {
+        "content": "played",
+        "beginOffset": 78
+      },
+      "partOfSpeech": {
+        "tag": "VERB"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 2,
+        "label": "CONJ"
+      },
+      "lemma": "play"
+    },
+    {
+      "text": {
+        "content": "by",
+        "beginOffset": 85
+      },
+      "partOfSpeech": {
+        "tag": "ADP"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 15,
+        "label": "PREP"
+      },
+      "lemma": "by"
+    },
+    {
+      "text": {
+        "content": "blowing",
+        "beginOffset": 88
+      },
+      "partOfSpeech": {
+        "tag": "VERB"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 16,
+        "label": "PCOMP"
+      },
+      "lemma": "blow"
+    },
+    {
+      "text": {
+        "content": "air",
+        "beginOffset": 96
+      },
+      "partOfSpeech": {
+        "tag": "NOUN"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 17,
+        "label": "DOBJ"
+      },
+      "lemma": "air"
+    },
+    {
+      "text": {
+        "content": "through",
+        "beginOffset": 100
+      },
+      "partOfSpeech": {
+        "tag": "ADP"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 17,
+        "label": "PREP"
+      },
+      "lemma": "through"
+    },
+    {
+      "text": {
+        "content": "closed",
+        "beginOffset": 108
+      },
+      "partOfSpeech": {
+        "tag": "ADJ"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 21,
+        "label": "AMOD"
+      },
+      "lemma": "closed"
+    },
+    {
+      "text": {
+        "content": "lips",
+        "beginOffset": 115
+      },
+      "partOfSpeech": {
+        "tag": "NOUN"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 19,
+        "label": "POBJ"
+      },
+      "lemma": "lip"
+    },
+    {
+      "text": {
+        "content": ",",
+        "beginOffset": 119
+      },
+      "partOfSpeech": {
+        "tag": "PUNCT"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 17,
+        "label": "P"
+      },
+      "lemma": ","
+    },
+    {
+      "text": {
+        "content": "producing",
+        "beginOffset": 121
+      },
+      "partOfSpeech": {
+        "tag": "VERB"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 17,
+        "label": "VMOD"
+      },
+      "lemma": "produce"
+    },
+    {
+      "text": {
+        "content": "a",
+        "beginOffset": 131
+      },
+      "partOfSpeech": {
+        "tag": "DET"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 30,
+        "label": "DET"
+      },
+      "lemma": "a"
+    },
+    {
+      "text": {
+        "content": "`",
+        "beginOffset": 133
+      },
+      "partOfSpeech": {
+        "tag": "PUNCT"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 30,
+        "label": "P"
+      },
+      "lemma": "`"
+    },
+    {
+      "text": {
+        "content": "`",
+        "beginOffset": 134
+      },
+      "partOfSpeech": {
+        "tag": "PUNCT"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 30,
+        "label": "P"
+      },
+      "lemma": "`"
+    },
+    {
+      "text": {
+        "content": "buzzing",
+        "beginOffset": 135
+      },
+      "partOfSpeech": {
+        "tag": "NOUN"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 30,
+        "label": "AMOD"
+      },
+      "lemma": "buzzing"
+    },
+    {
+      "text": {
+        "content": "'",
+        "beginOffset": 142
+      },
+      "partOfSpeech": {
+        "tag": "PUNCT"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 30,
+        "label": "P"
+      },
+      "lemma": "'"
+    },
+    {
+      "text": {
+        "content": "'",
+        "beginOffset": 143
+      },
+      "partOfSpeech": {
+        "tag": "PUNCT"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 30,
+        "label": "P"
+      },
+      "lemma": "'"
+    },
+    {
+      "text": {
+        "content": "sound",
+        "beginOffset": 145
+      },
+      "partOfSpeech": {
+        "tag": "NOUN"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 23,
+        "label": "DOBJ"
+      },
+      "lemma": "sound"
+    },
+    {
+      "text": {
+        "content": "which",
+        "beginOffset": 151
+      },
+      "partOfSpeech": {
+        "tag": "DET"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 32,
+        "label": "NSUBJ"
+      },
+      "lemma": "which"
+    },
+    {
+      "text": {
+        "content": "starts",
+        "beginOffset": 157
+      },
+      "partOfSpeech": {
+        "tag": "VERB"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 30,
+        "label": "RCMOD"
+      },
+      "lemma": "start"
+    },
+    {
+      "text": {
+        "content": "a",
+        "beginOffset": 164
+      },
+      "partOfSpeech": {
+        "tag": "DET"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 36,
+        "label": "DET"
+      },
+      "lemma": "a"
+    },
+    {
+      "text": {
+        "content": "standing",
+        "beginOffset": 166
+      },
+      "partOfSpeech": {
+        "tag": "VERB"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 36,
+        "label": "AMOD"
+      },
+      "lemma": "stand"
+    },
+    {
+      "text": {
+        "content": "wave",
+        "beginOffset": 175
+      },
+      "partOfSpeech": {
+        "tag": "NOUN"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 36,
+        "label": "NN"
+      },
+      "lemma": "wave"
+    },
+    {
+      "text": {
+        "content": "vibration",
+        "beginOffset": 180
+      },
+      "partOfSpeech": {
+        "tag": "NOUN"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 32,
+        "label": "DOBJ"
+      },
+      "lemma": "vibration"
+    },
+    {
+      "text": {
+        "content": "in",
+        "beginOffset": 190
+      },
+      "partOfSpeech": {
+        "tag": "ADP"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 32,
+        "label": "PREP"
+      },
+      "lemma": "in"
+    },
+    {
+      "text": {
+        "content": "the",
+        "beginOffset": 193
+      },
+      "partOfSpeech": {
+        "tag": "DET"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 40,
+        "label": "DET"
+      },
+      "lemma": "the"
+    },
+    {
+      "text": {
+        "content": "air",
+        "beginOffset": 197
+      },
+      "partOfSpeech": {
+        "tag": "NOUN"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 40,
+        "label": "NN"
+      },
+      "lemma": "air"
+    },
+    {
+      "text": {
+        "content": "column",
+        "beginOffset": 201
+      },
+      "partOfSpeech": {
+        "tag": "NOUN"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 37,
+        "label": "POBJ"
+      },
+      "lemma": "column"
+    },
+    {
+      "text": {
+        "content": "inside",
+        "beginOffset": 208
+      },
+      "partOfSpeech": {
+        "tag": "ADP"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 40,
+        "label": "PREP"
+      },
+      "lemma": "inside"
+    },
+    {
+      "text": {
+        "content": "the",
+        "beginOffset": 215
+      },
+      "partOfSpeech": {
+        "tag": "DET"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 43,
+        "label": "DET"
+      },
+      "lemma": "the"
+    },
+    {
+      "text": {
+        "content": "trumpet",
+        "beginOffset": 219
+      },
+      "partOfSpeech": {
+        "tag": "NOUN"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 41,
+        "label": "POBJ"
+      },
+      "lemma": "trumpet"
+    }
+  ],
+  "entities": [],
+  "language": "en"
+}

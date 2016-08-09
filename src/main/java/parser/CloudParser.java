@@ -1,11 +1,9 @@
 package parser;
 
-import java.io.BufferedWriter;
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 import java.nio.file.Files;
-import java.nio.file.Paths;
 import java.util.List;
 import java.util.UUID;
 import java.util.stream.Collectors;
@@ -16,34 +14,41 @@ import cloud.LanguageClient;
 import models.Features;
 import models.LanguageDocument;
 import models.LanguageRequest;
+import rx.Observable;
 import rx.schedulers.Schedulers;
+import rx.subjects.PublishSubject;
+import utils.FileUtils;
 
 public class CloudParser {
 
     private final LanguageClient mLanguageClient;
 
-    public CloudParser(App app, LanguageClient languageClient) {
-        app.getAppComponent().inject(this);
+    private final PublishSubject<String> mParsedSentenceSubject = PublishSubject.create();
+
+    public CloudParser(LanguageClient languageClient) {
         mLanguageClient = languageClient;
     }
 
     public void parseSentencesResource(String resourceName, String outputDirectory) {
-        List<String> list = readListFromResources(resourceName);
+        List<String> list = FileUtils.readListFromResources(resourceName, getClass());
         if (list == null) {
             return;
         }
 
+        final Integer[] count = new Integer[]{ 0 };
         list.stream().forEach(sentence -> {
+
             LanguageRequest languageRequest = constructLanguageRequest(sentence);
             mLanguageClient.rawParse(languageRequest)
                     .observeOn(Schedulers.newThread())
                     .toBlocking()
                     .subscribe(responseBody -> {
                         try {
-                            writeToDirectory(
+                            FileUtils.writeTextToFile(
                                     outputDirectory,
-                                    UUID.randomUUID().toString(),
+                                    count[0].toString() + ".txt",
                                     responseBody.string());
+                            count[0]++;
                         } catch (IOException e) {
                             e.printStackTrace();
                         }
@@ -51,35 +56,22 @@ public class CloudParser {
         });
     }
 
-    private List<String> readListFromResources(String fileName) {
-        ClassLoader classLoader = CloudParser.class.getClassLoader();
-        URL fileUrl = classLoader.getResource(fileName);
-        if (fileUrl == null) {
-            System.err.println("Resource URL not found.");
-            return null;
-        }
-        String qualifiedName = fileUrl.getFile();
-        if (qualifiedName == null) {
-            System.err.println("Could not get file from URL.");
-            return null;
-        }
-
-        File file = new File(qualifiedName);
-        try (Stream<String> stream = Files.lines(file.toPath())) {
-            return stream.collect(Collectors.toList());
-        } catch (IOException e) {
-            e.printStackTrace();
-            return null;
-        }
+    public void parseSentence(String sentence) {
+        LanguageRequest languageRequest = constructLanguageRequest(sentence);
+        mLanguageClient.rawParse(languageRequest)
+                .observeOn(Schedulers.newThread())
+                .toBlocking()
+                .subscribe(responseBody -> {
+                    try {
+                        mParsedSentenceSubject.onNext(responseBody.string());
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                }, throwable -> System.err.println(throwable.toString()));
     }
 
-    private static void writeToDirectory(String directory, String file, String content) {
-        String qualifiedName = directory + "/" + file + ".txt";
-        try (BufferedWriter writer = Files.newBufferedWriter(Paths.get(qualifiedName))) {
-            writer.write(content);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+    public Observable<String> getParsedSentenceObservable() {
+        return mParsedSentenceSubject.asObservable();
     }
 
     private static LanguageRequest constructLanguageRequest(String content) {

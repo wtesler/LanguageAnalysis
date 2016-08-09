@@ -12,7 +12,7 @@ import java.lang.annotation.Retention;
 import javax.inject.Qualifier;
 import javax.inject.Singleton;
 
-import bayes.Classifier;
+import bayes.QuestionClassifier;
 import bayes.SyntaxReader;
 import cloud.LanguageClient;
 import cloud.LanguageService;
@@ -39,14 +39,14 @@ public class AppModule {
     @Provides
     @ForQuestions
     @Singleton
-    Classifier provideClassifier(SyntaxReader syntaxReader) {
-        return new Classifier(syntaxReader);
+    QuestionClassifier provideClassifier(SyntaxReader syntaxReader) {
+        return new QuestionClassifier(syntaxReader);
     }
 
     @Provides
     @Singleton
     CloudParser provideCloudParser(LanguageClient languageClient) {
-        return new CloudParser(mApp, languageClient);
+        return new CloudParser(languageClient);
     }
 
     @Provides

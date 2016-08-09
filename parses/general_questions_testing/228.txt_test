@@ -1,0 +1,560 @@
+{
+  "sentences": [
+    {
+      "text": {
+        "content": "Do his works enjoy a broad popular appeal in the United States, where Rockwell is most famous for the cover illustrations of everyday life scenarios he created for The Saturday Evening Post magazine over more than four decades",
+        "beginOffset": 0
+      }
+    }
+  ],
+  "tokens": [
+    {
+      "text": {
+        "content": "Do",
+        "beginOffset": 0
+      },
+      "partOfSpeech": {
+        "tag": "VERB"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 3,
+        "label": "AUX"
+      },
+      "lemma": "Do"
+    },
+    {
+      "text": {
+        "content": "his",
+        "beginOffset": 3
+      },
+      "partOfSpeech": {
+        "tag": "PRON"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 2,
+        "label": "POSS"
+      },
+      "lemma": "his"
+    },
+    {
+      "text": {
+        "content": "works",
+        "beginOffset": 7
+      },
+      "partOfSpeech": {
+        "tag": "NOUN"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 3,
+        "label": "NSUBJ"
+      },
+      "lemma": "work"
+    },
+    {
+      "text": {
+        "content": "enjoy",
+        "beginOffset": 13
+      },
+      "partOfSpeech": {
+        "tag": "VERB"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 3,
+        "label": "ROOT"
+      },
+      "lemma": "enjoy"
+    },
+    {
+      "text": {
+        "content": "a",
+        "beginOffset": 19
+      },
+      "partOfSpeech": {
+        "tag": "DET"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 7,
+        "label": "DET"
+      },
+      "lemma": "a"
+    },
+    {
+      "text": {
+        "content": "broad",
+        "beginOffset": 21
+      },
+      "partOfSpeech": {
+        "tag": "ADJ"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 7,
+        "label": "AMOD"
+      },
+      "lemma": "broad"
+    },
+    {
+      "text": {
+        "content": "popular",
+        "beginOffset": 27
+      },
+      "partOfSpeech": {
+        "tag": "ADJ"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 7,
+        "label": "AMOD"
+      },
+      "lemma": "popular"
+    },
+    {
+      "text": {
+        "content": "appeal",
+        "beginOffset": 35
+      },
+      "partOfSpeech": {
+        "tag": "NOUN"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 3,
+        "label": "DOBJ"
+      },
+      "lemma": "appeal"
+    },
+    {
+      "text": {
+        "content": "in",
+        "beginOffset": 42
+      },
+      "partOfSpeech": {
+        "tag": "ADP"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 7,
+        "label": "PREP"
+      },
+      "lemma": "in"
+    },
+    {
+      "text": {
+        "content": "the",
+        "beginOffset": 45
+      },
+      "partOfSpeech": {
+        "tag": "DET"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 11,
+        "label": "DET"
+      },
+      "lemma": "the"
+    },
+    {
+      "text": {
+        "content": "United",
+        "beginOffset": 49
+      },
+      "partOfSpeech": {
+        "tag": "NOUN"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 11,
+        "label": "NN"
+      },
+      "lemma": "United"
+    },
+    {
+      "text": {
+        "content": "States",
+        "beginOffset": 56
+      },
+      "partOfSpeech": {
+        "tag": "NOUN"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 8,
+        "label": "POBJ"
+      },
+      "lemma": "States"
+    },
+    {
+      "text": {
+        "content": ",",
+        "beginOffset": 62
+      },
+      "partOfSpeech": {
+        "tag": "PUNCT"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 11,
+        "label": "P"
+      },
+      "lemma": ","
+    },
+    {
+      "text": {
+        "content": "where",
+        "beginOffset": 64
+      },
+      "partOfSpeech": {
+        "tag": "ADV"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 15,
+        "label": "ADVMOD"
+      },
+      "lemma": "where"
+    },
+    {
+      "text": {
+        "content": "Rockwell",
+        "beginOffset": 70
+      },
+      "partOfSpeech": {
+        "tag": "NOUN"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 15,
+        "label": "NSUBJ"
+      },
+      "lemma": "Rockwell"
+    },
+    {
+      "text": {
+        "content": "is",
+        "beginOffset": 79
+      },
+      "partOfSpeech": {
+        "tag": "VERB"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 11,
+        "label": "RCMOD"
+      },
+      "lemma": "be"
+    },
+    {
+      "text": {
+        "content": "most",
+        "beginOffset": 82
+      },
+      "partOfSpeech": {
+        "tag": "ADV"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 17,
+        "label": "ADVMOD"
+      },
+      "lemma": "most"
+    },
+    {
+      "text": {
+        "content": "famous",
+        "beginOffset": 87
+      },
+      "partOfSpeech": {
+        "tag": "ADJ"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 15,
+        "label": "ACOMP"
+      },
+      "lemma": "famous"
+    },
+    {
+      "text": {
+        "content": "for",
+        "beginOffset": 94
+      },
+      "partOfSpeech": {
+        "tag": "ADP"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 17,
+        "label": "PREP"
+      },
+      "lemma": "for"
+    },
+    {
+      "text": {
+        "content": "the",
+        "beginOffset": 98
+      },
+      "partOfSpeech": {
+        "tag": "DET"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 21,
+        "label": "DET"
+      },
+      "lemma": "the"
+    },
+    {
+      "text": {
+        "content": "cover",
+        "beginOffset": 102
+      },
+      "partOfSpeech": {
+        "tag": "NOUN"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 21,
+        "label": "NN"
+      },
+      "lemma": "cover"
+    },
+    {
+      "text": {
+        "content": "illustrations",
+        "beginOffset": 108
+      },
+      "partOfSpeech": {
+        "tag": "NOUN"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 18,
+        "label": "POBJ"
+      },
+      "lemma": "illustration"
+    },
+    {
+      "text": {
+        "content": "of",
+        "beginOffset": 122
+      },
+      "partOfSpeech": {
+        "tag": "ADP"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 21,
+        "label": "PREP"
+      },
+      "lemma": "of"
+    },
+    {
+      "text": {
+        "content": "everyday",
+        "beginOffset": 125
+      },
+      "partOfSpeech": {
+        "tag": "ADJ"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 25,
+        "label": "AMOD"
+      },
+      "lemma": "everyday"
+    },
+    {
+      "text": {
+        "content": "life",
+        "beginOffset": 134
+      },
+      "partOfSpeech": {
+        "tag": "NOUN"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 25,
+        "label": "NN"
+      },
+      "lemma": "life"
+    },
+    {
+      "text": {
+        "content": "scenarios",
+        "beginOffset": 139
+      },
+      "partOfSpeech": {
+        "tag": "NOUN"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 22,
+        "label": "POBJ"
+      },
+      "lemma": "scenario"
+    },
+    {
+      "text": {
+        "content": "he",
+        "beginOffset": 149
+      },
+      "partOfSpeech": {
+        "tag": "PRON"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 27,
+        "label": "NSUBJ"
+      },
+      "lemma": "he"
+    },
+    {
+      "text": {
+        "content": "created",
+        "beginOffset": 152
+      },
+      "partOfSpeech": {
+        "tag": "VERB"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 25,
+        "label": "RCMOD"
+      },
+      "lemma": "create"
+    },
+    {
+      "text": {
+        "content": "for",
+        "beginOffset": 160
+      },
+      "partOfSpeech": {
+        "tag": "ADP"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 27,
+        "label": "PREP"
+      },
+      "lemma": "for"
+    },
+    {
+      "text": {
+        "content": "The",
+        "beginOffset": 164
+      },
+      "partOfSpeech": {
+        "tag": "DET"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 33,
+        "label": "DET"
+      },
+      "lemma": "The"
+    },
+    {
+      "text": {
+        "content": "Saturday",
+        "beginOffset": 168
+      },
+      "partOfSpeech": {
+        "tag": "NOUN"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 32,
+        "label": "NN"
+      },
+      "lemma": "Saturday"
+    },
+    {
+      "text": {
+        "content": "Evening",
+        "beginOffset": 177
+      },
+      "partOfSpeech": {
+        "tag": "NOUN"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 32,
+        "label": "NN"
+      },
+      "lemma": "Evening"
+    },
+    {
+      "text": {
+        "content": "Post",
+        "beginOffset": 185
+      },
+      "partOfSpeech": {
+        "tag": "NOUN"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 33,
+        "label": "NN"
+      },
+      "lemma": "Post"
+    },
+    {
+      "text": {
+        "content": "magazine",
+        "beginOffset": 190
+      },
+      "partOfSpeech": {
+        "tag": "NOUN"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 28,
+        "label": "POBJ"
+      },
+      "lemma": "magazine"
+    },
+    {
+      "text": {
+        "content": "over",
+        "beginOffset": 199
+      },
+      "partOfSpeech": {
+        "tag": "ADP"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 27,
+        "label": "PREP"
+      },
+      "lemma": "over"
+    },
+    {
+      "text": {
+        "content": "more",
+        "beginOffset": 204
+      },
+      "partOfSpeech": {
+        "tag": "ADJ"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 37,
+        "label": "QUANTMOD"
+      },
+      "lemma": "more"
+    },
+    {
+      "text": {
+        "content": "than",
+        "beginOffset": 209
+      },
+      "partOfSpeech": {
+        "tag": "ADP"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 37,
+        "label": "QUANTMOD"
+      },
+      "lemma": "than"
+    },
+    {
+      "text": {
+        "content": "four",
+        "beginOffset": 214
+      },
+      "partOfSpeech": {
+        "tag": "NUM"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 38,
+        "label": "NUM"
+      },
+      "lemma": "four"
+    },
+    {
+      "text": {
+        "content": "decades",
+        "beginOffset": 219
+      },
+      "partOfSpeech": {
+        "tag": "NOUN"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 34,
+        "label": "POBJ"
+      },
+      "lemma": "decade"
+    }
+  ],
+  "entities": [],
+  "language": "en"
+}

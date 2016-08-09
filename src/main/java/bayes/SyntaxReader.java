@@ -10,8 +10,11 @@ import java.util.List;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
+import models.DependencyEdge;
 import models.DependencyTree;
 import models.LanguageResponse;
+import models.Node;
+import models.TextSpan;
 import models.Token;
 
 public class SyntaxReader {
@@ -28,7 +31,11 @@ public class SyntaxReader {
                     .collect(Collectors.mapping((Function<Path, LanguageResponse>) path -> {
                         try {
                             String content = new String(Files.readAllBytes(path));
-                            return mGson.fromJson(content, LanguageResponse.class);
+                            LanguageResponse response = mGson.fromJson(content, LanguageResponse.class);
+                            if (response.tokens.size() == 0) {
+                                System.err.println(path + " did not produce tokens");
+                            }
+                            return response;
                         } catch (IOException e) {
                             e.printStackTrace();
                             return null;
@@ -40,15 +47,24 @@ public class SyntaxReader {
         }
     }
 
+    public LanguageResponse convertParsedSentence(String parsedSentence) {
+        return mGson.fromJson(parsedSentence, LanguageResponse.class);
+    }
+
+    /**
+     * Assumes that each language response contains one sentence.
+     */
+    public static DependencyTree toDependencyTree(LanguageResponse response) {
+        Token[] sentenceTokens = response.tokens.toArray(new Token[response.tokens.size()]);
+        return new DependencyTree(sentenceTokens, 0);
+    }
+
     /**
      * Assumes that each language response contains one sentence.
      */
     public static List<DependencyTree> toDependencyTrees(List<LanguageResponse> responses) {
         return responses.stream()
-                .map(languageResponse -> {
-                    Token[] sentenceTokens = languageResponse.tokens.toArray(new Token[languageResponse.tokens.size()]);
-                    return new DependencyTree(sentenceTokens, 0);
-                })
+                .map(SyntaxReader::toDependencyTree)
                 .collect(Collectors.toList());
     }
 }

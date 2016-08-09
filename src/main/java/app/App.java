@@ -2,11 +2,15 @@ package app;
 
 import javax.inject.Inject;
 
-import bayes.Classifier;
+import app.AppModule.ForQuestions;
+import bayes.QuestionClassifier;
+import parser.CloudParser;
 
 public class App {
 
-    @Inject @AppModule.ForQuestions Classifier mClassifier;
+    @Inject @ForQuestions
+    QuestionClassifier mQuestionClassifier;
+    @Inject CloudParser mCloudParser;
 
     private final AppComponent mAppComponent;
 
@@ -21,7 +25,23 @@ public class App {
 
         mAppComponent.inject(this);
 
-        mClassifier.classify();
+        mQuestionClassifier
+                .train("parses/general_questions_training", "parses/general_responses_training");
+
+//        mCloudParser.getParsedSentenceObservable()
+//                .subscribe(parsedSentence -> {
+//                    double score = mQuestionClassifier.classifySentence(parsedSentence, siblingScoreMap);
+//                    System.out.println(score);
+//                });
+//
+//        mCloudParser.parseSentence("What did he take");
+//
+//        while (true) {
+//            continue;
+//        }
+
+        mQuestionClassifier.classifyDirectory("parses/general_questions_testing");
+        //mQuestionClassifier.classifyDirectory("parses/general_responses_testing");
     }
 
     public AppComponent getAppComponent() {
