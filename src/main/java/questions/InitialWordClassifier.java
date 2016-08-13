@@ -1,18 +1,9 @@
 package questions;
 
-import java.util.List;
-
-import classifier.Classification;
 import classifier.Classifier;
 import models.LanguageResponse;
 
 public class InitialWordClassifier extends Classifier<LanguageResponse> {
-
-    private final SyntaxReader mSyntaxReader;
-
-    public InitialWordClassifier(SyntaxReader syntaxReader) {
-        mSyntaxReader = syntaxReader;
-    }
 
     @Override
     public void train(String positiveDir, String negativeDir) {
@@ -24,12 +15,6 @@ public class InitialWordClassifier extends Classifier<LanguageResponse> {
         setScore("COULD", 1.0);
         setScore("DO", 1.0);
         setScore("DOES", 1.0);
-    }
-
-    @Override
-    public Classification classifyDirectory(String dir) {
-        List<LanguageResponse> responses = mSyntaxReader.readParsedDataFromFiles(dir);
-        return classifyObjects(responses);
     }
 
     @Override

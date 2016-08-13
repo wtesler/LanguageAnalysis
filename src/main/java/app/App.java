@@ -1,12 +1,14 @@
 package app;
 
+import java.util.List;
+
 import javax.inject.Inject;
 
 import app.AppModule.ForQuestions;
-import classifier.Classification;
+import classifier.Score;
+import models.LanguageResponse;
 import questions.EnsembleQuestionClassifier;
 import questions.SyntaxReader;
-import models.LanguageResponse;
 import parser.CloudParser;
 
 public class App {
@@ -31,11 +33,17 @@ public class App {
         mEnsembleQuestionClassifier
                 .train("parses/general_questions_training", "parses/general_responses_training");
 
-        mEnsembleQuestionClassifier.test("parses/general_questions_testing", "parses/general_responses_testing");
+        List<LanguageResponse> positiveResponses
+                = mSyntaxReader.readParsedDataFromFiles("parses/general_questions_testing");
+        List<LanguageResponse> negativeResponses
+                = mSyntaxReader.readParsedDataFromFiles("parses/general_responses_testing");
 
-        Classification classification = mEnsembleQuestionClassifier.classifyDirectory
-                ("parses/general_questions_master");
-        System.out.println("Accuracy: " + (double) classification.numPositive / classification.total);
+        mEnsembleQuestionClassifier.test(positiveResponses, negativeResponses);
+
+        List<LanguageResponse> responses = mSyntaxReader.readParsedDataFromFiles("parses/general_questions_master");
+
+        Score score = mEnsembleQuestionClassifier.scoreObjects(responses);
+        System.out.println("Accuracy: " + (double) score.correct / score.total);
 
 //        mCloudParser.getParsedSentenceObservable()
 //                .subscribe(parsedSentence -> {

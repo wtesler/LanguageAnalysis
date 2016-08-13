@@ -6,7 +6,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
-import classifier.Classification;
 import classifier.Classifier;
 import models.DependencyTree;
 import models.LanguageResponse;
@@ -42,12 +41,6 @@ public class SiblingClassifier extends Classifier<LanguageResponse> {
                     String result = entry.getKey() + " -> " + entry.getValue();
                     //System.out.println(result);
                 });
-    }
-
-    @Override
-    public Classification classifyDirectory(String dir) {
-        List<LanguageResponse> responses = mSyntaxReader.readParsedDataFromFiles(dir);
-        return classifyObjects(responses);
     }
 
     @Override
@@ -154,13 +147,6 @@ public class SiblingClassifier extends Classifier<LanguageResponse> {
                 }
             }
         }
-    }
-
-    public double classifySentence(String parsedSentence) {
-        LanguageResponse response = mSyntaxReader.convertParsedSentence(parsedSentence);
-        DependencyTree tree = SyntaxReader.toDependencyTree(response);
-
-        return classifyTree(tree);
     }
 
     public double classifyTree(DependencyTree tree) {

@@ -3,7 +3,6 @@ package questions;
 import java.util.ArrayList;
 import java.util.List;
 
-import classifier.Classification;
 import classifier.Classifier;
 import models.LanguageResponse;
 
@@ -17,8 +16,8 @@ public class EnsembleQuestionClassifier extends Classifier<LanguageResponse> {
         mSyntaxReader = syntaxReader;
 
         mClassifiers.add(new SiblingClassifier(mSyntaxReader));
-        mClassifiers.add(new QuestionWordsClassifier(mSyntaxReader));
-        mClassifiers.add(new InitialWordClassifier(mSyntaxReader));
+        mClassifiers.add(new QuestionWordsClassifier());
+        mClassifiers.add(new InitialWordClassifier());
     }
 
     @Override
@@ -27,9 +26,9 @@ public class EnsembleQuestionClassifier extends Classifier<LanguageResponse> {
     }
 
     @Override
-    public void test(String positiveDir, String negativeDir) {
-        mClassifiers.forEach(classifier -> classifier.test(positiveDir, negativeDir));
-        super.test(positiveDir, negativeDir);
+    public void test(List<LanguageResponse> positiveResponses, List<LanguageResponse> negativeResponses) {
+        mClassifiers.forEach(classifier -> classifier.test(positiveResponses, negativeResponses));
+        super.test(positiveResponses, negativeResponses);
     }
 
     @Override
@@ -42,11 +41,5 @@ public class EnsembleQuestionClassifier extends Classifier<LanguageResponse> {
 
         System.out.println("consensus: " + consensus);
         return consensus > 0;
-    }
-
-    @Override
-    public Classification classifyDirectory(String dir) {
-        List<LanguageResponse> responses = mSyntaxReader.readParsedDataFromFiles(dir);
-        return classifyObjects(responses);
     }
 }
