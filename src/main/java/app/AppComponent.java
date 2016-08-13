@@ -5,8 +5,8 @@ import com.squareup.okhttp.OkHttpClient;
 
 import javax.inject.Singleton;
 
-import bayes.QuestionClassifier;
-import bayes.SyntaxReader;
+import questions.EnsembleQuestionClassifier;
+import questions.SyntaxReader;
 import cloud.LanguageClient;
 import dagger.Component;
 import parser.CloudParser;
@@ -19,7 +19,7 @@ public interface AppComponent {
     void inject(App app);
 
     @AppModule.ForQuestions
-    QuestionClassifier classifier();
+    EnsembleQuestionClassifier classifier();
 
     CloudParser cloudParser();
 

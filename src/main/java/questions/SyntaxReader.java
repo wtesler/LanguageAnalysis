@@ -1,4 +1,4 @@
-package bayes;
+package questions;
 
 import com.google.gson.Gson;
 
@@ -10,11 +10,8 @@ import java.util.List;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
-import models.DependencyEdge;
 import models.DependencyTree;
 import models.LanguageResponse;
-import models.Node;
-import models.TextSpan;
 import models.Token;
 
 public class SyntaxReader {

@@ -12,8 +12,8 @@ import java.lang.annotation.Retention;
 import javax.inject.Qualifier;
 import javax.inject.Singleton;
 
-import bayes.QuestionClassifier;
-import bayes.SyntaxReader;
+import questions.EnsembleQuestionClassifier;
+import questions.SyntaxReader;
 import cloud.LanguageClient;
 import cloud.LanguageService;
 import dagger.Module;
@@ -39,8 +39,8 @@ public class AppModule {
     @Provides
     @ForQuestions
     @Singleton
-    QuestionClassifier provideClassifier(SyntaxReader syntaxReader) {
-        return new QuestionClassifier(syntaxReader);
+    EnsembleQuestionClassifier provideClassifier(SyntaxReader syntaxReader) {
+        return new EnsembleQuestionClassifier(syntaxReader);
     }
 
     @Provides
@@ -83,7 +83,7 @@ public class AppModule {
         });
 
         HttpLoggingInterceptor interceptor = new HttpLoggingInterceptor();
-        interceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
+        interceptor.setLevel(HttpLoggingInterceptor.Level.NONE);
         httpClient.interceptors().add(interceptor);
 
         return httpClient;

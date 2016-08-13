@@ -1,9 +1,8 @@
-package bayes;
+package questions;
 
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.HashSet;
-import java.util.function.Function;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
@@ -43,7 +42,7 @@ public class SiblingTraverser {
 
                     if (node.children.get(i).token.dependencyEdge.label.equals(DependencyEdge.P)
                             || node.children.get(i + 1).token.dependencyEdge.label.equals(DependencyEdge.P)) {
-                        // QuestionClassifier shouldn't take punctuation into account.
+                        // EnsembleQuestionClassifier shouldn't take punctuation into account.
                         return null;
                     }
 
