@@ -17,12 +17,12 @@ public class QuestionWordsClassifier extends Classifier<LanguageResponse> {
 
     @Override
     public boolean classify(LanguageResponse response) {
-        return getScore(response.tokens.get(0).lemma.toUpperCase()) != null;
+        //return getScore(response.tokens.get(0).lemma.toUpperCase()) != null;
 //
-//        int keywordCount = response.tokens
-//                .stream()
-//                .mapToInt(token -> getScore(token.lemma.toUpperCase()) != null ? 1 : 0)
-//                .sum();
-//        return keywordCount != 0;
+        int keywordCount = response.tokens
+                .stream()
+                .mapToInt(token -> getScore(token.lemma.toUpperCase()) != null ? 1 : 0)
+                .sum();
+        return keywordCount != 0;
     }
 }

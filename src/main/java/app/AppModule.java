@@ -13,7 +13,7 @@ import javax.inject.Qualifier;
 import javax.inject.Singleton;
 
 import questions.EnsembleQuestionClassifier;
-import questions.SyntaxReader;
+import questions.SyntaxStructurer;
 import cloud.LanguageClient;
 import cloud.LanguageService;
 import dagger.Module;
@@ -39,8 +39,8 @@ public class AppModule {
     @Provides
     @ForQuestions
     @Singleton
-    EnsembleQuestionClassifier provideClassifier(SyntaxReader syntaxReader) {
-        return new EnsembleQuestionClassifier(syntaxReader);
+    EnsembleQuestionClassifier provideClassifier(SyntaxStructurer syntaxStructurer) {
+        return new EnsembleQuestionClassifier(syntaxStructurer);
     }
 
     @Provides
@@ -103,8 +103,8 @@ public class AppModule {
 
     @Provides
     @Singleton
-    SyntaxReader provideSyntaxReader(Gson gson) {
-        return new SyntaxReader(gson);
+    SyntaxStructurer provideSyntaxReader(Gson gson) {
+        return new SyntaxStructurer(gson);
     }
 
     @Qualifier

@@ -15,6 +15,7 @@ public class InitialWordClassifier extends Classifier<LanguageResponse> {
         setScore("COULD", 1.0);
         setScore("DO", 1.0);
         setScore("DOES", 1.0);
+        setScore("WHICH", 1.0);
     }
 
     @Override

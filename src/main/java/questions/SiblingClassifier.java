@@ -9,34 +9,38 @@ import java.util.stream.Collectors;
 import classifier.Classifier;
 import models.DependencyTree;
 import models.LanguageResponse;
+import utils.LanguageUtils;
 
 public class SiblingClassifier extends Classifier<LanguageResponse> {
 
-    private final SyntaxReader mSyntaxReader;
+    private final SyntaxStructurer mSyntaxStructurer;
 
-    public SiblingClassifier(SyntaxReader syntaxReader) {
-        mSyntaxReader = syntaxReader;
+    public SiblingClassifier(SyntaxStructurer syntaxStructurer) {
+        mSyntaxStructurer = syntaxStructurer;
     }
 
     @Override
     public void train(String positiveDir, String negativeDir) {
-        HashMap<String, Double> positiveFreqMap = getSiblingFrequencyMap(positiveDir);
-        HashMap<String, Double> negativeFreqMap = getSiblingFrequencyMap(negativeDir);
+        List<LanguageResponse> positiveResponses = mSyntaxStructurer.readParsedDataFromFiles(positiveDir);
+        List<LanguageResponse> negativeResponses = mSyntaxStructurer.readParsedDataFromFiles(negativeDir);
 
-        positiveFreqMap.entrySet()
+        HashMap<String, Double> positiveFrequencies = getSiblingFrequencyMap(positiveResponses);
+        HashMap<String, Double> negativeFrequencies = getSiblingFrequencyMap(negativeResponses);
+
+        positiveFrequencies.entrySet()
                 .stream()
                 .forEach(entry -> {
-                    Double negativeValue = negativeFreqMap.get(entry.getKey());
-                    if (negativeValue == null) {
-                        negativeValue = 0.0;
+                    Double negativeFrequency = negativeFrequencies.get(entry.getKey());
+                    if (negativeFrequency == null) {
+                        negativeFrequency = 0.0;
                     }
-                    double positiveValue = entry.getValue();
+                    double positiveFrequency = entry.getValue();
 //                    double a = positiveValue / negativeValue;
 //                    double b = negativeValue / positiveValue;
 
-                    double value = positiveValue - negativeValue;
+                    double score = positiveFrequency - negativeFrequency;
 
-                    setScore(entry.getKey(), value);
+                    setScore(entry.getKey(), score);
 
                     String result = entry.getKey() + " -> " + entry.getValue();
                     //System.out.println(result);
@@ -45,7 +49,7 @@ public class SiblingClassifier extends Classifier<LanguageResponse> {
 
     @Override
     public boolean classify(LanguageResponse response) {
-        DependencyTree tree = SyntaxReader.toDependencyTree(response);
+        DependencyTree tree = LanguageUtils.toDependencyTree(response);
         HashSet<String> siblingSet = new HashSet<>();
         SiblingTraverser.collectSiblingSet(tree.getRoot(), siblingSet);
 
@@ -75,9 +79,8 @@ public class SiblingClassifier extends Classifier<LanguageResponse> {
 //        }
     }
 
-    public HashMap<String, Double> getSiblingFrequencyMap(String directory) {
-        List<LanguageResponse> responses = mSyntaxReader.readParsedDataFromFiles(directory);
-        List<DependencyTree> trees = SyntaxReader.toDependencyTrees(responses);
+    public HashMap<String, Double> getSiblingFrequencyMap(List<LanguageResponse> responses) {
+        List<DependencyTree> trees = LanguageUtils.toDependencyTrees(responses);
 
         final HashMap<String, Double> siblingCountMap = new HashMap<>();
         trees.stream().forEach(tree -> SiblingTraverser.collectSiblingCountInNode(tree.getRoot(), siblingCountMap));
@@ -105,8 +108,8 @@ public class SiblingClassifier extends Classifier<LanguageResponse> {
     }
 
     public void analyzeDependenciesBetweenSiblings(String directory) {
-        List<LanguageResponse> responses = mSyntaxReader.readParsedDataFromFiles(directory);
-        List<DependencyTree> trees = SyntaxReader.toDependencyTrees(responses);
+        List<LanguageResponse> responses = mSyntaxStructurer.readParsedDataFromFiles(directory);
+        List<DependencyTree> trees = LanguageUtils.toDependencyTrees(responses);
 
         final HashMap<String, Double> siblingCountMap = new HashMap<>();
         trees.stream().forEach(tree -> SiblingTraverser.collectSiblingCountInNode(tree.getRoot(),

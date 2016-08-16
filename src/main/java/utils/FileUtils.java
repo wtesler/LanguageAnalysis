@@ -17,6 +17,8 @@ import models.LanguageResponse;
 
 public class FileUtils {
 
+    private FileUtils() { }
+
     /**
      *
      * @param directory

@@ -1,21 +1,23 @@
 package app;
 
 import java.util.List;
+import java.util.Scanner;
 
 import javax.inject.Inject;
 
 import app.AppModule.ForQuestions;
 import classifier.Score;
 import models.LanguageResponse;
-import questions.EnsembleQuestionClassifier;
-import questions.SyntaxReader;
 import parser.CloudParser;
+import questions.EnsembleQuestionClassifier;
+import questions.SyntaxStructurer;
 
 public class App {
 
     @Inject @ForQuestions EnsembleQuestionClassifier mEnsembleQuestionClassifier;
     @Inject CloudParser mCloudParser;
-    @Inject SyntaxReader mSyntaxReader;
+    @Inject
+    SyntaxStructurer mSyntaxStructurer;
 
     private final AppComponent mAppComponent;
 
@@ -34,31 +36,30 @@ public class App {
                 .train("parses/general_questions_training", "parses/general_responses_training");
 
         List<LanguageResponse> positiveResponses
-                = mSyntaxReader.readParsedDataFromFiles("parses/general_questions_testing");
+                = mSyntaxStructurer.readParsedDataFromFiles("parses/general_questions_testing");
         List<LanguageResponse> negativeResponses
-                = mSyntaxReader.readParsedDataFromFiles("parses/general_responses_testing");
+                = mSyntaxStructurer.readParsedDataFromFiles("parses/general_responses_testing");
 
         mEnsembleQuestionClassifier.test(positiveResponses, negativeResponses);
 
-        List<LanguageResponse> responses = mSyntaxReader.readParsedDataFromFiles("parses/general_questions_master");
-
+        List<LanguageResponse> responses = mSyntaxStructurer.readParsedDataFromFiles("parses/general_questions_master");
         Score score = mEnsembleQuestionClassifier.scoreObjects(responses);
+
         System.out.println("Accuracy: " + (double) score.correct / score.total);
 
-//        mCloudParser.getParsedSentenceObservable()
-//                .subscribe(parsedSentence -> {
-//                    LanguageResponse response = mSyntaxReader.convertParsedSentence(parsedSentence);
-//                    boolean decision = mEnsembleQuestionClassifier.classify(response);
-//                    System.out.println(decision ? "This is a question" : "This is a statement");
-//                });
-//
-//        mCloudParser.parseSentence("I want a refund");
-//        mCloudParser.parseSentence("Two burgers");
-//        mCloudParser.parseSentence("A number 4 with a coke.");
-//        mCloudParser.parseSentence("Put mustard on it.");
+        mCloudParser.getParsedSentenceObservable()
+                .subscribe(parsedSentence -> {
+                    LanguageResponse response = mSyntaxStructurer.convertParsedSentence(parsedSentence);
+                    boolean decision = mEnsembleQuestionClassifier.classify(response, true);
+                    System.out.println(decision ? "This is a question" : "This is a statement");
+                });
 
         while (true) {
-            continue;
+            Scanner scanner = new Scanner(System.in);
+            String line = scanner.nextLine();
+            if (!line.isEmpty()) {
+                mCloudParser.parseSentence(line);
+            }
         }
     }
 

@@ -6,7 +6,7 @@ import com.squareup.okhttp.OkHttpClient;
 import javax.inject.Singleton;
 
 import questions.EnsembleQuestionClassifier;
-import questions.SyntaxReader;
+import questions.SyntaxStructurer;
 import cloud.LanguageClient;
 import dagger.Component;
 import parser.CloudParser;
@@ -33,6 +33,6 @@ public interface AppComponent {
     @AppModule.ForLanguage
     Retrofit languageRetrofit();
 
-    SyntaxReader syntaxReader();
+    SyntaxStructurer syntaxReader();
 }
 

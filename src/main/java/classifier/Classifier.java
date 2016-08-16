@@ -12,6 +12,13 @@ public abstract class Classifier<T> {
     private Double mPositiveConfidence = 1.0;
     private Double mNegativeConfidence = 1.0;
 
+    // Tested Values
+    int mFalsePositives = 0;
+    int mFalseNegatives = 0;
+
+    int mTruePositives = 0;
+    int mTrueNegatives = 0;
+
     public Classifier() { }
 
     /**
@@ -27,27 +34,22 @@ public abstract class Classifier<T> {
     /**
      * Use the data to set a confidence level.
      */
-    public void test(List<T> positiveObjects, List<T> negativeObjects) {
-        int truePositives = 0;
-        int falseNegatives = 0;
-        int falsePositives = 0;
-        int trueNegatives = 0;
+    public void test(List<T> positiveExamples, List<T> negativeExamples) {
+        Score positiveScore = scoreObjects(positiveExamples);
+        mTruePositives += positiveScore.correct;
+        mFalseNegatives += positiveScore.total - positiveScore.correct;
 
-        Score positiveScore = scoreObjects(positiveObjects);
-        truePositives += positiveScore.correct;
-        falseNegatives += positiveScore.total - positiveScore.correct;
+        Score negativeScore = scoreObjects(negativeExamples);
+        mFalsePositives += negativeScore.correct;
+        mTrueNegatives += negativeScore.total - negativeScore.correct;
 
-        Score negativeScore = scoreObjects(negativeObjects);
-        falsePositives += negativeScore.correct;
-        trueNegatives += negativeScore.total - negativeScore.correct;
-
-        double positiveConfidence = (double) truePositives / (truePositives + falsePositives);
+        double positiveConfidence = (double) mTruePositives / (mTruePositives + mFalsePositives);
         positiveConfidence = -Math.log(1 - positiveConfidence);
         if (positiveConfidence == Double.POSITIVE_INFINITY) {
             positiveConfidence = MAX_CONFIDENCE;
         }
 
-        double negativeConfidence = (double) trueNegatives / (trueNegatives + falseNegatives);
+        double negativeConfidence = (double) mTrueNegatives / (mTrueNegatives + mFalseNegatives);
         negativeConfidence = -Math.log(1 - negativeConfidence);
         if (negativeConfidence == Double.POSITIVE_INFINITY) {
             negativeConfidence = MAX_CONFIDENCE;

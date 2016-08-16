@@ -14,11 +14,11 @@ import models.DependencyTree;
 import models.LanguageResponse;
 import models.Token;
 
-public class SyntaxReader {
+public class SyntaxStructurer {
 
     private Gson mGson;
 
-    public SyntaxReader(Gson gson) {
+    public SyntaxStructurer(Gson gson) {
         mGson = gson;
     }
 
@@ -46,22 +46,5 @@ public class SyntaxReader {
 
     public LanguageResponse convertParsedSentence(String parsedSentence) {
         return mGson.fromJson(parsedSentence, LanguageResponse.class);
-    }
-
-    /**
-     * Assumes that each language response contains one sentence.
-     */
-    public static DependencyTree toDependencyTree(LanguageResponse response) {
-        Token[] sentenceTokens = response.tokens.toArray(new Token[response.tokens.size()]);
-        return new DependencyTree(sentenceTokens, 0);
-    }
-
-    /**
-     * Assumes that each language response contains one sentence.
-     */
-    public static List<DependencyTree> toDependencyTrees(List<LanguageResponse> responses) {
-        return responses.stream()
-                .map(SyntaxReader::toDependencyTree)
-                .collect(Collectors.toList());
     }
 }

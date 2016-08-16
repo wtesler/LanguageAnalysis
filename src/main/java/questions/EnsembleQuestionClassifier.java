@@ -8,14 +8,15 @@ import models.LanguageResponse;
 
 public class EnsembleQuestionClassifier extends Classifier<LanguageResponse> {
 
-    private final SyntaxReader mSyntaxReader;
+    private final SyntaxStructurer mSyntaxStructurer;
 
     private List<Classifier<LanguageResponse>> mClassifiers = new ArrayList<>();
 
-    public EnsembleQuestionClassifier(SyntaxReader syntaxReader) {
-        mSyntaxReader = syntaxReader;
+    public EnsembleQuestionClassifier(SyntaxStructurer syntaxStructurer) {
+        mSyntaxStructurer = syntaxStructurer;
 
-        mClassifiers.add(new SiblingClassifier(mSyntaxReader));
+        //mClassifiers.add(new SiblingClassifier(mSyntaxStructurer));
+        mClassifiers.add(new FlatEdgeClassifier(mSyntaxStructurer));
         mClassifiers.add(new QuestionWordsClassifier());
         mClassifiers.add(new InitialWordClassifier());
     }
@@ -26,20 +27,26 @@ public class EnsembleQuestionClassifier extends Classifier<LanguageResponse> {
     }
 
     @Override
-    public void test(List<LanguageResponse> positiveResponses, List<LanguageResponse> negativeResponses) {
-        mClassifiers.forEach(classifier -> classifier.test(positiveResponses, negativeResponses));
-        super.test(positiveResponses, negativeResponses);
+    public void test(List<LanguageResponse> positiveExamples, List<LanguageResponse> negativeExamples) {
+        mClassifiers.forEach(classifier -> classifier.test(positiveExamples, negativeExamples));
+        super.test(positiveExamples, negativeExamples);
     }
 
     @Override
     public boolean classify(LanguageResponse response) {
+        return classify(response, false);
+    }
+
+    public boolean classify(LanguageResponse response, boolean interactive) {
         double consensus = mClassifiers.stream().mapToDouble(classifier -> {
             boolean decision = classifier.classify(response);
             double confidence = decision ? classifier.getPositiveConfidence() : classifier.getNegativeConfidence();
             return (decision ? 1 : -1) * confidence;
         }).sum();
 
-        System.out.println("consensus: " + consensus);
+        if (interactive) {
+            System.out.println("confidence: " + consensus);
+        }
         return consensus > 0;
     }
 }
