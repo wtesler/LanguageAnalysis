@@ -8,16 +8,13 @@ import javax.inject.Inject;
 import app.AppModule.ForQuestions;
 import classifier.Score;
 import models.LanguageResponse;
-import parser.CloudParser;
+import cloud.CloudParser;
 import questions.EnsembleQuestionClassifier;
-import questions.SyntaxStructurer;
 
 public class App {
 
     @Inject @ForQuestions EnsembleQuestionClassifier mEnsembleQuestionClassifier;
     @Inject CloudParser mCloudParser;
-    @Inject
-    SyntaxStructurer mSyntaxStructurer;
 
     private final AppComponent mAppComponent;
 
@@ -32,24 +29,31 @@ public class App {
 
         mAppComponent.inject(this);
 
+        List<LanguageResponse> positiveTrainingResponses =
+                mCloudParser.parseDataFromFiles("parses/general_questions_training");
+        List<LanguageResponse> negativeTrainingResponses =
+                mCloudParser.parseDataFromFiles("parses/general_responses_training");
+
+        // Train
         mEnsembleQuestionClassifier
-                .train("parses/general_questions_training", "parses/general_responses_training");
+                .train(positiveTrainingResponses, negativeTrainingResponses);
 
-        List<LanguageResponse> positiveResponses
-                = mSyntaxStructurer.readParsedDataFromFiles("parses/general_questions_testing");
-        List<LanguageResponse> negativeResponses
-                = mSyntaxStructurer.readParsedDataFromFiles("parses/general_responses_testing");
+        List<LanguageResponse> positiveTestingResponses
+                = mCloudParser.parseDataFromFiles("parses/general_questions_testing");
+        List<LanguageResponse> negativeTestingResponses
+                = mCloudParser.parseDataFromFiles("parses/general_responses_testing");
 
-        mEnsembleQuestionClassifier.test(positiveResponses, negativeResponses);
+        // Test
+        mEnsembleQuestionClassifier.test(positiveTestingResponses, negativeTestingResponses);
 
-        List<LanguageResponse> responses = mSyntaxStructurer.readParsedDataFromFiles("parses/general_questions_master");
+        List<LanguageResponse> responses = mCloudParser.parseDataFromFiles("parses/general_questions_master");
         Score score = mEnsembleQuestionClassifier.scoreObjects(responses);
 
         System.out.println("Accuracy: " + (double) score.correct / score.total);
 
         mCloudParser.getParsedSentenceObservable()
                 .subscribe(parsedSentence -> {
-                    LanguageResponse response = mSyntaxStructurer.convertParsedSentence(parsedSentence);
+                    LanguageResponse response = mCloudParser.convertParsedSentence(parsedSentence);
                     boolean decision = mEnsembleQuestionClassifier.classify(response, true);
                     System.out.println(decision ? "This is a question" : "This is a statement");
                 });

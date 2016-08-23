@@ -6,6 +6,7 @@ import java.util.List;
 public abstract class Classifier<T> {
 
     private final HashMap<String, Double> mScoreMap = new HashMap<>();
+    private double mScoreSum;
 
     private final int MAX_CONFIDENCE = 10;
 
@@ -23,11 +24,8 @@ public abstract class Classifier<T> {
 
     /**
      * Use the data to set a score.
-     *
-     * @param positiveDir
-     * @param negativeDir
      */
-    public abstract void train(String positiveDir, String negativeDir);
+    public abstract void train(List<T> positiveExamples, List<T> negativeExamples);
 
     public abstract boolean classify(T object);
 
@@ -35,6 +33,8 @@ public abstract class Classifier<T> {
      * Use the data to set a confidence level.
      */
     public void test(List<T> positiveExamples, List<T> negativeExamples) {
+        normalize();
+
         Score positiveScore = scoreObjects(positiveExamples);
         mTruePositives += positiveScore.correct;
         mFalseNegatives += positiveScore.total - positiveScore.correct;
@@ -61,31 +61,15 @@ public abstract class Classifier<T> {
         System.out.println("Negative Confidence: " + getNegativeConfidence());
     }
 
-    public final Score scoreObjects(List<T> objects) {
-        Integer correctlyClassifed = objects.stream()
+    public final Score scoreObjects(List<T> presumedPositives) {
+        Integer correctlyClassifed = presumedPositives.stream()
                 .mapToInt(response -> classify(response) ? 1 : 0)
                 .sum();
 
         Score score = new Score();
         score.correct = correctlyClassifed;
-        score.total = objects.size();
+        score.total = presumedPositives.size();
         return score;
-    }
-
-    protected final Double getScore(String key) {
-        return mScoreMap.get(key);
-    }
-
-    protected final HashMap<String, Double> getScores() {
-        return mScoreMap;
-    }
-
-    protected final void setScore(String key, Double value) {
-        mScoreMap.put(key, value);
-    }
-
-    protected final void addScores(HashMap<String, Double> values) {
-        mScoreMap.putAll(values);
     }
 
     public final Double getPositiveConfidence() {
@@ -102,5 +86,26 @@ public abstract class Classifier<T> {
 
     public final void setNegativeConfidence(double confidence) {
         mNegativeConfidence = confidence;
+    }
+
+    protected final Double getScore(String key) {
+        return mScoreMap.get(key);
+    }
+
+    protected final void setScore(String key, Double value) {
+        if (mScoreMap.containsKey(key)) {
+            mScoreSum -= Math.abs(mScoreMap.get(key));
+        }
+        mScoreMap.put(key, value);
+        mScoreSum += Math.abs(value);
+    }
+
+    protected final HashMap<String, Double> getScores() {
+        return mScoreMap;
+    }
+
+    private void normalize() {
+        mScoreMap.entrySet().parallelStream()
+                .forEach(entry -> mScoreMap.put(entry.getKey(), entry.getValue() / mScoreSum));
     }
 }

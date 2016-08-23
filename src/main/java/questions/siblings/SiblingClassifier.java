@@ -1,4 +1,4 @@
-package questions;
+package questions.siblings;
 
 import java.util.HashMap;
 import java.util.HashSet;
@@ -7,25 +7,23 @@ import java.util.Map;
 import java.util.stream.Collectors;
 
 import classifier.Classifier;
+import cloud.CloudParser;
 import models.DependencyTree;
 import models.LanguageResponse;
 import utils.LanguageUtils;
 
 public class SiblingClassifier extends Classifier<LanguageResponse> {
 
-    private final SyntaxStructurer mSyntaxStructurer;
+    private final CloudParser mCloudParser;
 
-    public SiblingClassifier(SyntaxStructurer syntaxStructurer) {
-        mSyntaxStructurer = syntaxStructurer;
+    public SiblingClassifier(CloudParser cloudParser) {
+        mCloudParser = cloudParser;
     }
 
     @Override
-    public void train(String positiveDir, String negativeDir) {
-        List<LanguageResponse> positiveResponses = mSyntaxStructurer.readParsedDataFromFiles(positiveDir);
-        List<LanguageResponse> negativeResponses = mSyntaxStructurer.readParsedDataFromFiles(negativeDir);
-
-        HashMap<String, Double> positiveFrequencies = getSiblingFrequencyMap(positiveResponses);
-        HashMap<String, Double> negativeFrequencies = getSiblingFrequencyMap(negativeResponses);
+    public void train(List<LanguageResponse> positiveExamples, List<LanguageResponse> negativeExamples) {
+        HashMap<String, Double> positiveFrequencies = getSiblingFrequencyMap(positiveExamples);
+        HashMap<String, Double> negativeFrequencies = getSiblingFrequencyMap(negativeExamples);
 
         positiveFrequencies.entrySet()
                 .stream()
@@ -108,7 +106,7 @@ public class SiblingClassifier extends Classifier<LanguageResponse> {
     }
 
     public void analyzeDependenciesBetweenSiblings(String directory) {
-        List<LanguageResponse> responses = mSyntaxStructurer.readParsedDataFromFiles(directory);
+        List<LanguageResponse> responses = mCloudParser.parseDataFromFiles(directory);
         List<DependencyTree> trees = LanguageUtils.toDependencyTrees(responses);
 
         final HashMap<String, Double> siblingCountMap = new HashMap<>();

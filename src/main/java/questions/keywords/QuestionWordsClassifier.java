@@ -1,4 +1,6 @@
-package questions;
+package questions.keywords;
+
+import java.util.List;
 
 import classifier.Classifier;
 import models.LanguageResponse;
@@ -6,7 +8,7 @@ import models.LanguageResponse;
 public class QuestionWordsClassifier extends Classifier<LanguageResponse> {
 
     @Override
-    public void train(String positiveDir, String negativeDir) {
+    public void train(List<LanguageResponse> positiveExamples, List<LanguageResponse> negativeExamples) {
         setScore("WHO", 1.0);
         setScore("WHAT", 1.0);
         setScore("WHEN", 1.0);

@@ -1,4 +1,6 @@
-package questions;
+package questions.keywords;
+
+import java.util.List;
 
 import classifier.Classifier;
 import models.LanguageResponse;
@@ -6,9 +8,10 @@ import models.LanguageResponse;
 public class InitialWordClassifier extends Classifier<LanguageResponse> {
 
     @Override
-    public void train(String positiveDir, String negativeDir) {
+    public void train(List<LanguageResponse> positiveExamples, List<LanguageResponse> negativeExamples) {
         setScore("CAN", 1.0);
         setScore("IS", 1.0);
+        setScore("HAS", 1.0);
         setScore("ARE", 1.0);
         setScore("SHOULD", 1.0);
         setScore("WOULD", 1.0);

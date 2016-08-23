@@ -4,26 +4,32 @@ import java.util.ArrayList;
 import java.util.List;
 
 import classifier.Classifier;
+import cloud.CloudParser;
 import models.LanguageResponse;
+import questions.flat_edge.FlatEdgeClassifier;
+import questions.keywords.InitialWordClassifier;
+import questions.keywords.QuestionWordsClassifier;
+import questions.partofspeech.PosBigramClassifier;
 
 public class EnsembleQuestionClassifier extends Classifier<LanguageResponse> {
 
-    private final SyntaxStructurer mSyntaxStructurer;
+    private final CloudParser mCloudParser;
 
     private List<Classifier<LanguageResponse>> mClassifiers = new ArrayList<>();
 
-    public EnsembleQuestionClassifier(SyntaxStructurer syntaxStructurer) {
-        mSyntaxStructurer = syntaxStructurer;
+    public EnsembleQuestionClassifier(CloudParser cloudParser) {
+        mCloudParser = cloudParser;
 
-        //mClassifiers.add(new SiblingClassifier(mSyntaxStructurer));
-        mClassifiers.add(new FlatEdgeClassifier(mSyntaxStructurer));
+        //mClassifiers.add(new SiblingClassifier(cloudParser));
+        mClassifiers.add(new FlatEdgeClassifier(cloudParser));
         mClassifiers.add(new QuestionWordsClassifier());
         mClassifiers.add(new InitialWordClassifier());
+        mClassifiers.add(new PosBigramClassifier(cloudParser));
     }
 
     @Override
-    public void train(String positiveDir, String negativeDir) {
-        mClassifiers.forEach(classifier -> classifier.train(positiveDir, negativeDir));
+    public void train(List<LanguageResponse> positiveExamples, List<LanguageResponse> negativeExamples) {
+        mClassifiers.forEach(classifier -> classifier.train(positiveExamples, negativeExamples));
     }
 
     @Override

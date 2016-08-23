@@ -5,11 +5,10 @@ import com.squareup.okhttp.OkHttpClient;
 
 import javax.inject.Singleton;
 
-import questions.EnsembleQuestionClassifier;
-import questions.SyntaxStructurer;
+import cloud.CloudParser;
 import cloud.LanguageClient;
 import dagger.Component;
-import parser.CloudParser;
+import questions.EnsembleQuestionClassifier;
 import retrofit.Retrofit;
 
 @Singleton
@@ -32,7 +31,5 @@ public interface AppComponent {
 
     @AppModule.ForLanguage
     Retrofit languageRetrofit();
-
-    SyntaxStructurer syntaxReader();
 }
 

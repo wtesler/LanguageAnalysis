@@ -1,31 +1,26 @@
-package questions;
+package questions.flat_edge;
 
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 import classifier.Classifier;
-import models.DependencyTree;
+import cloud.CloudParser;
 import models.LanguageResponse;
-import models.Token;
-import utils.LanguageUtils;
 
 public class FlatEdgeClassifier extends Classifier<LanguageResponse> {
 
-    private final SyntaxStructurer mSyntaxStructurer;
+    private final CloudParser mCloudParser;
 
-    public FlatEdgeClassifier(SyntaxStructurer syntaxStructurer) {
-        mSyntaxStructurer = syntaxStructurer;
+    public FlatEdgeClassifier(CloudParser cloudParser) {
+        mCloudParser = cloudParser;
     }
 
 
     @Override
-    public void train(String positiveDir, String negativeDir) {
-        List<LanguageResponse> positiveResponses = mSyntaxStructurer.readParsedDataFromFiles(positiveDir);
-        List<LanguageResponse> negativeResponses = mSyntaxStructurer.readParsedDataFromFiles(negativeDir);
-
-        HashMap<String, Double> positiveFrequencies = getSiblingFrequencyMap(positiveResponses);
-        HashMap<String, Double> negativeFrequencies = getSiblingFrequencyMap(negativeResponses);
+    public void train(List<LanguageResponse> positiveExamples, List<LanguageResponse> negativeExamples) {
+        HashMap<String, Double> positiveFrequencies = getSiblingFrequencyMap(positiveExamples);
+        HashMap<String, Double> negativeFrequencies = getSiblingFrequencyMap(negativeExamples);
 
         positiveFrequencies.entrySet()
                 .stream()
@@ -35,8 +30,6 @@ public class FlatEdgeClassifier extends Classifier<LanguageResponse> {
                         negativeFrequency = 0.0;
                     }
                     double positiveFrequency = entry.getValue();
-//                    double a = positiveValue / negativeValue;
-//                    double b = negativeValue / positiveValue;
 
                     double score = positiveFrequency - negativeFrequency;
 

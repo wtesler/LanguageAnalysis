@@ -1,19 +1,19 @@
-package parser;
+package cloud;
+
+import com.google.gson.Gson;
 
 import java.io.File;
 import java.io.IOException;
-import java.net.URL;
 import java.nio.file.Files;
+import java.nio.file.Path;
 import java.util.List;
-import java.util.UUID;
+import java.util.function.Function;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
-import app.App;
-import cloud.LanguageClient;
 import models.Features;
 import models.LanguageDocument;
 import models.LanguageRequest;
+import models.LanguageResponse;
 import rx.Observable;
 import rx.schedulers.Schedulers;
 import rx.subjects.PublishSubject;
@@ -21,11 +21,13 @@ import utils.FileUtils;
 
 public class CloudParser {
 
+    private final Gson mGson;
     private final LanguageClient mLanguageClient;
 
     private final PublishSubject<String> mParsedSentenceSubject = PublishSubject.create();
 
-    public CloudParser(LanguageClient languageClient) {
+    public CloudParser(Gson gson, LanguageClient languageClient) {
+        mGson = gson;
         mLanguageClient = languageClient;
     }
 
@@ -72,6 +74,32 @@ public class CloudParser {
 
     public Observable<String> getParsedSentenceObservable() {
         return mParsedSentenceSubject.asObservable();
+    }
+
+    public LanguageResponse convertParsedSentence(String parsedSentence) {
+        return mGson.fromJson(parsedSentence, LanguageResponse.class);
+    }
+
+    public List<LanguageResponse> parseDataFromFiles(String directory) {
+        try {
+            return Files.list(new File(directory).toPath())
+                    .collect(Collectors.mapping((Function<Path, LanguageResponse>) path -> {
+                        try {
+                            String content = new String(Files.readAllBytes(path));
+                            LanguageResponse response = mGson.fromJson(content, LanguageResponse.class);
+                            if (response.tokens.size() == 0) {
+                                System.err.println(path + " did not produce tokens");
+                            }
+                            return response;
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                            return null;
+                        }
+                    }, Collectors.toList()));
+        } catch (IOException e) {
+            e.printStackTrace();
+            return null;
+        }
     }
 
     private static LanguageRequest constructLanguageRequest(String content) {

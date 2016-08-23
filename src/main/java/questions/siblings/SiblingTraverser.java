@@ -1,4 +1,4 @@
-package questions;
+package questions.siblings;
 
 import java.util.Collection;
 import java.util.HashMap;
@@ -40,17 +40,15 @@ public class SiblingTraverser {
                         return null;
                     }
 
-                    if (node.children.get(i).token.dependencyEdge.label.equals(DependencyEdge.P)
-                            || node.children.get(i + 1).token.dependencyEdge.label.equals(DependencyEdge.P)) {
-                        // EnsembleQuestionClassifier shouldn't take punctuation into account.
+                    String label1 = node.children.get(i).token.dependencyEdge.label;
+                    String label2 = node.children.get(i + 1).token.dependencyEdge.label;
+
+                    if (label1.equals(DependencyEdge.P) || label2.equals(DependencyEdge.P)) {
+                        // Shouldn't take punctuation into account.
                         return null;
                     }
 
-                    String siblingLabel = node.children.get(i).token.dependencyEdge.label
-                            + ","
-                            + node.children.get(i + 1).token.dependencyEdge.label;
-
-                    return siblingLabel;
+                    return label1 + "," + label2;
                 })
                 .filter(s -> s != null);
     }

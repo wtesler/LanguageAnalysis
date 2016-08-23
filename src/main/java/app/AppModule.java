@@ -12,13 +12,12 @@ import java.lang.annotation.Retention;
 import javax.inject.Qualifier;
 import javax.inject.Singleton;
 
-import questions.EnsembleQuestionClassifier;
-import questions.SyntaxStructurer;
+import cloud.CloudParser;
 import cloud.LanguageClient;
 import cloud.LanguageService;
 import dagger.Module;
 import dagger.Provides;
-import parser.CloudParser;
+import questions.EnsembleQuestionClassifier;
 import retrofit.GsonConverterFactory;
 import retrofit.Retrofit;
 import retrofit.RxJavaCallAdapterFactory;
@@ -39,14 +38,14 @@ public class AppModule {
     @Provides
     @ForQuestions
     @Singleton
-    EnsembleQuestionClassifier provideClassifier(SyntaxStructurer syntaxStructurer) {
-        return new EnsembleQuestionClassifier(syntaxStructurer);
+    EnsembleQuestionClassifier provideClassifier(CloudParser cloudParser) {
+        return new EnsembleQuestionClassifier(cloudParser);
     }
 
     @Provides
     @Singleton
-    CloudParser provideCloudParser(LanguageClient languageClient) {
-        return new CloudParser(languageClient);
+    CloudParser provideCloudParser(Gson gson, LanguageClient languageClient) {
+        return new CloudParser(gson, languageClient);
     }
 
     @Provides
@@ -99,12 +98,6 @@ public class AppModule {
                 .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
                 .client(okHttpClient)
                 .build();
-    }
-
-    @Provides
-    @Singleton
-    SyntaxStructurer provideSyntaxReader(Gson gson) {
-        return new SyntaxStructurer(gson);
     }
 
     @Qualifier
