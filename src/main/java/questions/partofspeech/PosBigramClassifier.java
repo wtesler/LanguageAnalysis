@@ -37,8 +37,8 @@ public class PosBigramClassifier extends Classifier<LanguageResponse> {
 
                     setScore(entry.getKey(), score);
 
-                    String result = entry.getKey() + " -> " + entry.getValue();
-                    System.out.println(result);
+                    //String result = entry.getKey() + " -> " + entry.getValue();
+                    //System.out.println(result);
                 });
     }
 
@@ -55,6 +55,8 @@ public class PosBigramClassifier extends Classifier<LanguageResponse> {
                     return value != null ? value: 0;
                 })
                 .sum();
+
+        //System.out.println("PosBigramClassifier classifies: " + score);
 
         return score > 0;
     }

@@ -34,9 +34,6 @@ public class FlatEdgeClassifier extends Classifier<LanguageResponse> {
                     double score = positiveFrequency - negativeFrequency;
 
                     setScore(entry.getKey(), score);
-
-                    String result = entry.getKey() + " -> " + entry.getValue();
-                    //System.out.println(result);
                 });
     }
 
@@ -51,6 +48,8 @@ public class FlatEdgeClassifier extends Classifier<LanguageResponse> {
 
             score += getScore(siblingLabel) != null ? getScore(siblingLabel) : 0;
         }
+
+        //System.out.println("FlatEdgeClassifier classifies: " + score);
 
         return score > 0;
     }
@@ -74,6 +73,7 @@ public class FlatEdgeClassifier extends Classifier<LanguageResponse> {
                 .mapToDouble(Map.Entry::getValue)
                 .sum();
 
+        // Normalize value
         siblingCountMap.entrySet()
                 .stream()
                 .forEach(entry -> {

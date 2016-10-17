@@ -15,6 +15,7 @@ public class QuestionWordsClassifier extends Classifier<LanguageResponse> {
         setScore("WHERE", 1.0);
         setScore("WHY", 1.0);
         setScore("HOW", 1.0);
+        setScore("WHICH", 1.0);
     }
 
     @Override

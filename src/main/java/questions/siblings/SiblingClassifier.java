@@ -40,7 +40,7 @@ public class SiblingClassifier extends Classifier<LanguageResponse> {
 
                     setScore(entry.getKey(), score);
 
-                    String result = entry.getKey() + " -> " + entry.getValue();
+                    //String result = entry.getKey() + " -> " + entry.getValue();
                     //System.out.println(result);
                 });
     }

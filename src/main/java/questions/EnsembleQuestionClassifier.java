@@ -10,6 +10,7 @@ import questions.flat_edge.FlatEdgeClassifier;
 import questions.keywords.InitialWordClassifier;
 import questions.keywords.QuestionWordsClassifier;
 import questions.partofspeech.PosBigramClassifier;
+import questions.siblings.SiblingClassifier;
 
 public class EnsembleQuestionClassifier extends Classifier<LanguageResponse> {
 
@@ -20,7 +21,7 @@ public class EnsembleQuestionClassifier extends Classifier<LanguageResponse> {
     public EnsembleQuestionClassifier(CloudParser cloudParser) {
         mCloudParser = cloudParser;
 
-        //mClassifiers.add(new SiblingClassifier(cloudParser));
+        mClassifiers.add(new SiblingClassifier(cloudParser));
         mClassifiers.add(new FlatEdgeClassifier(cloudParser));
         mClassifiers.add(new QuestionWordsClassifier());
         mClassifiers.add(new InitialWordClassifier());
@@ -44,15 +45,22 @@ public class EnsembleQuestionClassifier extends Classifier<LanguageResponse> {
     }
 
     public boolean classify(LanguageResponse response, boolean interactive) {
-        double consensus = mClassifiers.stream().mapToDouble(classifier -> {
+        double totalClassification = mClassifiers.stream().mapToDouble(classifier -> {
             boolean decision = classifier.classify(response);
             double confidence = decision ? classifier.getPositiveConfidence() : classifier.getNegativeConfidence();
-            return (decision ? 1 : -1) * confidence;
-        }).sum();
+            double classification = (decision ? 1 : -1) * confidence;
+            if (interactive) {
+                System.out.println(classifier.getClass().getSimpleName() + ": " + classification);
+            }
+            return classification;
+        })
+        .sum();
+
+        totalClassification /= mClassifiers.size();
 
         if (interactive) {
-            System.out.println("confidence: " + consensus);
+            System.out.println("Total Classification: " + totalClassification);
         }
-        return consensus > 0;
+        return totalClassification > 0;
     }
 }

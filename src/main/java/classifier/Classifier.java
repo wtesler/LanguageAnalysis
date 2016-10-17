@@ -8,7 +8,7 @@ public abstract class Classifier<T> {
     private final HashMap<String, Double> mScoreMap = new HashMap<>();
     private double mScoreSum;
 
-    private final int MAX_CONFIDENCE = 10;
+    private final int MAX_CONFIDENCE = 4;
 
     private Double mPositiveConfidence = 1.0;
     private Double mNegativeConfidence = 1.0;
@@ -33,7 +33,7 @@ public abstract class Classifier<T> {
      * Use the data to set a confidence level.
      */
     public void test(List<T> positiveExamples, List<T> negativeExamples) {
-        normalize();
+        //normalize();
 
         Score positiveScore = scoreObjects(positiveExamples);
         mTruePositives += positiveScore.correct;
@@ -45,20 +45,22 @@ public abstract class Classifier<T> {
 
         double positiveConfidence = (double) mTruePositives / (mTruePositives + mFalsePositives);
         positiveConfidence = -Math.log(1 - positiveConfidence);
-        if (positiveConfidence == Double.POSITIVE_INFINITY) {
+        if (positiveConfidence > MAX_CONFIDENCE) {
             positiveConfidence = MAX_CONFIDENCE;
         }
 
         double negativeConfidence = (double) mTrueNegatives / (mTrueNegatives + mFalseNegatives);
         negativeConfidence = -Math.log(1 - negativeConfidence);
-        if (negativeConfidence == Double.POSITIVE_INFINITY) {
+        if (negativeConfidence > MAX_CONFIDENCE) {
             negativeConfidence = MAX_CONFIDENCE;
         }
 
         setPositiveConfidence(positiveConfidence);
         setNegativeConfidence(negativeConfidence);
-        System.out.println("Positive Confidence: " + getPositiveConfidence());
-        System.out.println("Negative Confidence: " + getNegativeConfidence());
+
+        System.out.println(getClass().getSimpleName());
+        System.out.println("\tPositive Confidence: " + getPositiveConfidence());
+        System.out.println("\tNegative Confidence: " + getNegativeConfidence());
     }
 
     public final Score scoreObjects(List<T> presumedPositives) {
