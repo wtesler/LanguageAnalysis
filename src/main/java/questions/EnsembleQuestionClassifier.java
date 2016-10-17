@@ -40,15 +40,15 @@ public class EnsembleQuestionClassifier extends Classifier<LanguageResponse> {
     }
 
     @Override
-    public boolean classify(LanguageResponse response) {
+    public double classify(LanguageResponse response) {
         return classify(response, false);
     }
 
-    public boolean classify(LanguageResponse response, boolean interactive) {
+    public double classify(LanguageResponse response, boolean interactive) {
         double totalClassification = mClassifiers.stream().mapToDouble(classifier -> {
-            boolean decision = classifier.classify(response);
-            double confidence = decision ? classifier.getPositiveConfidence() : classifier.getNegativeConfidence();
-            double classification = (decision ? 1 : -1) * confidence;
+            double decision = classifier.classify(response);
+            double confidence = decision > 0 ? classifier.getPositiveConfidence() : classifier.getNegativeConfidence();
+            double classification = decision * confidence;
             if (interactive) {
                 System.out.println(classifier.getClass().getSimpleName() + ": " + classification);
             }
@@ -61,6 +61,6 @@ public class EnsembleQuestionClassifier extends Classifier<LanguageResponse> {
         if (interactive) {
             System.out.println("Total Classification: " + totalClassification);
         }
-        return totalClassification > 0;
+        return totalClassification;
     }
 }

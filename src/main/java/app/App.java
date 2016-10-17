@@ -54,8 +54,8 @@ public class App {
         mCloudParser.getParsedSentenceObservable()
                 .subscribe(parsedSentence -> {
                     LanguageResponse response = mCloudParser.convertParsedSentence(parsedSentence);
-                    boolean decision = mEnsembleQuestionClassifier.classify(response, true);
-                    System.out.println(decision ? "This is a question" : "This is a statement");
+                    double decision = mEnsembleQuestionClassifier.classify(response, true);
+                    System.out.println(decision > 0 ? "This is a question" : "This is a statement");
                 });
 
         while (true) {

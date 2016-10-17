@@ -43,7 +43,7 @@ public class PosBigramClassifier extends Classifier<LanguageResponse> {
     }
 
     @Override
-    public boolean classify(LanguageResponse response) {
+    public double classify(LanguageResponse response) {
         DependencyTree tree = LanguageUtils.toDependencyTree(response);
         HashSet<String> posBigramSet = new HashSet<>();
         PosTraverser.collectPosBigrams(tree.getRoot(), posBigramSet);
@@ -56,9 +56,9 @@ public class PosBigramClassifier extends Classifier<LanguageResponse> {
                 })
                 .sum();
 
-        //System.out.println("PosBigramClassifier classifies: " + score);
+        //System.out.println("PosBigramClassifier classifies: " + score / getRange());
 
-        return score > 0;
+        return score / getRange();
     }
 
     public HashMap<String, Double> getPosBigramFrequencyMap(List<LanguageResponse> responses) {

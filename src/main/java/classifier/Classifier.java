@@ -6,7 +6,8 @@ import java.util.List;
 public abstract class Classifier<T> {
 
     private final HashMap<String, Double> mScoreMap = new HashMap<>();
-    private double mScoreSum;
+    private double mHighestScore = Double.MIN_VALUE;
+    private double mLowestScore = Double.MAX_VALUE;
 
     private final int MAX_CONFIDENCE = 4;
 
@@ -27,14 +28,12 @@ public abstract class Classifier<T> {
      */
     public abstract void train(List<T> positiveExamples, List<T> negativeExamples);
 
-    public abstract boolean classify(T object);
+    public abstract double classify(T object);
 
     /**
      * Use the data to set a confidence level.
      */
     public void test(List<T> positiveExamples, List<T> negativeExamples) {
-        //normalize();
-
         Score positiveScore = scoreObjects(positiveExamples);
         mTruePositives += positiveScore.correct;
         mFalseNegatives += positiveScore.total - positiveScore.correct;
@@ -65,7 +64,7 @@ public abstract class Classifier<T> {
 
     public final Score scoreObjects(List<T> presumedPositives) {
         Integer correctlyClassifed = presumedPositives.stream()
-                .mapToInt(response -> classify(response) ? 1 : 0)
+                .mapToInt(response -> classify(response) > 0 ? 1 : 0)
                 .sum();
 
         Score score = new Score();
@@ -95,19 +94,20 @@ public abstract class Classifier<T> {
     }
 
     protected final void setScore(String key, Double value) {
-        if (mScoreMap.containsKey(key)) {
-            mScoreSum -= Math.abs(mScoreMap.get(key));
-        }
         mScoreMap.put(key, value);
-        mScoreSum += Math.abs(value);
+        if (value > mHighestScore) {
+            mHighestScore = value;
+        }
+        if (value < mLowestScore) {
+            mLowestScore = value;
+        }
     }
 
     protected final HashMap<String, Double> getScores() {
         return mScoreMap;
     }
 
-    private void normalize() {
-        mScoreMap.entrySet().parallelStream()
-                .forEach(entry -> mScoreMap.put(entry.getKey(), entry.getValue() / mScoreSum));
+    protected final double getRange() {
+        return mHighestScore - mLowestScore;
     }
 }

@@ -38,20 +38,17 @@ public class FlatEdgeClassifier extends Classifier<LanguageResponse> {
     }
 
     @Override
-    public boolean classify(LanguageResponse response) {
+    public double classify(LanguageResponse response) {
         double score = 0;
 
         for (int i = 0; i < response.tokens.size() - 1; i++) {
-            String siblingLabel = response.tokens.get(0).dependencyEdge.label
+            String siblingLabel = response.tokens.get(i).dependencyEdge.label
                     + ","
-                    + response.tokens.get(0).dependencyEdge.label;
-
+                    + response.tokens.get(i + 1).dependencyEdge.label;
             score += getScore(siblingLabel) != null ? getScore(siblingLabel) : 0;
         }
 
-        //System.out.println("FlatEdgeClassifier classifies: " + score);
-
-        return score > 0;
+        return score / getRange();
     }
 
     public HashMap<String, Double> getSiblingFrequencyMap(List<LanguageResponse> responses) {
@@ -59,9 +56,9 @@ public class FlatEdgeClassifier extends Classifier<LanguageResponse> {
         responses.
                 forEach(response -> {
                     for (int i = 0; i < response.tokens.size() - 1; i++) {
-                        String siblingLabel = response.tokens.get(0).dependencyEdge.label
+                        String siblingLabel = response.tokens.get(i).dependencyEdge.label
                                 + ","
-                                + response.tokens.get(0).dependencyEdge.label;
+                                + response.tokens.get(i + 1).dependencyEdge.label;
 
                         siblingCountMap.put(siblingLabel, siblingCountMap.containsKey(siblingLabel) ?
                                 siblingCountMap.get(siblingLabel) + 1 : 1);

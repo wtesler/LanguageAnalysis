@@ -21,9 +21,9 @@ public class InitialWordClassifier extends Classifier<LanguageResponse> {
     }
 
     @Override
-    public boolean classify(LanguageResponse response) {
+    public double classify(LanguageResponse response) {
         //System.out.println("InitialWordClassifier classifies: " + getScore(response.tokens.get(0).lemma.toUpperCase()));
 
-        return getScore(response.tokens.get(0).lemma.toUpperCase()) != null;
+        return getScore(response.tokens.get(0).lemma.toUpperCase()) != null ? 1 : -1;
     }
 }

@@ -46,7 +46,7 @@ public class SiblingClassifier extends Classifier<LanguageResponse> {
     }
 
     @Override
-    public boolean classify(LanguageResponse response) {
+    public double classify(LanguageResponse response) {
         DependencyTree tree = LanguageUtils.toDependencyTree(response);
         HashSet<String> siblingSet = new HashSet<>();
         SiblingTraverser.collectSiblingSet(tree.getRoot(), siblingSet);
@@ -59,7 +59,7 @@ public class SiblingClassifier extends Classifier<LanguageResponse> {
                 })
                 .sum();
 
-        return score > 0;
+        return score / getRange();
 //
 //        if (score >= 0) {
 //            System.out.println("----------------");
