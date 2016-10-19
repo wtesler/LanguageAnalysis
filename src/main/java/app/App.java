@@ -58,10 +58,9 @@ public class App {
 
         Score score1 = mEnsembleQuestionClassifier.scoreObjects(questions);
         Score score2 = mEnsembleQuestionClassifier.scoreObjects(answers);
+        score2.correct = score2.total - score2.correct;
 
-        System.out.println("Accuracy: "
-                + (double) (score1.correct + (score2.total - score2.correct))
-                / (score1.total + score2.total));
+        System.out.println("Accuracy: " + (double) (score1.correct + score2.correct) / (score1.total + score2.total));
 
         mCloudParser.getParsedSentenceObservable()
                 .subscribe(parsedSentence -> {
