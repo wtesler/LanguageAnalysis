@@ -80,28 +80,6 @@ public class CloudParser {
         return mGson.fromJson(parsedSentence, LanguageResponse.class);
     }
 
-    public List<LanguageResponse> parseDataFromFiles(String directory) {
-        try {
-            return Files.list(new File(directory).toPath())
-                    .collect(Collectors.mapping((Function<Path, LanguageResponse>) path -> {
-                        try {
-                            String content = new String(Files.readAllBytes(path));
-                            LanguageResponse response = mGson.fromJson(content, LanguageResponse.class);
-                            if (response.tokens.size() == 0) {
-                                System.err.println(path + " did not produce tokens");
-                            }
-                            return response;
-                        } catch (IOException e) {
-                            e.printStackTrace();
-                            return null;
-                        }
-                    }, Collectors.toList()));
-        } catch (IOException e) {
-            e.printStackTrace();
-            return null;
-        }
-    }
-
     private static LanguageRequest constructLanguageRequest(String content) {
         LanguageDocument document = new LanguageDocument();
         document.content = content;

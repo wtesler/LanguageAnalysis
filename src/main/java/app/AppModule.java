@@ -38,8 +38,8 @@ public class AppModule {
     @Provides
     @ForQuestions
     @Singleton
-    EnsembleQuestionClassifier provideClassifier(CloudParser cloudParser) {
-        return new EnsembleQuestionClassifier(cloudParser);
+    EnsembleQuestionClassifier provideQuestionClassifier() {
+        return new EnsembleQuestionClassifier();
     }
 
     @Provides

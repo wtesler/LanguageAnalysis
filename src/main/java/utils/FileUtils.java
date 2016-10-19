@@ -1,5 +1,7 @@
 package utils;
 
+import com.google.gson.Gson;
+
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.IOException;
@@ -64,6 +66,28 @@ public class FileUtils {
                     });
         } catch (IOException e) {
             e.printStackTrace();
+        }
+    }
+
+    public static List<LanguageResponse> parseLanguageResponsesFromFiles(String directory, Gson gson) {
+        try {
+            return Files.list(new File(directory).toPath())
+                    .collect(Collectors.mapping((Function<Path, LanguageResponse>) path -> {
+                        try {
+                            String content = new String(Files.readAllBytes(path));
+                            LanguageResponse response = gson.fromJson(content, LanguageResponse.class);
+                            if (response.tokens.size() == 0) {
+                                System.err.println(path + " did not produce tokens");
+                            }
+                            return response;
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                            return null;
+                        }
+                    }, Collectors.toList()));
+        } catch (IOException e) {
+            e.printStackTrace();
+            return null;
         }
     }
 }

@@ -1,5 +1,7 @@
 package app;
 
+import com.google.gson.Gson;
+
 import java.util.List;
 import java.util.Scanner;
 
@@ -10,11 +12,13 @@ import classifier.Score;
 import models.LanguageResponse;
 import cloud.CloudParser;
 import questions.EnsembleQuestionClassifier;
+import utils.FileUtils;
 
 public class App {
 
-    @Inject @ForQuestions EnsembleQuestionClassifier mEnsembleQuestionClassifier;
     @Inject CloudParser mCloudParser;
+    @Inject @ForQuestions EnsembleQuestionClassifier mEnsembleQuestionClassifier;
+    @Inject Gson mGson;
 
     private final AppComponent mAppComponent;
 
@@ -30,26 +34,34 @@ public class App {
         mAppComponent.inject(this);
 
         List<LanguageResponse> positiveTrainingResponses =
-                mCloudParser.parseDataFromFiles("parses/general_questions_training");
+                FileUtils.parseLanguageResponsesFromFiles("parses/general_questions_training", mGson);
         List<LanguageResponse> negativeTrainingResponses =
-                mCloudParser.parseDataFromFiles("parses/general_responses_training");
+                FileUtils.parseLanguageResponsesFromFiles("parses/general_responses_training", mGson);
 
         // Train
         mEnsembleQuestionClassifier
                 .train(positiveTrainingResponses, negativeTrainingResponses);
 
         List<LanguageResponse> positiveTestingResponses
-                = mCloudParser.parseDataFromFiles("parses/general_questions_testing");
+                = FileUtils.parseLanguageResponsesFromFiles("parses/general_questions_testing", mGson);
         List<LanguageResponse> negativeTestingResponses
-                = mCloudParser.parseDataFromFiles("parses/general_responses_testing");
+                = FileUtils.parseLanguageResponsesFromFiles("parses/general_responses_testing", mGson);
 
         // Test
         mEnsembleQuestionClassifier.test(positiveTestingResponses, negativeTestingResponses);
 
-        List<LanguageResponse> responses = mCloudParser.parseDataFromFiles("parses/general_questions_master");
-        Score score = mEnsembleQuestionClassifier.scoreObjects(responses);
+        List<LanguageResponse> questions
+                = FileUtils.parseLanguageResponsesFromFiles("parses/general_questions_master", mGson);
 
-        System.out.println("Accuracy: " + (double) score.correct / score.total);
+        List<LanguageResponse> answers
+                = FileUtils.parseLanguageResponsesFromFiles("parses/general_responses_master", mGson);
+
+        Score score1 = mEnsembleQuestionClassifier.scoreObjects(questions);
+        Score score2 = mEnsembleQuestionClassifier.scoreObjects(answers);
+
+        System.out.println("Accuracy: "
+                + (double) (score1.correct + (score2.total - score2.correct))
+                / (score1.total + score2.total));
 
         mCloudParser.getParsedSentenceObservable()
                 .subscribe(parsedSentence -> {

@@ -5,41 +5,20 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 
-import classifier.Classifier;
+import classifier.FrequencyClassifer;
 import cloud.CloudParser;
 import models.DependencyTree;
 import models.LanguageResponse;
 import utils.LanguageUtils;
 
-public class PosBigramClassifier extends Classifier<LanguageResponse> {
-
-    private final CloudParser mCloudParser;
-
-    public PosBigramClassifier(CloudParser cloudParser) {
-        mCloudParser = cloudParser;
-    }
+public class PosBigramClassifier extends FrequencyClassifer<LanguageResponse> {
 
     @Override
     public void train(List<LanguageResponse> positiveExamples, List<LanguageResponse> negativeExamples) {
         HashMap<String, Double> positiveFrequencies = getPosBigramFrequencyMap(positiveExamples);
         HashMap<String, Double> negativeFrequencies = getPosBigramFrequencyMap(negativeExamples);
 
-        positiveFrequencies.entrySet()
-                .stream()
-                .forEach(entry -> {
-                    Double negativeFrequency = negativeFrequencies.get(entry.getKey());
-                    if (negativeFrequency == null) {
-                        negativeFrequency = 0.0;
-                    }
-                    double positiveFrequency = entry.getValue();
-
-                    double score = positiveFrequency - negativeFrequency;
-
-                    setScore(entry.getKey(), score);
-
-                    //String result = entry.getKey() + " -> " + entry.getValue();
-                    //System.out.println(result);
-                });
+        scoreWithFrequencyAnalysis(positiveFrequencies, negativeFrequencies);
     }
 
     @Override
@@ -55,8 +34,6 @@ public class PosBigramClassifier extends Classifier<LanguageResponse> {
                     return value != null ? value: 0;
                 })
                 .sum();
-
-        //System.out.println("PosBigramClassifier classifies: " + score / getRange());
 
         return score / getRange();
     }

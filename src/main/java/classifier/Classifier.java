@@ -54,8 +54,8 @@ public abstract class Classifier<T> {
             negativeConfidence = MAX_CONFIDENCE;
         }
 
-        setPositiveConfidence(positiveConfidence);
-        setNegativeConfidence(negativeConfidence);
+        setPositiveConfidence(positiveConfidence / MAX_CONFIDENCE);
+        setNegativeConfidence(negativeConfidence / MAX_CONFIDENCE);
 
         System.out.println(getClass().getSimpleName());
         System.out.println("\tPositive Confidence: " + getPositiveConfidence());

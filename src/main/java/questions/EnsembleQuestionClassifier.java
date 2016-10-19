@@ -4,28 +4,25 @@ import java.util.ArrayList;
 import java.util.List;
 
 import classifier.Classifier;
-import cloud.CloudParser;
 import models.LanguageResponse;
+import questions.root_child_pos.RootChildPosClassifier;
 import questions.flat_edge.FlatEdgeClassifier;
 import questions.keywords.InitialWordClassifier;
 import questions.keywords.QuestionWordsClassifier;
 import questions.partofspeech.PosBigramClassifier;
 import questions.siblings.SiblingClassifier;
+import utils.VisUtils;
 
 public class EnsembleQuestionClassifier extends Classifier<LanguageResponse> {
 
-    private final CloudParser mCloudParser;
-
     private List<Classifier<LanguageResponse>> mClassifiers = new ArrayList<>();
 
-    public EnsembleQuestionClassifier(CloudParser cloudParser) {
-        mCloudParser = cloudParser;
-
-        mClassifiers.add(new SiblingClassifier(cloudParser));
-        mClassifiers.add(new FlatEdgeClassifier(cloudParser));
+    public EnsembleQuestionClassifier() {
+        mClassifiers.add(new SiblingClassifier());
+        mClassifiers.add(new FlatEdgeClassifier());
         mClassifiers.add(new QuestionWordsClassifier());
         mClassifiers.add(new InitialWordClassifier());
-        mClassifiers.add(new PosBigramClassifier(cloudParser));
+        mClassifiers.add(new PosBigramClassifier());
     }
 
     @Override
@@ -50,7 +47,10 @@ public class EnsembleQuestionClassifier extends Classifier<LanguageResponse> {
             double confidence = decision > 0 ? classifier.getPositiveConfidence() : classifier.getNegativeConfidence();
             double classification = decision * confidence;
             if (interactive) {
-                System.out.println(classifier.getClass().getSimpleName() + ": " + classification);
+                System.out.println(
+                        VisUtils.toGauge(classification)
+                                + " " + classifier.getClass().getSimpleName()
+                                + ": " + classification);
             }
             return classification;
         })
@@ -59,7 +59,10 @@ public class EnsembleQuestionClassifier extends Classifier<LanguageResponse> {
         totalClassification /= mClassifiers.size();
 
         if (interactive) {
-            System.out.println("Total Classification: " + totalClassification);
+            System.out.println(
+                    VisUtils.toGauge(totalClassification)
+                            + " " + getClass().getSimpleName()
+                            + ": " + totalClassification);
         }
         return totalClassification;
     }

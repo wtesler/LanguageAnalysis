@@ -20,12 +20,24 @@ public class QuestionWordsClassifier extends Classifier<LanguageResponse> {
 
     @Override
     public double classify(LanguageResponse response) {
-        //return getScore(response.tokens.get(0).lemma.toUpperCase()) != null;
+        if (getScore(response.tokens.get(0).lemma.toUpperCase()) != null) {
+            return 1;
+        } else if (response.tokens.size() > 0
+                && getScore(response.tokens.get(response.tokens.size() - 1).lemma.toUpperCase()) != null) {
+            return 1;
+        } else {
+            return -1;
+        }
+
+//        List<Token> tokens = new ArrayList<>(response.tokens);
+////        if (tokens.size() > 0) {
+////            tokens.remove(0);
+////        }
 //
-        int keywordCount = response.tokens
-                .stream()
-                .mapToInt(token -> getScore(token.lemma.toUpperCase()) != null ? 1 : 0)
-                .sum();
-        return keywordCount != 0 ? 1 : -1;
+//        int keywordCount = tokens
+//                .stream()
+//                .mapToInt(token -> getScore(token.lemma.toUpperCase()) != null ? 1 : 0)
+//                .sum();
+//        return keywordCount != 0 ? 1 : -1;
     }
 }

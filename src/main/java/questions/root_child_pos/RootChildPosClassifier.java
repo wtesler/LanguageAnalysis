@@ -1,4 +1,4 @@
-package questions.siblings;
+package questions.root_child_pos;
 
 import java.util.HashMap;
 import java.util.HashSet;
@@ -10,12 +10,12 @@ import models.DependencyTree;
 import models.LanguageResponse;
 import utils.LanguageUtils;
 
-public class SiblingClassifier extends FrequencyClassifer<LanguageResponse> {
+public class RootChildPosClassifier extends FrequencyClassifer<LanguageResponse> {
 
     @Override
     public void train(List<LanguageResponse> positiveExamples, List<LanguageResponse> negativeExamples) {
-        HashMap<String, Double> positiveFrequencies = getSiblingFrequencyMap(positiveExamples);
-        HashMap<String, Double> negativeFrequencies = getSiblingFrequencyMap(negativeExamples);
+        HashMap<String, Double> positiveFrequencies = getRootChildFrequencyMap(positiveExamples);
+        HashMap<String, Double> negativeFrequencies = getRootChildFrequencyMap(negativeExamples);
 
         scoreWithFrequencyAnalysis(positiveFrequencies, negativeFrequencies);
     }
@@ -23,13 +23,13 @@ public class SiblingClassifier extends FrequencyClassifer<LanguageResponse> {
     @Override
     public double classify(LanguageResponse response) {
         DependencyTree tree = LanguageUtils.toDependencyTree(response);
-        HashSet<String> siblingSet = new HashSet<>();
-        SiblingTraverser.collectSiblingSet(tree.getRoot(), siblingSet);
+        HashSet<String> rootChildSet = new HashSet<>();
+        RootChildPosTraverser.collectRootChildSet(tree.getRoot(), rootChildSet);
 
-        double score = siblingSet
+        double score = rootChildSet
                 .stream()
-                .mapToDouble(siblingPair -> {
-                    Double value = getScores().get(siblingPair);
+                .mapToDouble(rootChildPair -> {
+                    Double value = getScores().get(rootChildPair);
                     return value != null ? value: 0;
                 })
                 .sum();
@@ -52,22 +52,23 @@ public class SiblingClassifier extends FrequencyClassifer<LanguageResponse> {
 //        }
     }
 
-    public HashMap<String, Double> getSiblingFrequencyMap(List<LanguageResponse> responses) {
+    public HashMap<String, Double> getRootChildFrequencyMap(List<LanguageResponse> responses) {
         List<DependencyTree> trees = LanguageUtils.toDependencyTrees(responses);
 
-        final HashMap<String, Double> siblingCountMap = new HashMap<>();
-        trees.stream().forEach(tree -> SiblingTraverser.collectSiblingCountInNode(tree.getRoot(), siblingCountMap));
+        final HashMap<String, Double> rootChildCountMap = new HashMap<>();
+        trees.stream()
+                .forEach(tree -> RootChildPosTraverser.collectRootChildCountInNode(tree.getRoot(), rootChildCountMap));
 
-        Double numSiblings = siblingCountMap.entrySet()
+        Double numRootChildPairs = rootChildCountMap.entrySet()
                 .stream()
                 .mapToDouble(Map.Entry::getValue)
                 .sum();
 
-        siblingCountMap.entrySet()
+        rootChildCountMap.entrySet()
                 .stream()
                 .forEach(entry -> {
-                    double fraction = entry.getValue() / numSiblings;
-                    siblingCountMap.put(entry.getKey(), fraction);
+                    double fraction = entry.getValue() / numRootChildPairs;
+                    rootChildCountMap.put(entry.getKey(), fraction);
                 });
 
 //        siblingCountMap.entrySet()
@@ -77,6 +78,6 @@ public class SiblingClassifier extends FrequencyClassifer<LanguageResponse> {
 
         //System.out.println("Total pairs: " + numSiblings.toString());
 
-        return siblingCountMap;
+        return rootChildCountMap;
     }
 }

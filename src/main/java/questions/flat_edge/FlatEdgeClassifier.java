@@ -4,37 +4,17 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import classifier.Classifier;
-import cloud.CloudParser;
+import classifier.FrequencyClassifer;
 import models.LanguageResponse;
 
-public class FlatEdgeClassifier extends Classifier<LanguageResponse> {
-
-    private final CloudParser mCloudParser;
-
-    public FlatEdgeClassifier(CloudParser cloudParser) {
-        mCloudParser = cloudParser;
-    }
-
+public class FlatEdgeClassifier extends FrequencyClassifer<LanguageResponse> {
 
     @Override
     public void train(List<LanguageResponse> positiveExamples, List<LanguageResponse> negativeExamples) {
-        HashMap<String, Double> positiveFrequencies = getSiblingFrequencyMap(positiveExamples);
-        HashMap<String, Double> negativeFrequencies = getSiblingFrequencyMap(negativeExamples);
+        HashMap<String, Double> positiveFrequencies = getTokenSiblingFrequencyMap(positiveExamples);
+        HashMap<String, Double> negativeFrequencies = getTokenSiblingFrequencyMap(negativeExamples);
 
-        positiveFrequencies.entrySet()
-                .stream()
-                .forEach(entry -> {
-                    Double negativeFrequency = negativeFrequencies.get(entry.getKey());
-                    if (negativeFrequency == null) {
-                        negativeFrequency = 0.0;
-                    }
-                    double positiveFrequency = entry.getValue();
-
-                    double score = positiveFrequency - negativeFrequency;
-
-                    setScore(entry.getKey(), score);
-                });
+        scoreWithFrequencyAnalysis(positiveFrequencies, negativeFrequencies);
     }
 
     @Override
@@ -51,7 +31,7 @@ public class FlatEdgeClassifier extends Classifier<LanguageResponse> {
         return score / getRange();
     }
 
-    public HashMap<String, Double> getSiblingFrequencyMap(List<LanguageResponse> responses) {
+    public HashMap<String, Double> getTokenSiblingFrequencyMap(List<LanguageResponse> responses) {
         final HashMap<String, Double> siblingCountMap = new HashMap<>();
         responses.
                 forEach(response -> {
@@ -77,13 +57,6 @@ public class FlatEdgeClassifier extends Classifier<LanguageResponse> {
                     double fraction = entry.getValue() / numSiblings;
                     siblingCountMap.put(entry.getKey(), fraction);
                 });
-
-//        siblingCountMap.entrySet()
-//                .stream()
-//                .sorted((o1, o2) -> Double.compare(o2.getValue(), o1.getValue()));
-//                .forEach(entry -> System.out.println(entry.getKey() + " -> " + entry.getScore()));
-
-        //System.out.println("Total pairs: " + numSiblings.toString());
 
         return siblingCountMap;
     }

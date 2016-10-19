@@ -52,40 +52,4 @@ public class SiblingTraverser {
                 })
                 .filter(s -> s != null);
     }
-
-    /**
-     * @param siblingLabel i.e. "AUX,NSUBJ"
-     */
-    public static boolean doesTreeContainSibling(Node node, String siblingLabel) {
-        for (int i = 0; i < node.children.size() - 1; i++) {
-            String nodeSiblingLabel = node.children.get(i).token.dependencyEdge.label
-                    + ","
-                    + node.children.get(i + 1).token.dependencyEdge.label;
-
-            if (nodeSiblingLabel.equals(siblingLabel)) {
-                return true;
-            }
-
-            if (doesTreeContainSibling(node.children.get(i), siblingLabel)) {
-                return true;
-            }
-        }
-        return false;
-    }
-
-    public static void findSiblingsInTree(Node node, String siblingA, String siblingB, boolean[] siblingFound) {
-        for (int i = 0; i < node.children.size() - 1; i++) {
-            String nodeSibling = node.children.get(i).token.dependencyEdge.label
-                    + ","
-                    + node.children.get(i + 1).token.dependencyEdge.label;
-
-            if (nodeSibling.equals(siblingA)) {
-                siblingFound[0] = true;
-            } else if (nodeSibling.equals(siblingB)) {
-                siblingFound[1] = true;
-            }
-
-            findSiblingsInTree(node.children.get(i), siblingA, siblingB, siblingFound);
-        }
-    }
 }
