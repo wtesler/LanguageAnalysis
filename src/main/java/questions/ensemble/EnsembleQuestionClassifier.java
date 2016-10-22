@@ -12,7 +12,7 @@ public class EnsembleQuestionClassifier extends EnsembleClassifier<LanguageRespo
 
     public EnsembleQuestionClassifier() {
         addClassifier(new SiblingClassifier());
-        addClassifier(new FlatEdgeClassifier());
+        //addClassifier(new FlatEdgeClassifier());
         addClassifier(new QuestionWordsClassifier());
         addClassifier(new InitialWordClassifier());
         addClassifier(new PosBigramClassifier());
