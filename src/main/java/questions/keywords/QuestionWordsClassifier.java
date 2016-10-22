@@ -22,9 +22,12 @@ public class QuestionWordsClassifier extends Classifier<LanguageResponse> {
     public double classify(LanguageResponse response) {
         if (getScore(response.tokens.get(0).lemma.toUpperCase()) != null) {
             return 1;
-        } else if (response.tokens.size() > 0
+        } else if (response.tokens.size() > 1
                 && getScore(response.tokens.get(response.tokens.size() - 1).lemma.toUpperCase()) != null) {
             return 1;
+        } else if (response.tokens.size() > 2
+                && getScore(response.tokens.get(response.tokens.size() - 2).lemma.toUpperCase()) != null) {
+            return .5;
         } else {
             return -1;
         }

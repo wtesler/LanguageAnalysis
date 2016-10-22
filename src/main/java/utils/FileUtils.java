@@ -10,7 +10,6 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.List;
-import java.util.function.Consumer;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -29,6 +28,14 @@ public class FileUtils {
      */
     public static void writeTextToFile(String directory, String fileName, String content) {
         String qualifiedName = directory + "/" + fileName;
+        if (!Files.isDirectory(Paths.get(directory))) {
+            try {
+                Files.createDirectories(Paths.get(directory));
+            } catch (IOException e) {
+                e.printStackTrace();
+                return;
+            }
+        }
         try (BufferedWriter writer = Files.newBufferedWriter(Paths.get(qualifiedName))) {
             writer.write(content);
         } catch (IOException e) {

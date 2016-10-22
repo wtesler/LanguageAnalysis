@@ -24,7 +24,7 @@ public abstract class Classifier<T> {
     public Classifier() { }
 
     /**
-     * Use the data to set a score.
+     * Use the data to set scores.
      */
     public abstract void train(List<T> positiveExamples, List<T> negativeExamples);
 
@@ -34,11 +34,11 @@ public abstract class Classifier<T> {
      * Use the data to set a confidence level.
      */
     public void test(List<T> positiveExamples, List<T> negativeExamples) {
-        Score positiveScore = scoreObjects(positiveExamples);
+        Score positiveScore = score(positiveExamples);
         mTruePositives += positiveScore.correct;
         mFalseNegatives += positiveScore.total - positiveScore.correct;
 
-        Score negativeScore = scoreObjects(negativeExamples);
+        Score negativeScore = score(negativeExamples);
         mFalsePositives += negativeScore.correct;
         mTrueNegatives += negativeScore.total - negativeScore.correct;
 
@@ -62,7 +62,7 @@ public abstract class Classifier<T> {
         System.out.println("\tNegative Confidence: " + getNegativeConfidence());
     }
 
-    public final Score scoreObjects(List<T> presumedPositives) {
+    public final Score score(List<T> presumedPositives) {
         Integer correctlyClassifed = presumedPositives.stream()
                 .mapToInt(response -> classify(response) > 0 ? 1 : 0)
                 .sum();

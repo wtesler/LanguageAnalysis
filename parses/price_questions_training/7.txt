@@ -1,0 +1,84 @@
+{
+  "sentences": [
+    {
+      "text": {
+        "content": "Is it free to play",
+        "beginOffset": 0
+      }
+    }
+  ],
+  "tokens": [
+    {
+      "text": {
+        "content": "Is",
+        "beginOffset": 0
+      },
+      "partOfSpeech": {
+        "tag": "VERB"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 0,
+        "label": "ROOT"
+      },
+      "lemma": "be"
+    },
+    {
+      "text": {
+        "content": "it",
+        "beginOffset": 3
+      },
+      "partOfSpeech": {
+        "tag": "PRON"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 0,
+        "label": "NSUBJ"
+      },
+      "lemma": "it"
+    },
+    {
+      "text": {
+        "content": "free",
+        "beginOffset": 6
+      },
+      "partOfSpeech": {
+        "tag": "ADJ"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 0,
+        "label": "ACOMP"
+      },
+      "lemma": "free"
+    },
+    {
+      "text": {
+        "content": "to",
+        "beginOffset": 11
+      },
+      "partOfSpeech": {
+        "tag": "PRT"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 4,
+        "label": "AUX"
+      },
+      "lemma": "to"
+    },
+    {
+      "text": {
+        "content": "play",
+        "beginOffset": 14
+      },
+      "partOfSpeech": {
+        "tag": "VERB"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 2,
+        "label": "XCOMP"
+      },
+      "lemma": "play"
+    }
+  ],
+  "entities": [],
+  "language": "en"
+}

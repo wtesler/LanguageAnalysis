@@ -16,18 +16,11 @@ public class InitialWordClassifier extends Classifier<LanguageResponse> {
         setScore("WOULD", 1.0);
         setScore("COULD", 1.0);
         setScore("DO", 1.0);
-
-//        setScore("WHO", 1.0);
-//        setScore("WHAT", 1.0);
-//        setScore("WHEN", 1.0);
-//        setScore("WHERE", 1.0);
-//        setScore("WHY", 1.0);
-//        setScore("HOW", 1.0);
-//        setScore("WHICH", 1.0);
     }
 
     @Override
     public double classify(LanguageResponse response) {
-        return getScore(response.tokens.get(0).lemma.toUpperCase()) != null ? 1 : -1;
+        Double score = getScore(response.tokens.get(0).lemma.toUpperCase());
+        return score != null ? score : -1;
     }
 }

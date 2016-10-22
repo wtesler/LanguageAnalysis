@@ -1,4 +1,4 @@
-package questions.flat_edge;
+package questions.flatedge;
 
 import java.util.HashMap;
 import java.util.List;

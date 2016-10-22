@@ -1,4 +1,4 @@
-package questions.root_child_pos;
+package questions.rootchild;
 
 import java.util.Collection;
 import java.util.HashMap;
@@ -8,7 +8,6 @@ import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
-import models.DependencyEdge;
 import models.Node;
 import models.PartOfSpeech;
 

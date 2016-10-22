@@ -17,7 +17,8 @@ import cloud.LanguageClient;
 import cloud.LanguageService;
 import dagger.Module;
 import dagger.Provides;
-import questions.EnsembleQuestionClassifier;
+import price.ensemble.EnsemblePriceClassifier;
+import questions.ensemble.EnsembleQuestionClassifier;
 import retrofit.GsonConverterFactory;
 import retrofit.Retrofit;
 import retrofit.RxJavaCallAdapterFactory;
@@ -29,14 +30,20 @@ import static java.lang.annotation.RetentionPolicy.RUNTIME;
 @Module
 public class AppModule {
 
-    App mApp;
+    BaseApp mApp;
 
-    public AppModule(App app) {
+    public AppModule(BaseApp app) {
         mApp = app;
     }
 
     @Provides
-    @ForQuestions
+    @Singleton
+    EnsemblePriceClassifier provideEnsemblePriceClassifier() {
+        return new EnsemblePriceClassifier();
+    }
+
+
+    @Provides
     @Singleton
     EnsembleQuestionClassifier provideQuestionClassifier() {
         return new EnsembleQuestionClassifier();
@@ -104,9 +111,4 @@ public class AppModule {
     @Documented
     @Retention(RUNTIME)
     public @interface ForLanguage { }
-
-    @Qualifier
-    @Documented
-    @Retention(RUNTIME)
-    public @interface ForQuestions { }
 }

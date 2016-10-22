@@ -2,6 +2,10 @@ package classifier;
 
 import java.util.HashMap;
 
+/**
+ * A classifier which computes scores based on the frequency of a key's appearance.
+ * @param <T>
+ */
 public abstract class FrequencyClassifer<T> extends Classifier<T> {
 
     public void scoreWithFrequencyAnalysis(

@@ -1,0 +1,112 @@
+{
+  "sentences": [
+    {
+      "text": {
+        "content": "Will that be more than 5 dollars",
+        "beginOffset": 0
+      }
+    }
+  ],
+  "tokens": [
+    {
+      "text": {
+        "content": "Will",
+        "beginOffset": 0
+      },
+      "partOfSpeech": {
+        "tag": "VERB"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 2,
+        "label": "AUX"
+      },
+      "lemma": "Will"
+    },
+    {
+      "text": {
+        "content": "that",
+        "beginOffset": 5
+      },
+      "partOfSpeech": {
+        "tag": "DET"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 2,
+        "label": "NSUBJ"
+      },
+      "lemma": "that"
+    },
+    {
+      "text": {
+        "content": "be",
+        "beginOffset": 10
+      },
+      "partOfSpeech": {
+        "tag": "VERB"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 2,
+        "label": "ROOT"
+      },
+      "lemma": "be"
+    },
+    {
+      "text": {
+        "content": "more",
+        "beginOffset": 13
+      },
+      "partOfSpeech": {
+        "tag": "ADJ"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 5,
+        "label": "QUANTMOD"
+      },
+      "lemma": "more"
+    },
+    {
+      "text": {
+        "content": "than",
+        "beginOffset": 18
+      },
+      "partOfSpeech": {
+        "tag": "ADP"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 5,
+        "label": "QUANTMOD"
+      },
+      "lemma": "than"
+    },
+    {
+      "text": {
+        "content": "5",
+        "beginOffset": 23
+      },
+      "partOfSpeech": {
+        "tag": "NUM"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 6,
+        "label": "NUM"
+      },
+      "lemma": "5"
+    },
+    {
+      "text": {
+        "content": "dollars",
+        "beginOffset": 25
+      },
+      "partOfSpeech": {
+        "tag": "NOUN"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 2,
+        "label": "ATTR"
+      },
+      "lemma": "dollar"
+    }
+  ],
+  "entities": [],
+  "language": "en"
+}

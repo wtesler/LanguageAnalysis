@@ -1,0 +1,56 @@
+{
+  "sentences": [
+    {
+      "text": {
+        "content": "How much money",
+        "beginOffset": 0
+      }
+    }
+  ],
+  "tokens": [
+    {
+      "text": {
+        "content": "How",
+        "beginOffset": 0
+      },
+      "partOfSpeech": {
+        "tag": "ADV"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 1,
+        "label": "ADVMOD"
+      },
+      "lemma": "How"
+    },
+    {
+      "text": {
+        "content": "much",
+        "beginOffset": 4
+      },
+      "partOfSpeech": {
+        "tag": "ADJ"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 2,
+        "label": "AMOD"
+      },
+      "lemma": "much"
+    },
+    {
+      "text": {
+        "content": "money",
+        "beginOffset": 9
+      },
+      "partOfSpeech": {
+        "tag": "NOUN"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 2,
+        "label": "ROOT"
+      },
+      "lemma": "money"
+    }
+  ],
+  "entities": [],
+  "language": "en"
+}

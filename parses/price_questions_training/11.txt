@@ -1,0 +1,98 @@
+{
+  "sentences": [
+    {
+      "text": {
+        "content": "Is that a lot of money",
+        "beginOffset": 0
+      }
+    }
+  ],
+  "tokens": [
+    {
+      "text": {
+        "content": "Is",
+        "beginOffset": 0
+      },
+      "partOfSpeech": {
+        "tag": "VERB"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 0,
+        "label": "ROOT"
+      },
+      "lemma": "be"
+    },
+    {
+      "text": {
+        "content": "that",
+        "beginOffset": 3
+      },
+      "partOfSpeech": {
+        "tag": "DET"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 0,
+        "label": "NSUBJ"
+      },
+      "lemma": "that"
+    },
+    {
+      "text": {
+        "content": "a",
+        "beginOffset": 8
+      },
+      "partOfSpeech": {
+        "tag": "DET"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 3,
+        "label": "DET"
+      },
+      "lemma": "a"
+    },
+    {
+      "text": {
+        "content": "lot",
+        "beginOffset": 10
+      },
+      "partOfSpeech": {
+        "tag": "NOUN"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 0,
+        "label": "ATTR"
+      },
+      "lemma": "lot"
+    },
+    {
+      "text": {
+        "content": "of",
+        "beginOffset": 14
+      },
+      "partOfSpeech": {
+        "tag": "ADP"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 3,
+        "label": "PREP"
+      },
+      "lemma": "of"
+    },
+    {
+      "text": {
+        "content": "money",
+        "beginOffset": 17
+      },
+      "partOfSpeech": {
+        "tag": "NOUN"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 4,
+        "label": "POBJ"
+      },
+      "lemma": "money"
+    }
+  ],
+  "entities": [],
+  "language": "en"
+}

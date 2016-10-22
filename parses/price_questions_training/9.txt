@@ -1,0 +1,70 @@
+{
+  "sentences": [
+    {
+      "text": {
+        "content": "What would that cost",
+        "beginOffset": 0
+      }
+    }
+  ],
+  "tokens": [
+    {
+      "text": {
+        "content": "What",
+        "beginOffset": 0
+      },
+      "partOfSpeech": {
+        "tag": "PRON"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 3,
+        "label": "DOBJ"
+      },
+      "lemma": "What"
+    },
+    {
+      "text": {
+        "content": "would",
+        "beginOffset": 5
+      },
+      "partOfSpeech": {
+        "tag": "VERB"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 3,
+        "label": "AUX"
+      },
+      "lemma": "would"
+    },
+    {
+      "text": {
+        "content": "that",
+        "beginOffset": 11
+      },
+      "partOfSpeech": {
+        "tag": "DET"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 3,
+        "label": "NSUBJ"
+      },
+      "lemma": "that"
+    },
+    {
+      "text": {
+        "content": "cost",
+        "beginOffset": 16
+      },
+      "partOfSpeech": {
+        "tag": "NOUN"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 3,
+        "label": "ROOT"
+      },
+      "lemma": "cost"
+    }
+  ],
+  "entities": [],
+  "language": "en"
+}

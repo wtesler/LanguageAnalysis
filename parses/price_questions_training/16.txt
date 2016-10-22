@@ -1,0 +1,98 @@
+{
+  "sentences": [
+    {
+      "text": {
+        "content": "How much will that run me",
+        "beginOffset": 0
+      }
+    }
+  ],
+  "tokens": [
+    {
+      "text": {
+        "content": "How",
+        "beginOffset": 0
+      },
+      "partOfSpeech": {
+        "tag": "ADV"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 1,
+        "label": "ADVMOD"
+      },
+      "lemma": "How"
+    },
+    {
+      "text": {
+        "content": "much",
+        "beginOffset": 4
+      },
+      "partOfSpeech": {
+        "tag": "ADJ"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 2,
+        "label": "AMOD"
+      },
+      "lemma": "much"
+    },
+    {
+      "text": {
+        "content": "will",
+        "beginOffset": 9
+      },
+      "partOfSpeech": {
+        "tag": "NOUN"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 4,
+        "label": "DEP"
+      },
+      "lemma": "will"
+    },
+    {
+      "text": {
+        "content": "that",
+        "beginOffset": 14
+      },
+      "partOfSpeech": {
+        "tag": "DET"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 4,
+        "label": "NSUBJ"
+      },
+      "lemma": "that"
+    },
+    {
+      "text": {
+        "content": "run",
+        "beginOffset": 19
+      },
+      "partOfSpeech": {
+        "tag": "VERB"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 4,
+        "label": "ROOT"
+      },
+      "lemma": "run"
+    },
+    {
+      "text": {
+        "content": "me",
+        "beginOffset": 23
+      },
+      "partOfSpeech": {
+        "tag": "PRON"
+      },
+      "dependencyEdge": {
+        "headTokenIndex": 4,
+        "label": "DOBJ"
+      },
+      "lemma": "me"
+    }
+  ],
+  "entities": [],
+  "language": "en"
+}

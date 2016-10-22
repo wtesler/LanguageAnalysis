@@ -1,11 +1,12 @@
-package price;
+package price.keyword;
 
 import java.util.List;
 
 import classifier.Classifier;
+import classifier.KeywordClassifier;
 import models.LanguageResponse;
 
-public class PriceKeywordClassifier extends Classifier<LanguageResponse> {
+public class PriceKeywordClassifier extends KeywordClassifier {
 
     @Override
     public void train(
@@ -13,22 +14,15 @@ public class PriceKeywordClassifier extends Classifier<LanguageResponse> {
             List<LanguageResponse> negativeExamples) {
         setScore("COST", 1.0);
         setScore("COSTLY", 1.0);
+        setScore("COSTLIEST", 1.0);
         setScore("EXPENSIVE", 1.0);
         setScore("CHEAP", 1.0);
+        setScore("CHEAPER", 1.0);
+        setScore("CHEAPEST", 1.0);
         setScore("FREE", 1.0);
-        setScore("CREDIT", 1.0);
-        setScore("DEBIT", 1.0);
         setScore("DOLLARS", 1.0);
         setScore("PRICE", 1.0);
         setScore("MONEY", 1.0);
         setScore("CASH", 1.0);
-    }
-
-    @Override
-    public double classify(LanguageResponse response) {
-        int keywordCount = response.tokens.stream()
-                .mapToInt(token -> getScore(token.lemma.toUpperCase()) != null ? 1 : 0)
-                .sum();
-        return keywordCount != 0 ? 1 : -1;
     }
 }
