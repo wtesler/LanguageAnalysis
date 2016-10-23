@@ -1,12 +1,13 @@
-package classifier;
+package classifier.ensemble;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import classifier.Classifier;
 import utils.VisUtils;
 
-public abstract class EnsembleClassifier<T> extends Classifier<T> {
-    private List<Classifier<T>> mClassifiers = new ArrayList<>();
+public abstract class EnsembleClassifier<T> extends Classifier<T, Void> {
+    private List<Classifier<T, ?>> mClassifiers = new ArrayList<>();
 
     @Override
     public void train(List<T> positiveExamples, List<T> negativeExamples, boolean interactive) {
@@ -44,7 +45,7 @@ public abstract class EnsembleClassifier<T> extends Classifier<T> {
         return totalClassification;
     }
 
-    public void addClassifier(Classifier<T> classifier) {
+    public void addClassifier(Classifier<T, ?> classifier) {
         mClassifiers.add(classifier);
     }
 }

@@ -1,21 +1,24 @@
 package questions.ensemble;
 
-import classifier.EnsembleClassifier;
+import classifier.ensemble.EnsembleClassifier;
+import classifier.frequency.FrequencyClassifer;
 import models.LanguageResponse;
-import questions.flatedge.FlatEdgeClassifier;
+import questions.flatedge.FlatEdgeCollector;
 import questions.keywords.InitialWordClassifier;
 import questions.keywords.QuestionWordsClassifier;
-import questions.partofspeech.PosBigramClassifier;
-import questions.siblings.SiblingClassifier;
+import questions.partofspeech.PosBigramCollector;
+import questions.rootchild.RootChildCollector;
+import questions.siblings.SiblingCollector;
 
 public class QuestionEnsembleClassifier extends EnsembleClassifier<LanguageResponse> {
 
     public QuestionEnsembleClassifier() {
-        addClassifier(new SiblingClassifier());
-        //addClassifier(new FlatEdgeClassifier());
+        addClassifier(new FrequencyClassifer<>(new SiblingCollector()));
+        //addClassifier(new FrequencyClassifer<>(new FlatEdgeCollector()));
         addClassifier(new QuestionWordsClassifier());
         addClassifier(new InitialWordClassifier());
-        addClassifier(new PosBigramClassifier());
+        addClassifier(new FrequencyClassifer<>(new PosBigramCollector()));
+        //addClassifier(new FrequencyClassifer<>(new RootChildCollector()));
     }
 
     @Override

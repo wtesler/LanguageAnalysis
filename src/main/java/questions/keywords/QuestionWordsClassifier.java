@@ -5,7 +5,7 @@ import java.util.List;
 import classifier.Classifier;
 import models.LanguageResponse;
 
-public class QuestionWordsClassifier extends Classifier<LanguageResponse> {
+public class QuestionWordsClassifier extends Classifier<LanguageResponse, String> {
 
     @Override
     public void train(List<LanguageResponse> positiveExamples, List<LanguageResponse> negativeExamples,

@@ -2,8 +2,7 @@ package price.keyword;
 
 import java.util.List;
 
-import classifier.Classifier;
-import classifier.KeywordClassifier;
+import classifier.keyword.KeywordClassifier;
 import models.LanguageResponse;
 
 public class PriceKeywordClassifier extends KeywordClassifier {

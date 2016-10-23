@@ -18,7 +18,7 @@ public class PriceClassifierNode extends ClassifierNode<LanguageResponse> {
 
     @Inject Gson mGson;
 
-    public PriceClassifierNode(Classifier<LanguageResponse> classifier, BaseApp app) {
+    public PriceClassifierNode(Classifier<LanguageResponse, ?> classifier, BaseApp app) {
         super(classifier, app);
         app.getAppComponent().inject(this);
     }
@@ -34,7 +34,11 @@ public class PriceClassifierNode extends ClassifierNode<LanguageResponse> {
 
     @Override
     public void test(boolean interactive) {
+        List<LanguageResponse> positiveTestingResponses
+                = FileUtils.parseLanguageResponsesFromFiles("parses/price_questions_training", mGson);
+        List<LanguageResponse> negativeTestingResponses = new ArrayList<>();
 
+        getClassifier().test(positiveTestingResponses, negativeTestingResponses, true);
     }
 
     @Override

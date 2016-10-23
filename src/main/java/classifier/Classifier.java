@@ -3,9 +3,9 @@ package classifier;
 import java.util.HashMap;
 import java.util.List;
 
-public abstract class Classifier<T> {
+public abstract class Classifier<T, S> {
 
-    private final HashMap<String, Double> mScoreMap = new HashMap<>();
+    private final HashMap<S, Double> mScoreMap = new HashMap<>();
     private double mHighestScore = Double.MIN_VALUE;
     private double mLowestScore = Double.MAX_VALUE;
 
@@ -90,11 +90,11 @@ public abstract class Classifier<T> {
         mNegativeConfidence = confidence;
     }
 
-    protected final Double getScore(String key) {
+    protected final Double getScore(S key) {
         return mScoreMap.get(key);
     }
 
-    protected final void setScore(String key, Double value) {
+    protected final void setScore(S key, Double value) {
         mScoreMap.put(key, value);
         if (value > mHighestScore) {
             mHighestScore = value;
@@ -104,7 +104,7 @@ public abstract class Classifier<T> {
         }
     }
 
-    protected final HashMap<String, Double> getScores() {
+    protected final HashMap<S, Double> getScores() {
         return mScoreMap;
     }
 

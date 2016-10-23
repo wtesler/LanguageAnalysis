@@ -1,13 +1,15 @@
 package price.ensemble;
 
-import classifier.EnsembleClassifier;
+import classifier.ensemble.EnsembleClassifier;
 import models.LanguageResponse;
+import price.bigram.BigramKeywordClassifier;
 import price.keyword.PriceKeywordClassifier;
 
 public class PriceEnsembleClassifier extends EnsembleClassifier<LanguageResponse> {
 
     public PriceEnsembleClassifier() {
         addClassifier(new PriceKeywordClassifier());
+        addClassifier(new BigramKeywordClassifier());
     }
 
     @Override

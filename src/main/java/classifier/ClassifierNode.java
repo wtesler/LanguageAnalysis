@@ -6,11 +6,11 @@ import app.BaseApp;
 
 public abstract class ClassifierNode<T> {
 
-    private final Classifier<T> mClassifier;
+    private final Classifier<T, ?> mClassifier;
 
     private final ArrayList<ClassifierNode<T>> mChildren = new ArrayList<>();
 
-    public ClassifierNode(Classifier<T> classifier, final BaseApp app) {
+    public ClassifierNode(Classifier<T, ?> classifier, final BaseApp app) {
         mClassifier = classifier;
     }
 
@@ -42,11 +42,11 @@ public abstract class ClassifierNode<T> {
         return score;
     }
 
-    public Classifier<T> getClassifier() {
+    public Classifier<T, ?> getClassifier() {
         return mClassifier;
     }
 
-    public void addChild(ClassifierNode classifierNode) {
+    public void addChild(ClassifierNode<T> classifierNode) {
         mChildren.add(classifierNode);
     }
 }

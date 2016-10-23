@@ -17,7 +17,7 @@ public class QuestionClassifierNode extends ClassifierNode<LanguageResponse> {
 
     @Inject Gson mGson;
 
-    public QuestionClassifierNode(Classifier<LanguageResponse> classifier, BaseApp app) {
+    public QuestionClassifierNode(Classifier<LanguageResponse, ?> classifier, BaseApp app) {
         super(classifier, app);
         app.getAppComponent().inject(this);
     }
