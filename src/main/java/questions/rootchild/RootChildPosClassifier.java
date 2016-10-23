@@ -13,7 +13,8 @@ import utils.LanguageUtils;
 public class RootChildPosClassifier extends FrequencyClassifer<LanguageResponse> {
 
     @Override
-    public void train(List<LanguageResponse> positiveExamples, List<LanguageResponse> negativeExamples) {
+    public void train(List<LanguageResponse> positiveExamples, List<LanguageResponse> negativeExamples,
+                      boolean interactive) {
         HashMap<String, Double> positiveFrequencies = getRootChildFrequencyMap(positiveExamples);
         HashMap<String, Double> negativeFrequencies = getRootChildFrequencyMap(negativeExamples);
 
@@ -21,7 +22,7 @@ public class RootChildPosClassifier extends FrequencyClassifer<LanguageResponse>
     }
 
     @Override
-    public double classify(LanguageResponse response) {
+    public double classify(LanguageResponse response, boolean interactive) {
         DependencyTree tree = LanguageUtils.toDependencyTree(response);
         HashSet<String> rootChildSet = new HashSet<>();
         RootChildPosTraverser.collectRootChildSet(tree.getRoot(), rootChildSet);

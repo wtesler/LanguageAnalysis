@@ -23,36 +23,37 @@ public class QuestionClassifierNode extends ClassifierNode<LanguageResponse> {
     }
 
     @Override
-    public void train() {
+    public void train(boolean interactive) {
         List<LanguageResponse> positiveTrainingResponses =
                 FileUtils.parseLanguageResponsesFromFiles("parses/general_questions_training", mGson);
         List<LanguageResponse> negativeTrainingResponses =
                 FileUtils.parseLanguageResponsesFromFiles("parses/general_responses_training", mGson);
 
-        getClassifier().train(positiveTrainingResponses, negativeTrainingResponses);
+        getClassifier().train(positiveTrainingResponses, negativeTrainingResponses, true);
     }
 
     @Override
-    public void test() {
+    public void test(boolean interactive) {
         List<LanguageResponse> positiveTestingResponses
                 = FileUtils.parseLanguageResponsesFromFiles("parses/general_questions_testing", mGson);
         List<LanguageResponse> negativeTestingResponses
                 = FileUtils.parseLanguageResponsesFromFiles("parses/general_responses_testing", mGson);
 
-        getClassifier().test(positiveTestingResponses, negativeTestingResponses);
+        getClassifier().test(positiveTestingResponses, negativeTestingResponses, true);
     }
 
     @Override
-    public void score() {
+    public Score score(boolean interactive) {
         List<LanguageResponse> questions
                 = FileUtils.parseLanguageResponsesFromFiles("parses/general_questions_master", mGson);
 
         List<LanguageResponse> answers
                 = FileUtils.parseLanguageResponsesFromFiles("parses/general_responses_master", mGson);
 
-        Score score1 = getClassifier().score(questions);
-        Score score2 = getClassifier().score(answers);
+        Score score1 = getClassifier().score(questions, true);
+        Score score2 = getClassifier().score(answers, true);
         score2.correct = score2.total - score2.correct;
-        System.out.println("Accuracy: " + (double) (score1.correct + score2.correct) / (score1.total + score2.total));
+
+        return new Score(score1.correct + score2.correct, score1.total + score2.total);
     }
 }

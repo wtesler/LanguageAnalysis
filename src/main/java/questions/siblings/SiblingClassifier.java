@@ -13,7 +13,8 @@ import utils.LanguageUtils;
 public class SiblingClassifier extends FrequencyClassifer<LanguageResponse> {
 
     @Override
-    public void train(List<LanguageResponse> positiveExamples, List<LanguageResponse> negativeExamples) {
+    public void train(List<LanguageResponse> positiveExamples, List<LanguageResponse> negativeExamples,
+                      boolean interactive) {
         HashMap<String, Double> positiveFrequencies = getSiblingFrequencyMap(positiveExamples);
         HashMap<String, Double> negativeFrequencies = getSiblingFrequencyMap(negativeExamples);
 
@@ -21,7 +22,7 @@ public class SiblingClassifier extends FrequencyClassifer<LanguageResponse> {
     }
 
     @Override
-    public double classify(LanguageResponse response) {
+    public double classify(LanguageResponse response, boolean interactive) {
         DependencyTree tree = LanguageUtils.toDependencyTree(response);
         HashSet<String> siblingSet = new HashSet<>();
         SiblingTraverser.collectSiblingSet(tree.getRoot(), siblingSet);

@@ -9,7 +9,7 @@ public abstract class Classifier<T> {
     private double mHighestScore = Double.MIN_VALUE;
     private double mLowestScore = Double.MAX_VALUE;
 
-    private final int MAX_CONFIDENCE = 4;
+    private final int MAX_CONFIDENCE = 5;
 
     private Double mPositiveConfidence = 1.0;
     private Double mNegativeConfidence = 1.0;
@@ -26,19 +26,23 @@ public abstract class Classifier<T> {
     /**
      * Use the data to set scores.
      */
-    public abstract void train(List<T> positiveExamples, List<T> negativeExamples);
+    public abstract void train(List<T> positiveExamples, List<T> negativeExamples, boolean interactive);
 
-    public abstract double classify(T object);
+    public final double classify(T model) {
+        return classify(model, false);
+    }
+
+    public abstract double classify(T object, boolean interactive);
 
     /**
      * Use the data to set a confidence level.
      */
-    public void test(List<T> positiveExamples, List<T> negativeExamples) {
-        Score positiveScore = score(positiveExamples);
+    public void test(List<T> positiveExamples, List<T> negativeExamples, boolean interactive) {
+        Score positiveScore = score(positiveExamples, interactive);
         mTruePositives += positiveScore.correct;
         mFalseNegatives += positiveScore.total - positiveScore.correct;
 
-        Score negativeScore = score(negativeExamples);
+        Score negativeScore = score(negativeExamples, interactive);
         mFalsePositives += negativeScore.correct;
         mTrueNegatives += negativeScore.total - negativeScore.correct;
 
@@ -62,15 +66,12 @@ public abstract class Classifier<T> {
         System.out.println("\tNegative Confidence: " + getNegativeConfidence());
     }
 
-    public final Score score(List<T> presumedPositives) {
+    public final Score score(List<T> presumedPositives, boolean interactive) {
         Integer correctlyClassifed = presumedPositives.stream()
                 .mapToInt(response -> classify(response) > 0 ? 1 : 0)
                 .sum();
 
-        Score score = new Score();
-        score.correct = correctlyClassifed;
-        score.total = presumedPositives.size();
-        return score;
+        return new Score(correctlyClassifed, presumedPositives.size());
     }
 
     public final Double getPositiveConfidence() {

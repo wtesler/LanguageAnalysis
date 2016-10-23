@@ -11,7 +11,8 @@ public class PriceKeywordClassifier extends KeywordClassifier {
     @Override
     public void train(
             List<LanguageResponse> positiveExamples,
-            List<LanguageResponse> negativeExamples) {
+            List<LanguageResponse> negativeExamples,
+            boolean interactive) {
         setScore("COST", 1.0);
         setScore("COSTLY", 1.0);
         setScore("COSTLIEST", 1.0);

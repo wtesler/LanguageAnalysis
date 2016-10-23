@@ -10,7 +10,8 @@ import models.LanguageResponse;
 public class FlatEdgeClassifier extends FrequencyClassifer<LanguageResponse> {
 
     @Override
-    public void train(List<LanguageResponse> positiveExamples, List<LanguageResponse> negativeExamples) {
+    public void train(List<LanguageResponse> positiveExamples, List<LanguageResponse> negativeExamples,
+                      boolean interactive) {
         HashMap<String, Double> positiveFrequencies = getTokenSiblingFrequencyMap(positiveExamples);
         HashMap<String, Double> negativeFrequencies = getTokenSiblingFrequencyMap(negativeExamples);
 
@@ -18,7 +19,7 @@ public class FlatEdgeClassifier extends FrequencyClassifer<LanguageResponse> {
     }
 
     @Override
-    public double classify(LanguageResponse response) {
+    public double classify(LanguageResponse response, boolean interactive) {
         double score = 0;
 
         for (int i = 0; i < response.tokens.size() - 1; i++) {

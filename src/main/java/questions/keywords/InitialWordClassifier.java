@@ -8,7 +8,8 @@ import models.LanguageResponse;
 public class InitialWordClassifier extends Classifier<LanguageResponse> {
 
     @Override
-    public void train(List<LanguageResponse> positiveExamples, List<LanguageResponse> negativeExamples) {
+    public void train(List<LanguageResponse> positiveExamples, List<LanguageResponse> negativeExamples,
+                      boolean interactive) {
         setScore("CAN", 1.0);
         setScore("BE", 1.0);
         setScore("HAVE", 1.0);
@@ -19,7 +20,7 @@ public class InitialWordClassifier extends Classifier<LanguageResponse> {
     }
 
     @Override
-    public double classify(LanguageResponse response) {
+    public double classify(LanguageResponse response, boolean interactive) {
         Double score = getScore(response.tokens.get(0).lemma.toUpperCase());
         return score != null ? score : -1;
     }

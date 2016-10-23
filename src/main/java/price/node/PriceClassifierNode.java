@@ -24,21 +24,21 @@ public class PriceClassifierNode extends ClassifierNode<LanguageResponse> {
     }
 
     @Override
-    public void train() {
+    public void train(boolean interactive) {
         List<LanguageResponse> positiveTrainingResponses =
                 FileUtils.parseLanguageResponsesFromFiles("parses/price_questions_training", mGson);
         List<LanguageResponse> negativeTrainingResponses = new ArrayList<>();
 
-        getClassifier().train(positiveTrainingResponses, negativeTrainingResponses);
+        getClassifier().train(positiveTrainingResponses, negativeTrainingResponses, true);
     }
 
     @Override
-    public void test() {
+    public void test(boolean interactive) {
 
     }
 
     @Override
-    public void score() {
-
+    public Score score(boolean interactive) {
+        return new Score(0, 0);
     }
 }

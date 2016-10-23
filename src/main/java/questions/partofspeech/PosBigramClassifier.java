@@ -6,7 +6,6 @@ import java.util.List;
 import java.util.Map;
 
 import classifier.FrequencyClassifer;
-import cloud.CloudParser;
 import models.DependencyTree;
 import models.LanguageResponse;
 import utils.LanguageUtils;
@@ -14,7 +13,8 @@ import utils.LanguageUtils;
 public class PosBigramClassifier extends FrequencyClassifer<LanguageResponse> {
 
     @Override
-    public void train(List<LanguageResponse> positiveExamples, List<LanguageResponse> negativeExamples) {
+    public void train(List<LanguageResponse> positiveExamples, List<LanguageResponse> negativeExamples,
+                      boolean interactive) {
         HashMap<String, Double> positiveFrequencies = getPosBigramFrequencyMap(positiveExamples);
         HashMap<String, Double> negativeFrequencies = getPosBigramFrequencyMap(negativeExamples);
 
@@ -22,7 +22,7 @@ public class PosBigramClassifier extends FrequencyClassifer<LanguageResponse> {
     }
 
     @Override
-    public double classify(LanguageResponse response) {
+    public double classify(LanguageResponse response, boolean interactive) {
         DependencyTree tree = LanguageUtils.toDependencyTree(response);
         HashSet<String> posBigramSet = new HashSet<>();
         PosTraverser.collectPosBigrams(tree.getRoot(), posBigramSet);

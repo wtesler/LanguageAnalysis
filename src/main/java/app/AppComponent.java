@@ -5,14 +5,12 @@ import com.squareup.okhttp.OkHttpClient;
 
 import javax.inject.Singleton;
 
-import classifier.ClassifierNode;
 import cloud.CloudParser;
 import cloud.LanguageClient;
 import dagger.Component;
-import models.LanguageResponse;
-import price.ensemble.EnsemblePriceClassifier;
+import price.ensemble.PriceEnsembleClassifier;
 import price.node.PriceClassifierNode;
-import questions.ensemble.EnsembleQuestionClassifier;
+import questions.ensemble.QuestionEnsembleClassifier;
 import questions.node.QuestionClassifierNode;
 import retrofit.Retrofit;
 
@@ -25,9 +23,9 @@ public interface AppComponent {
     void inject(PriceClassifierNode priceClassifierNode);
     void inject(QuestionClassifierNode questionClassifierNode);
 
-    EnsemblePriceClassifier priceClassifier();
+    PriceEnsembleClassifier priceClassifier();
 
-    EnsembleQuestionClassifier questionClassifier();
+    QuestionEnsembleClassifier questionClassifier();
 
     CloudParser cloudParser();
 

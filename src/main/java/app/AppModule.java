@@ -17,8 +17,8 @@ import cloud.LanguageClient;
 import cloud.LanguageService;
 import dagger.Module;
 import dagger.Provides;
-import price.ensemble.EnsemblePriceClassifier;
-import questions.ensemble.EnsembleQuestionClassifier;
+import price.ensemble.PriceEnsembleClassifier;
+import questions.ensemble.QuestionEnsembleClassifier;
 import retrofit.GsonConverterFactory;
 import retrofit.Retrofit;
 import retrofit.RxJavaCallAdapterFactory;
@@ -38,15 +38,15 @@ public class AppModule {
 
     @Provides
     @Singleton
-    EnsemblePriceClassifier provideEnsemblePriceClassifier() {
-        return new EnsemblePriceClassifier();
+    PriceEnsembleClassifier provideEnsemblePriceClassifier() {
+        return new PriceEnsembleClassifier();
     }
 
 
     @Provides
     @Singleton
-    EnsembleQuestionClassifier provideQuestionClassifier() {
-        return new EnsembleQuestionClassifier();
+    QuestionEnsembleClassifier provideQuestionClassifier() {
+        return new QuestionEnsembleClassifier();
     }
 
     @Provides

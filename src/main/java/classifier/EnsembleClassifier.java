@@ -9,21 +9,17 @@ public abstract class EnsembleClassifier<T> extends Classifier<T> {
     private List<Classifier<T>> mClassifiers = new ArrayList<>();
 
     @Override
-    public void train(List<T> positiveExamples, List<T> negativeExamples) {
-        mClassifiers.forEach(classifier -> classifier.train(positiveExamples, negativeExamples));
+    public void train(List<T> positiveExamples, List<T> negativeExamples, boolean interactive) {
+        mClassifiers.forEach(classifier -> classifier.train(positiveExamples, negativeExamples, true));
     }
 
     @Override
-    public void test(List<T> positiveExamples, List<T> negativeExamples) {
-        mClassifiers.forEach(classifier -> classifier.test(positiveExamples, negativeExamples));
-        super.test(positiveExamples, negativeExamples);
+    public void test(List<T> positiveExamples, List<T> negativeExamples, boolean interactive) {
+        mClassifiers.forEach(classifier -> classifier.test(positiveExamples, negativeExamples, true));
+        super.test(positiveExamples, negativeExamples, true);
     }
 
     @Override
-    public double classify(T model) {
-        return classify(model, false);
-    }
-
     public double classify(T model, boolean interactive) {
         double totalClassification = mClassifiers.stream().mapToDouble(classifier -> {
             double decision = classifier.classify(model);
@@ -32,20 +28,18 @@ public abstract class EnsembleClassifier<T> extends Classifier<T> {
             if (interactive) {
                 System.out.println(
                         VisUtils.toGauge(classification)
-                                + " " + classifier.getClass().getSimpleName()
-                                + ": " + classification);
+                                + " " + classifier.getClass().getSimpleName() + ": " + classification);
             }
             return classification;
         })
-                .sum();
+        .sum();
 
         totalClassification /= mClassifiers.size();
 
         if (interactive) {
             System.out.println(
                     VisUtils.toGauge(totalClassification)
-                            + " " + getClass().getSimpleName()
-                            + ": " + totalClassification);
+                            + " " + getClass().getSimpleName() + ": " + totalClassification);
         }
         return totalClassification;
     }

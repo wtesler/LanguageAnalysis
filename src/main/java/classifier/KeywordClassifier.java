@@ -9,7 +9,7 @@ import models.LanguageResponse;
 public abstract class KeywordClassifier extends Classifier<LanguageResponse> {
 
     @Override
-    public final double classify(LanguageResponse response) {
+    public final double classify(LanguageResponse response, boolean interactive) {
         double scoreSum = response.tokens.stream()
                 .mapToDouble(token -> {
                     Double score = getScore(token.lemma.toUpperCase());
