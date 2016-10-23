@@ -17,6 +17,7 @@ public class ParseApp extends BaseApp {
 
         getAppComponent().inject(this);
 
-        mCloudParser.parseSentencesResource("price_questions_training.txt", "parses/price_questions_training");
+        mCloudParser.parseSentencesResource("price_visual_questions_training.txt",
+                "parses/price_discovery questions_training");
     }
 }

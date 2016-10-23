@@ -9,16 +9,20 @@ import javax.inject.Inject;
 import classifier.Score;
 import cloud.CloudParser;
 import models.LanguageResponse;
-import price.ensemble.PriceEnsembleClassifier;
-import price.node.PriceClassifierNode;
-import questions.ensemble.QuestionEnsembleClassifier;
-import questions.node.QuestionClassifierNode;
+import price_discovery.ensemble.PriceDiscoveryEnsembleClassifier;
+import question_price.ensemble.PriceEnsembleClassifier;
+import question_price.node.PriceClassifierNode;
+import price_discovery.node.PriceVisualClassifierNode;
+import question.ensemble.QuestionEnsembleClassifier;
+import question.node.QuestionClassifierNode;
 
 public class LearnApp extends BaseApp {
 
     @Inject CloudParser mCloudParser;
     @Inject Gson mGson;
     @Inject PriceEnsembleClassifier mPriceEnsembleClassifier;
+    @Inject
+    PriceDiscoveryEnsembleClassifier mPriceDiscoveryEnsembleClassifier;
     @Inject QuestionEnsembleClassifier mQuestionEnsembleClassifier;
 
     public static void main(String[] args) {
@@ -33,7 +37,11 @@ public class LearnApp extends BaseApp {
         QuestionClassifierNode questionClassifierNode = new QuestionClassifierNode(mQuestionEnsembleClassifier, this);
 
         PriceClassifierNode priceClassifierNode = new PriceClassifierNode(mPriceEnsembleClassifier, this);
-        questionClassifierNode.addChild(priceClassifierNode);
+        questionClassifierNode.addChild(priceClassifierNode, true);
+
+        PriceVisualClassifierNode priceVisualClassifierNode
+                = new PriceVisualClassifierNode(mPriceDiscoveryEnsembleClassifier, this);
+        priceClassifierNode.addChild(priceVisualClassifierNode, true);
 
         // Tell the classifiers to learn.
         questionClassifierNode.learn(true);

@@ -1,8 +1,8 @@
 package classifier.frequency;
 
 import java.util.Collection;
-import java.util.HashMap;
 import java.util.HashSet;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -27,12 +27,12 @@ public abstract class NodeFrequencyCollector<S> extends FrequencyCollector<Langu
     }
 
     @Override
-    public void collectModelCountMap(LanguageResponse response, final HashMap<S, Double> modelCountMap) {
+    public void collectModelCountMap(LanguageResponse response, final ConcurrentHashMap<S, Double> modelCountMap) {
         Node node = LanguageUtils.toDependencyTree(response).getRoot();
         collectModelCountMap(node, modelCountMap);
     }
 
-    private void collectModelCountMap(Node node, final HashMap<S, Double> modelCountMap) {
+    private void collectModelCountMap(Node node, final ConcurrentHashMap<S, Double> modelCountMap) {
         node.children.stream().forEach(child -> collectModelCountMap(child, modelCountMap));
         getModelStream(node).forEach(model -> {
             modelCountMap.put(model, modelCountMap.containsKey(model) ? modelCountMap.get(model) + 1 : 1);

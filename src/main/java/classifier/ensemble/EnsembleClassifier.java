@@ -11,13 +11,13 @@ public abstract class EnsembleClassifier<T> extends Classifier<T, Void> {
 
     @Override
     public void train(List<T> positiveExamples, List<T> negativeExamples, boolean interactive) {
-        mClassifiers.forEach(classifier -> classifier.train(positiveExamples, negativeExamples, true));
+        mClassifiers.forEach(classifier -> classifier.train(positiveExamples, negativeExamples, interactive));
     }
 
     @Override
     public void test(List<T> positiveExamples, List<T> negativeExamples, boolean interactive) {
-        mClassifiers.forEach(classifier -> classifier.test(positiveExamples, negativeExamples, true));
-        super.test(positiveExamples, negativeExamples, true);
+        mClassifiers.forEach(classifier -> classifier.test(positiveExamples, negativeExamples, interactive));
+        super.test(positiveExamples, negativeExamples, interactive);
     }
 
     @Override

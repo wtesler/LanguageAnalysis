@@ -8,7 +8,8 @@ public abstract class ClassifierNode<T> {
 
     private final Classifier<T, ?> mClassifier;
 
-    private final ArrayList<ClassifierNode<T>> mChildren = new ArrayList<>();
+    private final ArrayList<ClassifierNode<T>> mPositiveChildren = new ArrayList<>();
+    private final ArrayList<ClassifierNode<T>> mNegativeChildren = new ArrayList<>();
 
     public ClassifierNode(Classifier<T, ?> classifier, final BaseApp app) {
         mClassifier = classifier;
@@ -22,23 +23,31 @@ public abstract class ClassifierNode<T> {
 
     public final void learn(boolean interactive) {
         train(interactive);
-        mChildren.parallelStream().forEach(node -> node.train(interactive));
-
         test(interactive);
-        mChildren.parallelStream().forEach(node -> node.test(interactive));
+        mPositiveChildren.stream().forEach(node -> node.learn(interactive));
+        mNegativeChildren.stream().forEach(node -> node.learn(interactive));
     }
 
     public final void classify(T model, boolean interactive) {
-        mClassifier.classify(model, interactive);
-        mChildren.stream().forEach(node -> node.classify(model, interactive));
+        double classification = mClassifier.classify(model, interactive);
+        if (classification > 0) {
+            mPositiveChildren.stream().forEach(node -> node.classify(model, interactive));
+
+        } else {
+            mNegativeChildren.stream().forEach(node -> node.classify(model, interactive));
+        }
     }
 
     public Score totalScore(final boolean interactive) {
         Score score = score(interactive);
-        Score childrenScore =  mChildren.parallelStream()
+        Score positiveChildrenScore =  mPositiveChildren.stream()
                 .map(classifierNode -> classifierNode.score(interactive))
                 .collect(Score::new, Score::add, Score::add);
-        score.add(childrenScore);
+        Score negativeChildrenScore =  mNegativeChildren.stream()
+                .map(classifierNode -> classifierNode.score(interactive))
+                .collect(Score::new, Score::add, Score::add);
+        score.add(positiveChildrenScore);
+        score.add(negativeChildrenScore);
         return score;
     }
 
@@ -46,7 +55,11 @@ public abstract class ClassifierNode<T> {
         return mClassifier;
     }
 
-    public void addChild(ClassifierNode<T> classifierNode) {
-        mChildren.add(classifierNode);
+    public void addChild(ClassifierNode<T> classifierNode, boolean positive) {
+        if (positive) {
+            mPositiveChildren.add(classifierNode);
+        } else {
+            mNegativeChildren.add(classifierNode);
+        }
     }
 }

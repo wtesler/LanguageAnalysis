@@ -1,15 +1,17 @@
 package classifier.frequency;
 
-import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 
 import classifier.Classifier;
 
 /**
  * A classifier which computes scores based on the frequency of a key's appearance.
- * @param <S> NodeFrequencyCollector type
+ *
+ * @param <T> The learning input type.
+ * @param <S> Key type (For example: {@link String} for a collection of "A,B" pairs.
  */
 public class FrequencyClassifer<T, S> extends Classifier<T, S> {
 
@@ -21,8 +23,8 @@ public class FrequencyClassifer<T, S> extends Classifier<T, S> {
 
     @Override
     public void train(List<T> positiveExamples, List<T> negativeExamples, boolean interactive) {
-        HashMap<S, Double> positiveFrequencies = getFrequencyMap(positiveExamples);
-        HashMap<S, Double> negativeFrequencies = getFrequencyMap(negativeExamples);
+        ConcurrentHashMap<S, Double> positiveFrequencies = getFrequencyMap(positiveExamples);
+        ConcurrentHashMap<S, Double> negativeFrequencies = getFrequencyMap(negativeExamples);
 
         scoreWithFrequencyAnalysis(positiveFrequencies, negativeFrequencies);
     }
@@ -44,8 +46,8 @@ public class FrequencyClassifer<T, S> extends Classifier<T, S> {
     }
 
     public void scoreWithFrequencyAnalysis(
-            HashMap<S, Double> positiveFrequencies,
-            HashMap<S, Double> negativeFrequencies) {
+            ConcurrentHashMap<S, Double> positiveFrequencies,
+            ConcurrentHashMap<S, Double> negativeFrequencies) {
 
         positiveFrequencies.entrySet()
                 .stream()
@@ -79,8 +81,8 @@ public class FrequencyClassifer<T, S> extends Classifier<T, S> {
                 });
     }
 
-    public HashMap<S, Double> getFrequencyMap(List<T> inputs) {
-        final HashMap<S, Double> mModelCountMap = new HashMap<>();
+    public ConcurrentHashMap<S, Double> getFrequencyMap(List<T> inputs) {
+        final ConcurrentHashMap<S, Double> mModelCountMap = new ConcurrentHashMap<>();
         inputs.stream().forEach(input -> mCollector.collectModelCountMap(input, mModelCountMap));
 
         Double totalModels = mModelCountMap.entrySet()

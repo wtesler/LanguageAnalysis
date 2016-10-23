@@ -1,11 +1,11 @@
 package classifier;
 
-import java.util.HashMap;
 import java.util.List;
+import java.util.concurrent.ConcurrentHashMap;
 
 public abstract class Classifier<T, S> {
 
-    private final HashMap<S, Double> mScoreMap = new HashMap<>();
+    private final ConcurrentHashMap<S, Double> mScoreMap = new ConcurrentHashMap<>();
     private double mHighestScore = Double.MIN_VALUE;
     private double mLowestScore = Double.MAX_VALUE;
 
@@ -61,9 +61,11 @@ public abstract class Classifier<T, S> {
         setPositiveConfidence(positiveConfidence / MAX_CONFIDENCE);
         setNegativeConfidence(negativeConfidence / MAX_CONFIDENCE);
 
-        System.out.println(getClass().getSimpleName());
-        System.out.println("\tPositive Confidence: " + getPositiveConfidence());
-        System.out.println("\tNegative Confidence: " + getNegativeConfidence());
+        if (interactive) {
+            System.out.println(getClass().getSimpleName());
+            System.out.println("\tPositive Confidence: " + getPositiveConfidence());
+            System.out.println("\tNegative Confidence: " + getNegativeConfidence());
+        }
     }
 
     public final Score score(List<T> presumedPositives, boolean interactive) {
@@ -104,7 +106,7 @@ public abstract class Classifier<T, S> {
         }
     }
 
-    protected final HashMap<S, Double> getScores() {
+    protected final ConcurrentHashMap<S, Double> getScores() {
         return mScoreMap;
     }
 
