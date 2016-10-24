@@ -1,4 +1,4 @@
-package models;
+package models.language;
 
 public class TextSpan {
 

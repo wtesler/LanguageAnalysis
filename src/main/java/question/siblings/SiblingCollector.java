@@ -4,8 +4,8 @@ import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
 import classifier.frequency.NodeFrequencyCollector;
-import models.DependencyEdge;
-import models.Node;
+import models.language.DependencyEdge;
+import models.language.Node;
 
 public class SiblingCollector extends NodeFrequencyCollector<String> {
 

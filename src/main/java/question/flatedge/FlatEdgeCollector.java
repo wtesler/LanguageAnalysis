@@ -9,7 +9,7 @@ import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
 import classifier.frequency.FrequencyCollector;
-import models.LanguageResponse;
+import models.language.LanguageResponse;
 
 public class FlatEdgeCollector extends FrequencyCollector<LanguageResponse, String> {
 

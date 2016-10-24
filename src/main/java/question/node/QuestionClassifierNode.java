@@ -9,7 +9,7 @@ import javax.inject.Inject;
 import app.BaseApp;
 import classifier.ClassifierNode;
 import classifier.Score;
-import models.LanguageResponse;
+import models.language.LanguageResponse;
 import question.ensemble.QuestionEnsembleClassifier;
 import utils.FileUtils;
 

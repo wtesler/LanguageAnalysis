@@ -2,9 +2,9 @@ package cloud;
 
 import com.squareup.okhttp.ResponseBody;
 
-import models.GcsLanguageRequest;
-import models.LanguageRequest;
-import models.LanguageResponse;
+import models.language.GcsLanguageRequest;
+import models.language.LanguageRequest;
+import models.language.LanguageResponse;
 import rx.Observable;
 import utils.RxUtils;
 

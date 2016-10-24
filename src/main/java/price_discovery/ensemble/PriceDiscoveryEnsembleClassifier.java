@@ -1,7 +1,7 @@
 package price_discovery.ensemble;
 
 import classifier.ensemble.EnsembleClassifier;
-import models.LanguageResponse;
+import models.language.LanguageResponse;
 import price_discovery.keyword.PriceDiscoveryKeywordClassifier;
 
 public class PriceDiscoveryEnsembleClassifier extends EnsembleClassifier<LanguageResponse> {

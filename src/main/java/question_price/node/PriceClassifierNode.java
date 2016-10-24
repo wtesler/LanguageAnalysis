@@ -8,10 +8,9 @@ import java.util.List;
 import javax.inject.Inject;
 
 import app.BaseApp;
-import classifier.Classifier;
 import classifier.ClassifierNode;
 import classifier.Score;
-import models.LanguageResponse;
+import models.language.LanguageResponse;
 import question_price.ensemble.PriceEnsembleClassifier;
 import utils.FileUtils;
 

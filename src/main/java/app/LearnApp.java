@@ -1,28 +1,24 @@
 package app;
 
-import com.google.gson.Gson;
-
 import java.util.Scanner;
 
 import javax.inject.Inject;
 
 import classifier.Score;
 import cloud.CloudParser;
-import models.LanguageResponse;
+import models.language.LanguageResponse;
 import price_discovery.ensemble.PriceDiscoveryEnsembleClassifier;
-import question_price.ensemble.PriceEnsembleClassifier;
-import question_price.node.PriceClassifierNode;
 import price_discovery.node.PriceVisualClassifierNode;
 import question.ensemble.QuestionEnsembleClassifier;
 import question.node.QuestionClassifierNode;
+import question_price.ensemble.PriceEnsembleClassifier;
+import question_price.node.PriceClassifierNode;
 
 public class LearnApp extends BaseApp {
 
     @Inject CloudParser mCloudParser;
-    @Inject Gson mGson;
     @Inject PriceEnsembleClassifier mPriceEnsembleClassifier;
-    @Inject
-    PriceDiscoveryEnsembleClassifier mPriceDiscoveryEnsembleClassifier;
+    @Inject PriceDiscoveryEnsembleClassifier mPriceDiscoveryEnsembleClassifier;
     @Inject QuestionEnsembleClassifier mQuestionEnsembleClassifier;
 
     public static void main(String[] args) {

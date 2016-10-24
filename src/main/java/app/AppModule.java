@@ -15,6 +15,8 @@ import javax.inject.Singleton;
 import cloud.CloudParser;
 import cloud.LanguageClient;
 import cloud.LanguageService;
+import cloud.SpeechClient;
+import cloud.SpeechService;
 import dagger.Module;
 import dagger.Provides;
 import price_discovery.ensemble.PriceDiscoveryEnsembleClassifier;
@@ -75,6 +77,13 @@ public class AppModule {
     }
 
     @Provides
+    @Singleton
+    SpeechClient provideSpeechClient(@ForSpeech Retrofit retrofit) {
+        SpeechService speechService = retrofit.create(SpeechService.class);
+        return new SpeechClient(speechService);
+    }
+
+    @Provides
     @ForLanguage
     @Singleton
     OkHttpClient provideLanguageOkHttpClient() {
@@ -105,8 +114,28 @@ public class AppModule {
     @ForLanguage
     @Singleton
     Retrofit provideLanguageRetrofit(@ForLanguage OkHttpClient okHttpClient) {
+//        HttpLoggingInterceptor interceptor = new HttpLoggingInterceptor();
+//        interceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
+//        okHttpClient.interceptors().add(interceptor);
+
         return new Retrofit.Builder()
                 .baseUrl("https://language.googleapis.com/")
+                .addConverterFactory(GsonConverterFactory.create())
+                .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
+                .client(okHttpClient)
+                .build();
+    }
+
+    @Provides
+    @ForSpeech
+    @Singleton
+    Retrofit provideSpeechRetrofit(@ForLanguage OkHttpClient okHttpClient) {
+//        HttpLoggingInterceptor interceptor = new HttpLoggingInterceptor();
+//        interceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
+//        okHttpClient.interceptors().add(interceptor);
+
+        return new Retrofit.Builder()
+                .baseUrl("https://speech.googleapis.com/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
                 .client(okHttpClient)
@@ -117,4 +146,9 @@ public class AppModule {
     @Documented
     @Retention(RUNTIME)
     public @interface ForLanguage { }
+
+    @Qualifier
+    @Documented
+    @Retention(RUNTIME)
+    public @interface ForSpeech { }
 }

@@ -2,7 +2,7 @@ package question.ensemble;
 
 import classifier.ensemble.EnsembleClassifier;
 import classifier.frequency.FrequencyClassifer;
-import models.LanguageResponse;
+import models.language.LanguageResponse;
 import question.keywords.InitialWordClassifier;
 import question.keywords.QuestionWordsClassifier;
 import question.partofspeech.PosBigramCollector;

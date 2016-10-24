@@ -3,7 +3,7 @@ package price_discovery.keyword;
 import java.util.List;
 
 import classifier.keyword.KeywordClassifier;
-import models.LanguageResponse;
+import models.language.LanguageResponse;
 
 public class PriceDiscoveryKeywordClassifier extends KeywordClassifier {
 

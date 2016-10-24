@@ -10,7 +10,7 @@ import javax.inject.Inject;
 import app.BaseApp;
 import classifier.ClassifierNode;
 import classifier.Score;
-import models.LanguageResponse;
+import models.language.LanguageResponse;
 import price_discovery.ensemble.PriceDiscoveryEnsembleClassifier;
 import utils.FileUtils;
 

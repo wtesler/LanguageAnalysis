@@ -1,7 +1,7 @@
 package question_price.ensemble;
 
 import classifier.ensemble.EnsembleClassifier;
-import models.LanguageResponse;
+import models.language.LanguageResponse;
 import question_price.bigram.BigramKeywordClassifier;
 import question_price.keyword.PriceKeywordClassifier;
 

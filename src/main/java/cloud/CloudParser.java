@@ -2,18 +2,13 @@ package cloud;
 
 import com.google.gson.Gson;
 
-import java.io.File;
 import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
 import java.util.List;
-import java.util.function.Function;
-import java.util.stream.Collectors;
 
-import models.Features;
-import models.LanguageDocument;
-import models.LanguageRequest;
-import models.LanguageResponse;
+import models.language.Features;
+import models.language.LanguageDocument;
+import models.language.LanguageRequest;
+import models.language.LanguageResponse;
 import rx.Observable;
 import rx.schedulers.Schedulers;
 import rx.subjects.PublishSubject;

@@ -14,7 +14,7 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-import models.LanguageResponse;
+import models.language.LanguageResponse;
 
 public class FileUtils {
 

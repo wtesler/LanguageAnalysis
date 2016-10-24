@@ -7,7 +7,9 @@ import javax.inject.Singleton;
 
 import cloud.CloudParser;
 import cloud.LanguageClient;
+import cloud.SpeechClient;
 import dagger.Component;
+import microphone.SpeechApp;
 import price_discovery.ensemble.PriceDiscoveryEnsembleClassifier;
 import question_price.ensemble.PriceEnsembleClassifier;
 import question_price.node.PriceClassifierNode;
@@ -22,6 +24,7 @@ public interface AppComponent {
 
     void inject(LearnApp app);
     void inject(ParseApp app);
+    void inject(SpeechApp app);
     void inject(PriceClassifierNode priceClassifierNode);
     void inject(PriceVisualClassifierNode priceClassifierNode);
     void inject(QuestionClassifierNode questionClassifierNode);
@@ -38,10 +41,15 @@ public interface AppComponent {
 
     LanguageClient languageClient();
 
+    SpeechClient speechClient();
+
     @AppModule.ForLanguage
     OkHttpClient okHttpClient();
 
     @AppModule.ForLanguage
     Retrofit languageRetrofit();
+
+    @AppModule.ForSpeech
+    Retrofit speechRetrofit();
 }
 

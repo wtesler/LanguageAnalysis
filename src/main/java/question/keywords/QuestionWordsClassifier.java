@@ -3,7 +3,7 @@ package question.keywords;
 import java.util.List;
 
 import classifier.Classifier;
-import models.LanguageResponse;
+import models.language.LanguageResponse;
 
 public class QuestionWordsClassifier extends Classifier<LanguageResponse, String> {
 

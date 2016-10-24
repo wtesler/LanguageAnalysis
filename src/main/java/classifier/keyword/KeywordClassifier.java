@@ -1,7 +1,7 @@
 package classifier.keyword;
 
 import classifier.Classifier;
-import models.LanguageResponse;
+import models.language.LanguageResponse;
 
 /**
  * Scores a {@link LanguageResponse} based on whether it contains certain lemma keys. If no keys match, it returns a

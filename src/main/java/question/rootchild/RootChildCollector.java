@@ -4,8 +4,8 @@ import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
 import classifier.frequency.NodeFrequencyCollector;
-import models.Node;
-import models.PartOfSpeech;
+import models.language.Node;
+import models.language.PartOfSpeech;
 
 public class RootChildCollector extends NodeFrequencyCollector<String> {
 

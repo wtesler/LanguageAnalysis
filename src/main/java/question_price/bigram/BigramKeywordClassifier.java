@@ -6,7 +6,7 @@ import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
 import classifier.Classifier;
-import models.LanguageResponse;
+import models.language.LanguageResponse;
 
 public class BigramKeywordClassifier extends Classifier<LanguageResponse, String> {
 

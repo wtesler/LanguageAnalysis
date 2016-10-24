@@ -3,9 +3,9 @@ package utils;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import models.DependencyTree;
-import models.LanguageResponse;
-import models.Token;
+import models.language.DependencyTree;
+import models.language.LanguageResponse;
+import models.language.Token;
 
 public class LanguageUtils {
 

@@ -7,8 +7,8 @@ import java.util.function.Supplier;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-import models.LanguageResponse;
-import models.Node;
+import models.language.LanguageResponse;
+import models.language.Node;
 import utils.LanguageUtils;
 
 public abstract class NodeFrequencyCollector<S> extends FrequencyCollector<LanguageResponse, S> {
